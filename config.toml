@@ -1,3 +1,65 @@
-baseURL = "http://example.org/"
+baseurl = "KirtiB.com"
 languageCode = "en-us"
-title = "My New Hugo Site"
+Title = "Kirti Bhardwaj"
+# Copyright notice. This is displayer in the footer.
+copyright = "&copy; Belongs to Kirti Bhardwaj"
+theme = "hugo_theme_pickles"
+pygmentsStyle = "native"
+
+[params]
+  paginate = 10
+  # Social accounts. Link to these accounts are displayed in the header and
+  # footer
+  twitter = "https://twitter.com/kirtib"
+  github = "https://github.com/LostWarrior"
+  linkedin = "https://www.linkedin.com/in/kirtib/"
+  # Disqus shortname
+  disqus = ""
+  # Google Analytics API key.
+  ga_api_key = "Your Google Analytics tracking id"
+  author = "Kirti Bhardwaj"
+  authorwebsite = "example.com"
+  avatar = "/path/to/avatar"
+  contact = "mailto:kirti.sbhardwaj@gmail.com)"
+  bio = "A web developer,data visualizer based out of Bangalore, India."
+  # Short subtitle/tagline. This is displayed in the header.
+  subtitle = ""
+  # Logo image. This is displayed ogp image.
+  logo = "/path/to/logo"
+  favicon = "/path/to/favicon"
+
+[[menu.main]]
+    name = "Blog"
+    url = "/posts/Building-site-with-hugo.md"
+    weight = 1
+
+[[menu.main]]
+    name = "About"
+    url = "/about"
+    weight = 2
+
+
+[related]
+  # Only include matches with rank >= threshold. This is a normalized rank between 0 and 100.
+  threshold = 80
+
+  # To get stable "See also" sections we, by default, exclude newer related pages.
+  includeNewer = false
+
+  # Will lower case keywords in both queries and in the indexes.
+  toLower = false
+
+  [[related.indices]]
+  name = "keywords"
+  weight = 0
+  [[related.indices]]
+  name  = "author"
+  toLower = true
+  weight = 10
+  [[related.indices]]
+  name  = "tags"
+  weight = 0
+  [[related.indices]]
+  name  = "date"
+  weight = 5
+  pattern = "2017"
