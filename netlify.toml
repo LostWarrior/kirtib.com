@@ -5,9 +5,6 @@
 # “base” is directory to change to before starting build. if you set base:
 #    that is where we will look for package.json/.nvmrc/etc not repo root!
 
-[build]
-  publish = "public"
-  command = "hugo"
 
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.36"
