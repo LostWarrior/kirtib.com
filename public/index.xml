@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kirti Bhardwaj</title>
-    <link>KirtiB.com/</link>
+    <link>/</link>
     <description>Recent content on Kirti Bhardwaj</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Belongs to Kirti Bhardwaj</copyright>
     <lastBuildDate>Tue, 06 Feb 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="KirtiB.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hey There</title>
-      <link>KirtiB.com/about/</link>
+      <link>/about/</link>
       <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>KirtiB.com/about/</guid>
+      <guid>/about/</guid>
       <description>Hey there, welcome to my home on the interwebz. I am web developer, data visualizer based out of Bangalore, India.I enjoy tweaking with d3 and building things in general.
 I also, love a good challenge.</description>
     </item>
     
     <item>
       <title>Building Personal Website With Hugo And Netlify</title>
-      <link>KirtiB.com/posts/building-site-with-hugo/</link>
+      <link>/posts/building-site-with-hugo/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>KirtiB.com/posts/building-site-with-hugo/</guid>
+      <guid>/posts/building-site-with-hugo/</guid>
       <description>Introduction When I decided to build my personal website, there were options abound on how to build, how to deploy etc. I came across hugo and netlify on twitter and everyone raved about how easy it was. So, I decided to get a basic website up and running first and then go about tweaking and moving it. Found the process to be really smooth, documenting it here for future reference as well as for someone else who might want to use it.</description>
     </item>
     

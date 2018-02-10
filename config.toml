@@ -1,4 +1,4 @@
-baseurl = "KirtiB.com"
+baseurl = "/"
 languageCode = "en-us"
 Title = "Kirti Bhardwaj"
 # Copyright notice. This is displayer in the footer.
@@ -10,27 +10,18 @@ pygmentsStyle = "native"
   paginate = 10
   # Social accounts. Link to these accounts are displayed in the header and
   # footer
-  twitter = "https://twitter.com/kirtib"
-  github = "https://github.com/LostWarrior"
-  linkedin = "https://www.linkedin.com/in/kirtib/"
-  # Disqus shortname
-  disqus = ""
+  twitter = "kirtib"
+  github = "LostWarrior"
+  linkedin = "kirtib/"
   # Google Analytics API key.
   ga_api_key = "Your Google Analytics tracking id"
   author = "Kirti Bhardwaj"
-  authorwebsite = "example.com"
-  avatar = "/path/to/avatar"
   contact = "mailto:kirti.sbhardwaj@gmail.com)"
   bio = "A web developer,data visualizer based out of Bangalore, India."
-  # Short subtitle/tagline. This is displayed in the header.
-  subtitle = ""
-  # Logo image. This is displayed ogp image.
-  logo = "/path/to/logo"
-  favicon = "/path/to/favicon"
 
 [[menu.main]]
     name = "Blog"
-    url = "/posts/Building-site-with-hugo.md"
+    url = "/posts/building-site-with-hugo/"
     weight = 1
 
 [[menu.main]]

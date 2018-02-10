@@ -3,34 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>KirtiB.com/about/</loc>
+    <loc>/about/</loc>
     <lastmod>2018-02-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>KirtiB.com/posts/building-site-with-hugo/</loc>
+    <loc>/posts/building-site-with-hugo/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>KirtiB.com/categories/</loc>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>KirtiB.com/</loc>
+    <loc>/</loc>
     <lastmod>2018-02-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>KirtiB.com/posts/</loc>
+    <loc>/posts/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>KirtiB.com/tags/</loc>
+    <loc>/tags/</loc>
     <priority>0</priority>
   </url>
   
