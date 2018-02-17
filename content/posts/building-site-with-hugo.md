@@ -1,9 +1,8 @@
 ---
 author: "Kirti Bhardwaj"
-date: 2014-09-28
+date: 2018-02-06
 linktitle: Building Personal Website With Hugo And Netlify
-<!-- next: /tutorials/github-pages-blog
-prev: /tutorials/automated-deployments -->
+next: /posts/installing-postgres-linux-mint
 title: Building Personal Website With Hugo And Netlify
 weight: 10
 ---
