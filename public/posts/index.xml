@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Belongs to Kirti Bhardwaj</copyright>
-    <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Installing Postgres on Linux Mint</title>
+      <link>/posts/installing-postgres-linux-mint/</link>
+      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/installing-postgres-linux-mint/</guid>
+      <description>Background Recently I needed to install and setup Postgres on my system for a side project. Here are the steps I followed to get it working on my machine.
+## Check For Version Installed: lsb_release -a It will give you and output like this.  Once this is done we run:
+$ sudo apt-get update $ sudo apt-get install postgresql postgresql-contrib  Click enter when prompted.
+Postgres uses &amp;quot;roles&amp;quot; to handle authorization.</description>
+    </item>
     
     <item>
       <title>Building Personal Website With Hugo And Netlify</title>

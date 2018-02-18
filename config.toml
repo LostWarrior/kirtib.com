@@ -21,13 +21,13 @@ pygmentsStyle = "native"
 
 [[menu.main]]
     name = "Blog"
-    url = "/posts/building-site-with-hugo/"
+    url = "/posts/installing-postgres-linux-mint/"
     weight = 1
 
 [[menu.main]]
     name = "About"
     url = "/about"
-    weight = 2
+    weight = 1
 
 
 [related]
@@ -35,7 +35,7 @@ pygmentsStyle = "native"
   threshold = 80
 
   # To get stable "See also" sections we, by default, exclude newer related pages.
-  includeNewer = false
+  includeNewer = true
 
   # Will lower case keywords in both queries and in the indexes.
   toLower = false
@@ -54,3 +54,8 @@ pygmentsStyle = "native"
   name  = "date"
   weight = 5
   pattern = "2017"
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"

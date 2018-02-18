@@ -30,7 +30,7 @@ pygmentsStyle = "native"
 
 [[menu.main]]
     name = "Blog"
-    url = "/posts/Building-site-with-hugo.md"
+    url = "/posts/installing-postgres-linux-mint/"
     weight = 1
 
 [[menu.main]]
