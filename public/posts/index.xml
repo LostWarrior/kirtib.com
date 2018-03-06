@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Belongs to Kirti Bhardwaj</copyright>
-    <lastBuildDate>Sat, 17 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Creating a php web service for authorization</title>
+      <link>/posts/php-webservice-with-jwt/</link>
+      <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/php-webservice-with-jwt/</guid>
+      <description>Introduction Recently, I needed to create a php webservice which any application could connect to and it would return you a JWT auth token authorizing you. Here, I retrace my steps as well as share basic barebones code for such a webservice
+Url First of all we needed a url we can hit so, I added a domain name to my /etc/hosts file
+sudo vim /etc/hosts Added below entry to the file 127.</description>
+    </item>
     
     <item>
       <title>Installing Postgres on Linux Mint</title>
@@ -27,7 +38,7 @@ Postgres uses &amp;quot;roles&amp;quot; to handle authorization.</description>
     <item>
       <title>Building Personal Website With Hugo And Netlify</title>
       <link>/posts/building-site-with-hugo/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>/posts/building-site-with-hugo/</guid>
       <description>Introduction When I decided to build my personal website, there were options abound on how to build, how to deploy etc. I came across hugo and netlify on twitter and everyone raved about how easy it was. So, I decided to get a basic website up and running first and then go about tweaking and moving it. Found the process to be really smooth, documenting it here for future reference as well as for someone else who might want to use it.</description>
