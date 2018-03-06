@@ -1,10 +1,12 @@
 ---
+
 author: "Kirti Bhardwaj"
-date: 2018-02-22
+date: "2018-02-22"
 linktitle: javascript-event-overview
-prev: /posts/building-site-with-hugo
-title: JS Concepts: Events An Overview
+title: JS Concepts -> Events An Overview
 weight: 10
+draft: true
+
 ---
 
 ## Introduction

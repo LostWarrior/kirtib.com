@@ -1,10 +1,13 @@
 ---
+
 author: "Kirti Bhardwaj"
-date: 2018-02-19
+date: "2018-02-22"
 linktitle: javascript-event-delegation
-prev: /posts/building-site-with-hugo
-title: JS Concepts: Event Delegation
+title: JS Concepts -> Event Delegation
 weight: 10
+draft: true
+
+
 ---
 
 ## Introduction
