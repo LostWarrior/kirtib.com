@@ -10,6 +10,13 @@
   </url>
   
   <url>
+    <loc>/posts/php-webservice-with-jwt/</loc>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>/posts/installing-postgres-linux-mint/</loc>
     <lastmod>2018-02-17T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -38,7 +45,7 @@
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2018-02-17T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>

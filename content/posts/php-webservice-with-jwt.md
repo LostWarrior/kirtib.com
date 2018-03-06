@@ -62,15 +62,16 @@ This to out .htaccess file. This essentially allows all requests for ws.php to b
 
 Now on to the important part, custom code, this has three parts:
 
-1) Including all the config options:
+**1) Including all the config options:**
 
-```	require_once(config/constants.php);
+```	
+require_once(config/constants.php);
 ```
-2) Authorizing the username and password:
+**2) Authorizing the username and password:**
 
 Here we write a custom function to authorize if username and password salt store for user matches the one user has entered as well as return a key if it matches.
 
-3) Sending the JWT back to the querying code:
+**3) Sending the JWT back to the querying code:**
 
 ![Return JWT](/images/jwt.png) 
 
