@@ -27,7 +27,7 @@ Postgres uses &amp;quot;roles&amp;quot; to handle authorization.</description>
     <item>
       <title>Building Personal Website With Hugo And Netlify</title>
       <link>/posts/building-site-with-hugo/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>/posts/building-site-with-hugo/</guid>
       <description>Introduction When I decided to build my personal website, there were options abound on how to build, how to deploy etc. I came across hugo and netlify on twitter and everyone raved about how easy it was. So, I decided to get a basic website up and running first and then go about tweaking and moving it. Found the process to be really smooth, documenting it here for future reference as well as for someone else who might want to use it.</description>

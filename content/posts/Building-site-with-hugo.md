@@ -6,6 +6,7 @@ linktitle: Building Personal Website With Hugo And Netlify
 prev: /tutorials/automated-deployments -->
 title: Building Personal Website With Hugo And Netlify
 weight: 10
+
 ---
 
 ## Introduction
