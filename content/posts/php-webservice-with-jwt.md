@@ -10,7 +10,7 @@ weight: 10
 
 ## Introduction
 
-Recently, I needed to create a php webservice which any application could connect to and it would return you a JWT auth token authorizing you.
+Recently, I needed to create a php webservice which any application could connect to and it would return a JWT auth token authorizing you.
 Here, I retrace my steps as well as share basic barebones code for such a webservice
 
 ## Url
@@ -36,7 +36,7 @@ This is how your folder structure will look like:
 
 ![Folder Structure](/images/folder.png) 
 
-Now, first point of entrance is going to be ws.php [short for web service] whereas, custom.php will have the helper code/custom functions that we will write.We will create a config folder which will store our configurations etc.
+Now, first point of entrance is going to be ws.php [short for web service] whereas, custom.php will have the helper code/custom functions that we will write. We will create a config folder which will store our configurations etc.
 
 Here is the code for web service.php
 
@@ -69,7 +69,7 @@ require_once(config/constants.php);
 ```
 **2) Authorizing the username and password:**
 
-Here we write a custom function to authorize if username and password salt store for user matches the one user has entered as well as return a key if it matches.
+Here we write a custom function to authorize if username and password salt stored for the user matches the one user has entered as well as return a key if it matches.
 
 **3) Sending the JWT back to the querying code:**
 
