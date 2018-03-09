@@ -14,7 +14,7 @@ Recently I needed to install and setup Postgres on my system for a side project.
 ```
 ## Check For Version Installed:
 lsb_release -a
-It will give you and output like this.
+It will give you output like this.
 ```
 
 ![OS Release](/images/release.png)  
@@ -52,7 +52,7 @@ Enter name of role to add: test
 Shall the new role be a superuser? (y/n) y/n
 ```
 
-We need to set up as password:
+We need to set up a password:
 
 ```
 sudo -u postgres psql postgres
@@ -68,7 +68,7 @@ or from inside the prompt:
 ```
 SELECT * FROM pg_roles
 ```
-Another assumption postgres makes is that there will be a databse with same name as the role used for login. So we create a new databse:
+Another assumption postgres makes is that there will be a database with same name as the role used for login. So we create a new databse:
 
 ```
 From inside the postgres db:

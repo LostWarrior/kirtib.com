@@ -46,7 +46,7 @@ Events are objects which implement the event interface or some interface based o
 	Value Type: Boolean
 	Property Description: Returns true or false depending on how event was initialized. True if event invokes listeners past a ShadowRoot node that is the root of its target attribute value, and false otherwise.All UA [ user action ]-dispatched UI events are composed. Propogation occurs if bubbles property is set to true.
 	You can determine the path the event will follow as it makes its way through the shadow root to the DOM root by calling composedPath().
-5. curentTarget:
+5. currentTarget:
 	```Syntax: event.currentTarget```
 	Value Type: Refrence to element to which event handler is attached.
 	Property Description: Identifies the current target of the event, as event traverses the DOM.Must be initialized to null when and event is created.
@@ -111,7 +111,7 @@ Events are objects which implement the event interface or some interface based o
 
 Now, that we know a bit about Event objects and what properties and methods they make available to us, let us discuss types of Events: 
 
-Events can represent everything from basic user interactions to automated notifications of things happening in the rendering model.Typically, events are dispatched by user agent as a result of user interaction or completion of some task, applications can also dispatch events [synthetic events]. Events are also used to let an application control what happens next in an operation.
+Events can represent everything from basic user interactions to automated notifications of things happening in the rendering model. Typically, events are dispatched by user agent as a result of user interaction or completion of some task, applications can also dispatch events [synthetic events]. Events are also used to let an application control what happens next in an operation.
 
 KeyBoard Events:
 
@@ -147,7 +147,7 @@ Drag and Drop Events:
 7. dragstart
 8. drop
 
-We will discuss a few in details in coming weeks.
+We will discuss a few in detail in the coming weeks.
 
 ## Attribution
 
