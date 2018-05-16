@@ -6,12 +6,11 @@ linktitle: javascript-event-overview
 title: JS Concepts -> Events An Overview
 weight: 10
 draft: true
-
 ---
 
 ## Introduction
 
-Today we will discuss about Events.
+
 Best way to define something is to look at examples, so here are a few examples of events [Context is limited to web]:
 
 # User presses a key on keyboard
