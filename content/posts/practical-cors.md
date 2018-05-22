@@ -5,7 +5,7 @@ linktitle: practical-cors
 prev: /posts/cors
 title: A Practical Introduction To Cross Origin Resource Sharing
 weight: 10
-
+draft: true
 ---
 
 
