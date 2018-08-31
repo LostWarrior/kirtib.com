@@ -221,7 +221,7 @@ There are a lot more things to understand about events that will come up in futu
 ## Attribution
 
 You can get a full list of events here: [MDN Events](https://developer.mozilla.org/en-US/docs/Web/Events)
-And read a bit more about events: [MDN Events Api](https://developer.mozilla.org/en-US/docs/Web/API/Event)
+And read a bit more about events: [MDN Events API](https://developer.mozilla.org/en-US/docs/Web/API/Event)
 and the dom spec: [Spec](https://dom.spec.whatwg.org/#events)
 
 
