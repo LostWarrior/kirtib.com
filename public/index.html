@@ -11,7 +11,7 @@
 
   
 
-  <meta name="author" content="Kirti Bhardwaj"/>
+  <meta name="author" content=""/>
   <meta property="og:site_name" content="Kirti Bhardwaj" />
   <meta property="og:url" content="/" />
 
@@ -27,7 +27,7 @@
   <meta property="og:type" content="website" />
   
   
-  <meta name="generator" content="Hugo 0.36" /><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+  <meta name="generator" content="Hugo 0.40.1" /><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css" />
   <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Kirti Bhardwaj" />
   
@@ -51,6 +51,30 @@
 
 <article class="c-article p-list-article">
   <header>
+    <h2 class="c-title c-article__title"><a href="/posts/cors/">Introduction To Cross Origin Resource Sharing</a></h2>
+    <p class="c-article__meta">
+      Posted on
+      <time datetime="2018-05-11T00:00:00Z">
+        May 11, 2018
+      </time>
+    </p>
+  </header>
+  <div class="c-article__summary">
+    Introduction A user agent makes a CORS request when it requests resource from a different domain, protocol or port. It is restricted on most browsers for security reasons, XMLHttpRequest and the Fetch API both follow same origin policy
+Same Origin Policy
+There is no single same origin policy.However, let us try to define some basics:
+What is Origin ?   According to RFC 6454 user-agents group URIs together into protection domains called origin.
+  </div>
+  
+  <a href="/posts/cors/" class="c-article__btn p-list-article__btn">Read more</a></li>
+  
+</article>
+
+
+
+
+<article class="c-article p-list-article">
+  <header>
     <h2 class="c-title c-article__title"><a href="/posts/php-webservice-with-jwt/">Creating a php web service for authorization</a></h2>
     <p class="c-article__meta">
       Posted on
@@ -60,12 +84,34 @@
     </p>
   </header>
   <div class="c-article__summary">
-    Introduction Recently, I needed to create a php webservice which any application could connect to and it would return you a JWT auth token authorizing you. Here, I retrace my steps as well as share basic barebones code for such a webservice
+    Introduction Recently, I needed to create a php webservice which any application could connect to and it would return a JWT auth token authorizing you. Here, I retrace my steps as well as share basic barebones code for such a webservice
 Url First of all we needed a url we can hit so, I added a domain name to my /etc/hosts file
 sudo vim /etc/hosts Added below entry to the file 127.
   </div>
   
   <a href="/posts/php-webservice-with-jwt/" class="c-article__btn p-list-article__btn">Read more</a></li>
+  
+</article>
+
+
+
+
+<article class="c-article p-list-article">
+  <header>
+    <h2 class="c-title c-article__title"><a href="/posts/javascript-event-overview/">JS Concepts -&gt; Events An Overview</a></h2>
+    <p class="c-article__meta">
+      Posted on
+      <time datetime="2018-02-22T00:00:00Z">
+        Feb 22, 2018
+      </time>
+    </p>
+  </header>
+  <div class="c-article__summary">
+    Introduction Best way to define something is to look at examples, so here are a few examples of events [Context is limited to web]:
+User presses a key on keyboard Error Occured Api returned data Web page finished loading  Event interface represents any event which happens in DOM, there are many types of events and they use different interfaces. Some of these interfaces are based on main Event interface, which contains common properties and methods for all events.
+  </div>
+  
+  <a href="/posts/javascript-event-overview/" class="c-article__btn p-list-article__btn">Read more</a></li>
   
 </article>
 
@@ -84,7 +130,7 @@ sudo vim /etc/hosts Added below entry to the file 127.
   </header>
   <div class="c-article__summary">
     Background Recently I needed to install and setup Postgres on my system for a side project. Here are the steps I followed to get it working on my machine.
-## Check For Version Installed: lsb_release -a It will give you and output like this.  Once this is done we run:
+## Check For Version Installed: lsb_release -a It will give you output like this.  Once this is done we run:
 $ sudo apt-get update $ sudo apt-get install postgresql postgresql-contrib  Click enter when prompted.
 Postgres uses &quot;roles&quot; to handle authorization.
   </div>
@@ -128,27 +174,6 @@ Postgres uses &quot;roles&quot; to handle authorization.
 </nav>
 
 
-<aside class="p-author">
-  
-  
-  <div class="p-author__body">
-    
-    <p class="c-title p-author__name ">Kirti Bhardwaj</p>
-    
-    
-    <p>A web developer,data visualizer based out of Bangalore, India.</p>
-    
-    
-    <p>
-      <a href="mailto:kirti.sbhardwaj@gmail.com%29">
-        Contact me
-      </a>
-    </p>
-    
-  </div>
-  
-</aside>
-
 
   </main>
   
@@ -163,7 +188,13 @@ Postgres uses &quot;roles&quot; to handle authorization.
     
       
       <li class="p-menu__listitem">
-        <a href="/posts/installing-postgres-linux-mint/">Blog</a>
+        <a href="/posts/">Blog</a>
+      </li>
+      
+    
+      
+      <li class="p-menu__listitem">
+        <a href="/resume">Resume</a>
       </li>
       
     

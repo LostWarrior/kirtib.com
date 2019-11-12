@@ -11,7 +11,7 @@
 
   
 
-  <meta name="author" content="Kirti Bhardwaj"/>
+  <meta name="author" content=""/>
   <meta property="og:site_name" content="Kirti Bhardwaj" />
   <meta property="og:url" content="/posts/installing-postgres-linux-mint/" />
 
@@ -28,7 +28,7 @@
   
   
   
-  <meta name="generator" content="Hugo 0.36" /><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+  <meta name="generator" content="Hugo 0.40.1" /><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css" />
   <script type="text/javascript" src="/js/bundle.js"></script>
   
@@ -70,7 +70,7 @@
 
 <pre><code>## Check For Version Installed:
 lsb_release -a
-It will give you and output like this.
+It will give you output like this.
 </code></pre>
 
 <p><img src="/images/release.png" alt="OS Release" /></p>
@@ -106,7 +106,7 @@ $ sudo apt-get install postgresql postgresql-contrib
 Shall the new role be a superuser? (y/n) y/n
 </code></pre>
 
-<p>We need to set up as password:</p>
+<p>We need to set up a password:</p>
 
 <pre><code>sudo -u postgres psql postgres
 Enter your password twice.
@@ -122,7 +122,7 @@ Enter your password twice.
 <pre><code>SELECT * FROM pg_roles
 </code></pre>
 
-<p>Another assumption postgres makes is that there will be a databse with same name as the role used for login. So we create a new databse:</p>
+<p>Another assumption postgres makes is that there will be a database with same name as the role used for login. So we create a new databse:</p>
 
 <pre><code>From inside the postgres db:
 createdb test
@@ -173,7 +173,7 @@ sudo adduser test
       <div class="c-pagination__ctrl">
         <div class="c-pagination__newer">
           
-          <a href="/posts/php-webservice-with-jwt/">Newer</a>
+          <a href="/posts/javascript-event-overview/">Newer</a>
           
         </div>
         <div class="c-pagination__older">
@@ -190,9 +190,23 @@ sudo adduser test
   <ul id="slider" class="p-related__list">
     
     <li class="p-related__item js-related__item">
+      <a href="/posts/cors/"
+        >
+        <span>Introduction To Cross Origin Resource Sharing</span>
+      </a>
+    </li>
+    
+    <li class="p-related__item js-related__item">
       <a href="/posts/php-webservice-with-jwt/"
         >
         <span>Creating a php web service for authorization</span>
+      </a>
+    </li>
+    
+    <li class="p-related__item js-related__item">
+      <a href="/posts/javascript-event-overview/"
+        >
+        <span>JS Concepts -&gt; Events An Overview</span>
       </a>
     </li>
     
@@ -203,39 +217,11 @@ sudo adduser test
       </a>
     </li>
     
-    <li class="p-related__item js-related__item">
-      <a href="/about/"
-        >
-        <span>Hey There</span>
-      </a>
-    </li>
-    
   </ul>
 </section>
 
 
     
-<aside class="p-author">
-  
-  
-  <div class="p-author__body">
-    
-    <p class="c-title p-author__name ">Kirti Bhardwaj</p>
-    
-    
-    <p>A web developer,data visualizer based out of Bangalore, India.</p>
-    
-    
-    <p>
-      <a href="mailto:kirti.sbhardwaj@gmail.com%29">
-        Contact me
-      </a>
-    </p>
-    
-  </div>
-  
-</aside>
-
 
   </footer>
 </article>
@@ -252,7 +238,13 @@ sudo adduser test
     
       
       <li class="p-menu__listitem">
-        <a href="/posts/installing-postgres-linux-mint/">Blog</a>
+        <a href="/posts/">Blog</a>
+      </li>
+      
+    
+      
+      <li class="p-menu__listitem">
+        <a href="/resume">Resume</a>
       </li>
       
     
