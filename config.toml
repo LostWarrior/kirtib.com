@@ -4,10 +4,15 @@ Title = "Kirti Bhardwaj"
 # Copyright notice. This is displayer in the footer.
 copyright = "&copy; Belongs to Kirti Bhardwaj"
 theme = "hugo_theme_pickles"
-pygmentsStyle = "native"
+pygmentsStyle = "monokai"
+pygmentsUseClasses= true
 
 [params]
-  paginate = 10
+  ShowDatesOnPosts= false
+  # Custom CSS. Put here your custom CSS files. They are loaded after the theme CSS;
+  # they have to be referred from static root. Example
+  custom_css = ["css/custom.css"]
+  paginate = 5
   # Social accounts. Link to these accounts are displayed in the header and
   # footer
   twitter = "kirtib"
@@ -15,13 +20,13 @@ pygmentsStyle = "native"
   linkedin = "kirtib/"
   # Google Analytics API key.
   ga_api_key = "Your Google Analytics tracking id"
-  author = "Kirti Bhardwaj"
-  contact = "mailto:kirti.sbhardwaj@gmail.com)"
-  bio = "A web developer,data visualizer based out of Bangalore, India."
+  #author = "Kirti Bhardwaj"
+  #contact = "mailto:kirti.sbhardwaj@gmail.com)"
+  
 
 [[menu.main]]
     name = "Blog"
-    url = "/posts/installing-postgres-linux-mint/"
+    url = "/posts/"
     weight = 1
 
 [[menu.main]]
@@ -29,6 +34,10 @@ pygmentsStyle = "native"
     url = "/about"
     weight = 1
 
+[[menu.main]]
+    name = "Resume"
+    url = "/resume"
+    weight = 1
 
 [related]
   # Only include matches with rank >= threshold. This is a normalized rank between 0 and 100.
@@ -46,13 +55,13 @@ pygmentsStyle = "native"
   [[related.indices]]
   name  = "author"
   toLower = true
-  weight = 10
+  weight = 5
   [[related.indices]]
   name  = "tags"
   weight = 0
   [[related.indices]]
   name  = "date"
-  weight = 5
+  weight = 2
   pattern = "2017"
 
 [sitemap]

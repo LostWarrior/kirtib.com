@@ -11,7 +11,7 @@
 
   
 
-  <meta name="author" content="Kirti Bhardwaj"/>
+  <meta name="author" content=""/>
   <meta property="og:site_name" content="Kirti Bhardwaj" />
   <meta property="og:url" content="/posts/php-webservice-with-jwt/" />
 
@@ -28,7 +28,7 @@
   
   
   
-  <meta name="generator" content="Hugo 0.36" /><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+  <meta name="generator" content="Hugo 0.40.1" /><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css" />
   <script type="text/javascript" src="/js/bundle.js"></script>
   
@@ -66,7 +66,7 @@
 
 <h2 id="introduction">Introduction</h2>
 
-<p>Recently, I needed to create a php webservice which any application could connect to and it would return you a JWT auth token authorizing you.
+<p>Recently, I needed to create a php webservice which any application could connect to and it would return a JWT auth token authorizing you.
 Here, I retrace my steps as well as share basic barebones code for such a webservice</p>
 
 <h2 id="url">Url</h2>
@@ -91,7 +91,7 @@ Added below entry to the file
 
 <p><img src="/images/folder.png" alt="Folder Structure" /></p>
 
-<p>Now, first point of entrance is going to be ws.php [short for web service] whereas, custom.php will have the helper code/custom functions that we will write.We will create a config folder which will store our configurations etc.</p>
+<p>Now, first point of entrance is going to be ws.php [short for web service] whereas, custom.php will have the helper code/custom functions that we will write. We will create a config folder which will store our configurations etc.</p>
 
 <p>Here is the code for web service.php</p>
 
@@ -116,15 +116,16 @@ Satisfy any
 
 <p>Now on to the important part, custom code, this has three parts:</p>
 
-<p>1) Including all the config options:</p>
+<p><strong>1) Including all the config options:</strong></p>
 
-<pre><code class="language-require_once(config/constants.php);"></code></pre>
+<pre><code>require_once(config/constants.php);
+</code></pre>
 
-<p>2) Authorizing the username and password:</p>
+<p><strong>2) Authorizing the username and password:</strong></p>
 
-<p>Here we write a custom function to authorize if username and password salt store for user matches the one user has entered as well as return a key if it matches.</p>
+<p>Here we write a custom function to authorize if username and password salt stored for the user matches the one user has entered as well as return a key if it matches.</p>
 
-<p>3) Sending the JWT back to the querying code:</p>
+<p><strong>3) Sending the JWT back to the querying code:</strong></p>
 
 <p><img src="/images/jwt.png" alt="Return JWT" /></p>
 
@@ -143,12 +144,12 @@ Satisfy any
       <div class="c-pagination__ctrl">
         <div class="c-pagination__newer">
           
-          <a href="/about/">Newer</a>
+          <a href="/posts/cors/">Newer</a>
           
         </div>
         <div class="c-pagination__older">
           
-          <a href="/posts/installing-postgres-linux-mint/">Older</a>
+          <a href="/posts/javascript-event-overview/">Older</a>
           
         </div>
       </div>
@@ -160,16 +161,23 @@ Satisfy any
   <ul id="slider" class="p-related__list">
     
     <li class="p-related__item js-related__item">
-      <a href="/posts/installing-postgres-linux-mint/"
+      <a href="/posts/cors/"
         >
-        <span>Installing Postgres on Linux Mint</span>
+        <span>Introduction To Cross Origin Resource Sharing</span>
       </a>
     </li>
     
     <li class="p-related__item js-related__item">
-      <a href="/about/"
+      <a href="/posts/javascript-event-overview/"
         >
-        <span>Hey There</span>
+        <span>JS Concepts -&gt; Events An Overview</span>
+      </a>
+    </li>
+    
+    <li class="p-related__item js-related__item">
+      <a href="/posts/installing-postgres-linux-mint/"
+        >
+        <span>Installing Postgres on Linux Mint</span>
       </a>
     </li>
     
@@ -185,27 +193,6 @@ Satisfy any
 
 
     
-<aside class="p-author">
-  
-  
-  <div class="p-author__body">
-    
-    <p class="c-title p-author__name ">Kirti Bhardwaj</p>
-    
-    
-    <p>A web developer,data visualizer based out of Bangalore, India.</p>
-    
-    
-    <p>
-      <a href="mailto:kirti.sbhardwaj@gmail.com%29">
-        Contact me
-      </a>
-    </p>
-    
-  </div>
-  
-</aside>
-
 
   </footer>
 </article>
@@ -222,7 +209,13 @@ Satisfy any
     
       
       <li class="p-menu__listitem">
-        <a href="/posts/installing-postgres-linux-mint/">Blog</a>
+        <a href="/posts/">Blog</a>
+      </li>
+      
+    
+      
+      <li class="p-menu__listitem">
+        <a href="/resume">Resume</a>
       </li>
       
     
