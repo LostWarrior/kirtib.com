@@ -8,7 +8,7 @@ Download <i class="fa fa-download"></i> [pdf](/files/resume.pdf) here
 
 <!-- > 
 * London, United Kingdom
-* (+91)-8587030563
+* (+44)- 7826808638
 * [Email](mailto:kirti.sbhardwaj@gmail.com) -->
 
 
@@ -126,7 +126,7 @@ As a part of team at RadioLocus worked on dashboard for smartcity project by Gov
 
 #### <b> EDUCATION </b>
 
-###### <b> <span class="pink-color" style="color:#ff4088;">TAKSHASHILA INSTITUTION​</span> — GCPP </b> *<small>(SEPT 18 - PRESENT)</small>*
+###### <b> <span class="pink-color" style="color:#ff4088;">TAKSHASHILA INSTITUTION​</span> — GCPP </b> *<small>(SEPT 18 - Jan 19)</small>*
 ###### <b> <span class="pink-color" style="color:#ff4088;">University Of London​</span> — (ECONOMICS) </b> *<small>(AUG 11 - 13)</small>*
 ###### <b> <span class="pink-color" style="color:#ff4088;">NALSAR​</span> — P.G.Diploma (IHL) </b> *<small>(10 - 11) </small>*
 ###### <b> <span class="pink-color" style="color:#ff4088;">BRCM</span> — B.E. (Computer Science And Engineering) </b> *<small>(AUG 05 - SEPT 09)</small>*

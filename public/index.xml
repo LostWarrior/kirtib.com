@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Belongs to Kirti Bhardwaj</copyright>
-    <lastBuildDate>Fri, 11 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JS Solutions- Median of two sorted arrays</title>
+      <link>/posts/median-sorted-array/</link>
+      <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/median-sorted-array/</guid>
+      <description>Problem Statement There are two sorted arrays nums1 and nums2 of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+Here is the leetcode link to the problem: {LeetCode: Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+What is a median? StatTrek defines median as a measure of central tendency. Simply explained In an array of odd values median will be middle value.</description>
+    </item>
     
     <item>
       <title>Introduction To Cross Origin Resource Sharing</title>
@@ -73,9 +84,8 @@ Postgres uses &amp;quot;roles&amp;quot; to handle authorization.</description>
       
       <guid>/resume/</guid>
       <description>Download  pdf here
-* London, United Kingdom * (+91)-8587030563 * [Email](mailto:kirti.sbhardwaj@gmail.com) --  Kirti Bhardwaj   SKILLS Javascript, d3.js, php, html5, css, webpack, svg, react.js, git, parcel.js, jenkins, node
- EXPERIENCE  Walmart Labs​ — Software Engineer III (Jan 2019 - SEPTEMBER 2019) Worked on Fitment for Walmart, created the widget using react, redux.
-Radiolocus, Mumbai and Bangalore​ — Frontend Developer (MAY 2015 - SEPTEMBER 2018) Lead frontend team while playing a role at intersection of engineering and product.</description>
+* London, United Kingdom * (+44)- 7826808638 * [Email](mailto:kirti.sbhardwaj@gmail.com) --  Kirti Bhardwaj   SKILLS Javascript, d3.js, php, html5, css, webpack, svg, react.js, git, parcel.js, jenkins, node
+ EXPERIENCE  Walmart Labs​ — Software Engineer III (Jan 2019 - SEPTEMBER 2019) Used react, redux, electrode and hapi.js to build the fitment widget for Walmart.com raising the ​ ATC​ for auto parts by a significant number.</description>
     </item>
     
     <item>
@@ -84,7 +94,7 @@ Radiolocus, Mumbai and Bangalore​ — Frontend Developer (MAY 2015 - SEPTEMBER
       <pubDate>Thu, 11 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>Hi! I am Kirti, a web engineer and developer based out of Bangalore, India.
+      <description>Hi! I am Kirti, a web engineer and developer based out of London, United Kingdom.
 Started out as an engineering grad trying to co-found a ridesharing startup &amp;ldquo;Get Jugaad&amp;rdquo;. Have studied a range of subjects from Computer Science, Economics, Public Policy to International Humanitarian Law.
 Somehow, accidently stumbled upon the world of web and software again and it reeled me in. Haven&amp;rsquo;t stopped since then, I believe people are multi dimensional and our experiences and adventures shape us.</description>
     </item>
