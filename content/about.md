@@ -1,7 +1,7 @@
 ---
 date: 2018-01-11
 ---
-Hi! I am Kirti, a web engineer and developer based out of Bangalore, India.
+Hi! I am Kirti, a web engineer and developer based out of London, United Kingdom.
 
 Started out as an engineering grad trying to co-found a ridesharing startup "Get Jugaad". Have studied a range of subjects from Computer Science, Economics, Public Policy to International Humanitarian Law. 
 
@@ -11,7 +11,7 @@ I love talking to people and learning from their experiences and stories.The thi
 
 <b>Want to know more?</b>
 
-Here is my [resume, ](/resume)You can also find me here:
+Here is my [resume, ](/resume).You can also find me here:
 
 > * <svg viewBox="0 0 64 64" class="c-links__icon"><use xlink:href="#icon-github"></use></svg>
 	<b> Github  :  </b>
@@ -22,6 +22,8 @@ Here is my [resume, ](/resume)You can also find me here:
 * <svg viewBox="0 0 64 64" class="c-links__icon"><use xlink:href="#icon-linkedin"></use></svg>
 	<b>LinkedIn: </b>
 	[KirtiB](https://www.linkedin.com/in/kirtib/)
+
+You can find my <b>LeetCode </b> [here](https://leetcode.com/lostwarrior/)
 
 Feel free to drop by and say hello.	
 
