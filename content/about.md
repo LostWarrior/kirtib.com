@@ -3,11 +3,13 @@ date: 2018-01-11
 ---
 Hi! I am Kirti, a web engineer and developer based out of London, United Kingdom.
 
-Started out as an engineering grad trying to co-found a ridesharing startup "Get Jugaad". Have studied a range of subjects from Computer Science, Economics, Public Policy to International Humanitarian Law. 
+Started out as an engineering grad trying to co-found a ridesharing startup “Get Jugaad”. Have studied a range of subjects from Computer Science, Economics, Public Policy to International Humanitarian Law.
 
-Somehow, accidently stumbled upon the world of web and software again and it reeled me in. Haven't stopped since then, I believe people are multi dimensional and our experiences and adventures shape us. My diverse education has made me more emphathatic and has given me the ability to see the bigger picture.
+Somehow, accidentally stumbled upon the world of web and software again and it reeled me in. Haven’t stopped since then, I believe people are multidimensional and our experiences and adventures shape us. My diverse education has made me more empathetic and has given me the ability to see the bigger picture.
 
-I love talking to people and learning from their experiences and stories.The things I enjoy are as diverse as human beings, all co existing and making each other better. Someday, I would love to write the book titled, "What Lord of The Rings can teach you about good Engineering".
+I love talking to people and learning from their experiences and stories.The things I enjoy are as diverse as human beings, all coexisting and making each other better. Someday, I would love to write the book titled, “What Lord of The Rings can teach you about good Engineering”
+
+
 
 <b>Want to know more?</b>
 
