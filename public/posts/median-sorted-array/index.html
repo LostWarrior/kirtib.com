@@ -4,16 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
   
-  <title>Introduction To Cross Origin Resource Sharing</title>
-  <meta property="og:title" content="Introduction To Cross Origin Resource Sharing" />
-  <meta name="twitter:title" content="Introduction To Cross Origin Resource Sharing" />
+  <title>JS Solutions- Median of two sorted arrays</title>
+  <meta property="og:title" content="JS Solutions- Median of two sorted arrays" />
+  <meta name="twitter:title" content="JS Solutions- Median of two sorted arrays" />
   
 
   
 
   <meta name="author" content=""/>
   <meta property="og:site_name" content="Kirti Bhardwaj" />
-  <meta property="og:url" content="/posts/cors/" />
+  <meta property="og:url" content="/posts/median-sorted-array/" />
 
   
   <meta name="twitter:card" content="summary" />
@@ -49,12 +49,12 @@
 
 <article class="p-article">
   <header>
-    <h1>Introduction To Cross Origin Resource Sharing</h1>
+    <h1>JS Solutions- Median of two sorted arrays</h1>
     <div>
       <div class="c-time">
         Posted on
-        <time datetime="2018-05-11T00:00:00Z">
-          May 11, 2018
+        <time datetime="2019-05-11T00:00:00Z">
+          May 11, 2019
         </time>
       </div>
       
@@ -64,418 +64,59 @@
   <section id="js-article" class="p-article__body">
     
 
-<h2 id="introduction">Introduction</h2>
+<h3 id="problem-statement">Problem Statement</h3>
 
-<p>A user agent makes a CORS request when it requests resource from a different domain, protocol or port. It is restricted on most browsers for security reasons, XMLHttpRequest and the Fetch API both follow <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">same origin policy</a></p>
+<p>There are two sorted arrays nums1 and nums2 of size m and n respectively.
+Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).</p>
 
-<p><strong><em>Same Origin Policy</em></strong></p>
+<p>Here is the leetcode link to the problem: {LeetCode: Median of Two Sorted Arrays](<a href="https://leetcode.com/problems/median-of-two-sorted-arrays/">https://leetcode.com/problems/median-of-two-sorted-arrays/</a>)</p>
 
-<p>There is no single same origin policy.However, let us try to define some basics:</p>
+<p><strong><em>What is a median?</em></strong>
+    <a href="https://stattrek.com/statistics/dictionary.aspx?definition=median">StatTrek</a> defines median as a measure of central tendency. Simply explained In an array of odd values median will be middle value.
+ <strong><em>Discussion</em></strong>
+    We are trying to find union of two arrays A and B here, left half will be smaller than right half. Finding median gives use left half which ends with median value.
+    Merging two arrays take O(m+n) time. We need to find a way where we can find the values in left half without merging both arrays so, as to keep complexity lower than O(m+n)</p>
 
-<p><strong>What is Origin ?</strong>
-    </br>
-    </br>
-    According to <a href="https://tools.ietf.org/html/rfc6454">RFC 6454</a> user-agents group URIs together into protection domains called <strong>origin</strong>.
-    </br>
-    Two URIs are part of <strong>same origin</strong> if they have <strong>same scheme, host and port</strong>.
-    </br>
-    For example, these urls will be treated as same origin:</p>
+<h3 id="test-cases">Test Cases:</h3>
 
-<pre><code>    http://example.com,  
-    http://example.com:80,  
-    http://example.com/path/file,  
+<p>nums1 = [1, 3]
+nums2 = [2]
+union = [1,2,3]</p>
+
+<p>The median is 2.0</p>
+
+<p>nums1 = [1, 2]
+nums2 = [3, 4]
+union = [1,2,3,4]</p>
+
+<p>The median is (2 + 3)/2 = 2.5</p>
+
+<h3 id="solution">Solution</h3>
+
+<pre><code>We will use binary search to find the left half of the union such that, both halves are equal size and every element in left half is lesser than every element in right half. We know the size of this would be (m + n)/2, so we can safely say that we only want to know what values array1 will be contributing. Because, we know array2 would be contributing rest of the values.
+
+Let's try to solve this:
+
+    array x =&gt; [x1,x2,x3,x4,x5,x6];
+    array y =&gt; [y1, y2, y4, y4, y5, y6, y7, y8];
+
+    Let's say we find a partition x =&gt; (2, 4) and y =&gt; (5, 3) that is, on left side of union array we will have:
+    x1,x2,y1,y2,y3,y4,y5 and on right side we will have x3,x4,x5,x6,y6,y7,y8.
+
+    Now if, x2 &lt;= y6 (largest) &amp;&amp; y5 &lt;= x3 (smallest) then our median will be 
+    if numbers are even =&gt; median = avg(max(x2,y6), min(x3,y5))
+    if numbers are odd =&gt; median = max(x2,y5); (one extra element on left side)
+
+    To find this partition we do a binary search on smaller of two arrays.Time complexity of this operation would be O(log(min(x,y))) where x and y are lengths of two arrays.
+
+
+Example:
+    Everything becomes clearer once we look at examples. So, let's take two arrays A and B where total number is odd.
+    A= [1,3,8,9,15];
+    B= [7,11,18,19,21,25];
+
+    U = 1,3,7,8,9, ***11***,15,18,19,21,25
 </code></pre>
-
-<p>Whereas, these will be different origin:</p>
-
-<pre><code>    http://example.com/
-    http://example.com:8080/
-    http://www.example.com/
-    https://example.com:80/
-    https://example.com/
-    http://example.org/
-    http://kirtib.com/
-</code></pre>
-
-<p><strong>What is Authority?</strong>
-    </br>
-    </br>
-    Even though we are digressing from the topic here but, authority is a good concept to understand.
-    Not every resource in an origin carries same authority (security).
-    </br>
-    User-agents determine how much authority to grant a resource by examining its <strong>media type</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">mime-type</a> and web applications can limit content&rsquo;s authority by restricting its media type.
-    </br>
-    For example, images have no authority but, html document has full authority of its origin.So,serving images is less risky then serving content with media-type &lsquo;text/html&rsquo;.
-    </br>
-    </br>
-    <strong>Note: =&gt;</strong>
-    If you add untrusted content in your web application, you can risk leaking origin&rsquo;s authority to untrusted content <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">Cross-side-scripting</a></p>
-
-<p><strong><em>Policy</em></strong>
-    </br>
-    In general, user-agents isolate different origins and permit controlled communication between origins.This way a malicious website is not able to access content of a website you are logged into in a different tab.
-    </br>
-    This StackExchange response explains it much better <a href="https://security.stackexchange.com/questions/8264/why-is-the-same-origin-policy-so-important">Why is the same origin policy so important?</a></p>
-
-<p>Now, that we have a better understanding of same origin policy, we can move on to handling cross-origin-request.</p>
-
-<h2 id="cross-origin-resource-access">Cross-Origin Resource Access</h2>
-
-<p>Same-origin policy handles interactions between two origins, we can divide it into three categories:</p>
-
-<ul>
-<li>Writes:
-
-<ul>
-<li>Usually allowed. Example: links, redirects.</li>
-<li>To block: CSRF token</li>
-</ul></li>
-<li>Embeds:
-
-<ul>
-<li>Usually allowed.</li>
-<li>To block: Ensure resource can not be interpreted as embeddable.Content-Type header is not respected mostly, can also use CSRF token.</li>
-</ul></li>
-<li>Reads:
-
-<ul>
-<li>Usually not allowed.</li>
-<li>To block: Make a resource not embeddable</li>
-</ul></li>
-</ul>
-
-<p><strong><em>Resources which may be embedded cross-origin</em></strong></p>
-
-<ul>
-<li>&lt;script&gt;</script> tag.</li>
-<li>&lt;link /&gt;, requires a content-type header.</li>
-<li>&lt;img&gt;</li>
-<li>&lt;video&gt;</video> and &lt;audio&gt;</audio>.</li>
-<li>&lt;object&gt;</object>, &lt;embed&gt; &amp; &lt;applet&gt;</applet>.</li>
-<li>Fonts with @font-face.</li>
-<li>&lt;frame&gt;</frame>&amp; &lt;iframe&gt;</iframe>. X-Frame-Options header can be used to disallow</li>
-</ul>
-
-<p>We use CORS to allow cross-origin access.</p>
-
-<p><strong><em>Practical Uses Of CORS</em></strong></p>
-
-<ul>
-<li>External Stylesheets</li>
-<li>Web fonts</li>
-<li>Images</li>
-<li>Public Apis</li>
-<li>If your frontend application is running on a different port from backend server</li>
-<li>Any external resources really.</li>
-</ul>
-
-<h2 id="cross-origin-resource-sharing-cors">Cross Origin Resource Sharing (CORS)</h2>
-
-<p>Enabling CORS requires coordination between both the server and client.</p>
-
-<p><strong>Cross Origin Request Algorithm Parameters</strong></p>
-
-<p>Algorithm takes following params:</p>
-
-<ul>
-<li>Request Url =&gt; Url</li>
-<li>Request Method =&gt; Method for request, default value is GET</li>
-<li>Author Request Headers =&gt; Headers set by authors, default is empty</li>
-<li>Request Entity Body =&gt; default is missing</li>
-<li>Source Origin =&gt; Origin of request</li>
-<li>Referrer Source =&gt; Determines referer header</li>
-<li>Manual Redirect Flag =&gt; Set when redirects are <em>not</em> to be followed automatically</li>
-<li>Omit Credentials Flag =&gt; Set when user credentials are to be <em>excluded</em> in request and cookies are to be ignored in response</li>
-<li>Force Preflight Flag =&gt; When preflight request is required</li>
-</ul>
-
-<p><strong>Types</strong></p>
-
-<ol>
-<li><p><strong>Simple CORS Requests</strong>
-Simple CORS request are HTTP requests that include  <code>Origin</code> header.
-These request do no trigger preflight.There are a few conditions a request has to make to be classified as simple request:</p>
-
-<ol>
-<li>Allowed methods: GET, POST, HEAD</li>
-<li>Allowed values for Content-Type headers are:
-application/x-www-form-urlencoded; multipart/form-data and text/plain</li>
-<li>Only headers that can be manually set; apart from those set automatically by user-agent; are:
-<a href="https://fetch.spec.whatwg.org/#cors-safelisted-request-header">CORS Safelisted Request Headers</a></li>
-<li>No ReadableStream object is used in the request</li>
-<li>No event listeners are registered on any XMLHttpRequestUpload object used in the request</li>
-</ol></li>
-
-<li><p><strong>Preflighted CORS Requests</strong></p>
-
-<p>These request send an option method to check if the actual resource is safe to send and checks if CORS protocol is understood. It includes <code>OPTIONS</code> method and includes <code>Access-Control-Request-Method</code>  and <code>Access-Control-Request-Headers</code>  headers.</p>
-
-<p><img src="/images/preflighted-cors.png" alt="Preflighted CORS" /></p>
-
-<p>A request is preflighted if any of the below conditions are true:</p>
-
-<ol>
-<li>Methods: PUT, DELETE, CONNECT,OPTIONS,TRACE, PATCH</li>
-<li>Apart for user-agent headers it includes any headers other than safelisted request headers, defined above.These can be:
-Accept, Accept-Language, Content-Language, Content-Type, Last-Event-ID etc.</li>
-<li>If Content-Type header has values other than above mentioned ones</li>
-<li>ReadableStream object is used in the request</li>
-<li>Event listeners are registered on any XMLHttpRequestUpload object used in the request</li>
-</ol></li>
-</ol>
-
-<h2 id="about-the-headers">About The Headers</h2>
-
-<p>Headers allow clients and servers to pass additional information along with the request or response. Syntax for a header is:</p>
-
-<pre><code>Header Name : Header Value
-</code></pre>
-
-<p>Header Name is case-insensitve, value is a byte-sequence which has no leading (ignored) or trailing HTTP whitespace bytes and contains no 0x00, 0x0A or 0x0D bytes.</p>
-
-<p><strong>1. Request Headers</strong>
-    </br>
-    These are the http headers clients may set while making CORS request. These are automatically set by browser.</p>
-
-<ul>
-<li><p>Origin :
-</br>
-Info: Indicates the origin of request. This header is always set.Can be an empty string (useful if source is a data URL).Includes:</p>
-
-<pre><code>    Scheme: Protocol that is used e.g. HTTP or HTTPS
-    Hostname: Domain name of the server or ip
-    Port: TCP port on which server is listening. Default is 80.
-</code></pre>
-
-<p>Set By: Browser</p>
-
-<p>Example: </br></p>
-
-<pre><code>Origin: https://kirtib.com
-</code></pre></li>
-
-<li><p>Access-Control-Request-Method:
-</br>
-Info: Used during preflight request to tell server what HTTP method will be used by the next request.Used because preflight request is always OPTIONS.Includes:
-    HTTP request methods for ex. &lsquo;GET&rsquo;, &lsquo;POST&rsquo;
-Set By: Browser</p>
-
-<p>Example:</br></p>
-
-<pre><code>Access-Control-Request-Method: POST
-</code></pre></li>
-
-<li><p>Access-Control-Request-Headers:</p>
-
-<p>Info:Used during preflight to tell server what headers will be used by next request.Includes:</p>
-
-<pre><code>List of HTTP headers included in the request, separated by commas.
-</code></pre>
-
-<p>Set By: Browser</p>
-
-<p>Example:</p>
-
-<pre><code>Access-Control-Request-Headers: X-PINGOTHER, Content-Type
-</code></pre>
-
-<p><img src="/images/headers-request.png" alt="request header example" /></p></li>
-</ul>
-
-<p><strong>2. Response Headers</strong>
-</br>
-These headers are sent back by server for CORS requests.</p>
-
-<ul>
-<li><p>Access-Control-Allow-Origin:</p>
-
-<p>Info: Indicates if the origin is allowed to access the resource.For requests without credentials, server may specify star (wildcard) thus, allowing any origin access to the resource</p>
-
-<p>Example:</p>
-
-<pre><code>    Access-Control-Allow-Origin: *                  [To allow access to any resource]
-    Access-Control-Allow-Origin: https://kirtib.com [To allow access to https://kirtib.com]
-</code></pre>
-
-<p>For example 2 where server specifies an origin host it must also include Origin in Vary response header to indicate that the responses will differ based on the value of Origin header.</p>
-
-<p>Example:</p>
-
-<pre><code>    Access-Control-Allow-Origin: https://kirtib.com
-    Vary: Origin
-</code></pre></li>
-
-<li><p>Access-Control-Expose-Headers:</p>
-
-<p>Info: It indicates which headers can be exposed as part of response.That is, if you want a client to be able to access headers other than simple response headers that are exposed by default.Includes:</p>
-
-<pre><code>A list of exposed headers which consist header names that are exposed and open to use.
-</code></pre>
-
-<p>Example:</p>
-
-<pre><code>Access-Control-Expose-Headers: Content-Length, Custom-header
-</code></pre>
-
-<p><strong>Note: =&gt;</strong></p>
-
-<pre><code>Simple response headers are headers that have been safelisted also called CORS-safelisted-response-header and are not filtered when response is processed by CORS
-
-Simple response headers that are exposed by default are:
-    Cache-Control
-    Content-Language
-    Content-Type
-    Expires
-    Last-Modified
-    Pragma
-</code></pre>
-
-<p>More about safelisted headers below.</p></li>
-
-<li><p>Access-Control-Max-Age:</p>
-
-<p>Info: Defines maximum number of seconds the result of preflight request can be cached. This information is contained in Access-Control-Allow-Methods and Access-Control-Allow-Headers. If value returned is -1, it will disable caching and forces a preflight OPTIONS check for all calls. Different browsers cap this value at different levels, some even specify a default value.</p>
-
-<p>Example:</p>
-
-<pre><code>Access-Control-Max-Age: 86400
-</code></pre>
-
-<p>(Caches for 24 hours)</p></li>
-
-<li><p>Access-Control-Allow-Credentials:</p>
-
-<p>Info: Tells whether the response can be shared when request&rsquo;s credential mode is &lsquo;include&rsquo;.If returned as a response to preflight req, it tells if actual request can be made using credentials (For preflight, request&rsquo;s credential mode is always &lsquo;omit&rsquo;). Credentials must be set on both sides for CORS to succeed.</p>
-
-<p><em>Credentials can be cookies, authorization headers or TLS client certificates.</em></p>
-
-<p>Example:</p>
-
-<pre><code>Access-Control-Allow-Credentials: true
-</code></pre>
-
-<p>With XHR:</p>
-
-<pre><code>let xhr = new XMLHttpRequest();
-xhr.open('GET','http://kirtib.com', true);
-xhr.withCredentials = true;
-xhr.send(null);
-</code></pre>
-
-<p>With Fetch:</p>
-
-<pre><code>fetch(url, {credentials: 'include'});
-</code></pre></li>
-
-<li><p>Access-Control-Allow-Methods:</p>
-
-<p>Info: Specifies which method/s are allowed when accessing resource in response to preflight request.</p>
-
-<p>Example:</p>
-
-<pre><code>Access-Control-Allow-Methods: POST, GET, PATCH
-</code></pre></li>
-
-<li><p>Access-Control-Allow-Headers:</p>
-
-<p>Info: Used in response to preflight request and indicates which HTTP headers (apart from simple headers) can be used during actual request.</p>
-
-<p>Required if <code>Access-Control-Request-Headers</code> header is present in request.</p>
-
-<p>Example:</p>
-
-<pre><code>    Access-Control-Allow-Headers: Custom-Header
-</code></pre></li>
-</ul>
-
-<p><strong>3. CORS-safelisted-request-headers</strong></p>
-
-<p>These are headers whose name is byte-case-insensitive match for any one of:</p>
-
-<pre><code>Accept,
-Accept-Language,
-Content-Language,
-Content-Type
-</code></pre>
-
-<p>and value has a MIME type that is <code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code>, or <code>text/plain</code></p>
-
-<p>or name is byte-case-insensitive match for any one of:</p>
-
-<pre><code>DPR
-Downlink
-Save-Data
-Viewport-Width
-Width 
-</code></pre>
-
-<p>and value is not failure.</p>
-
-<p><strong>4. CORS-safelisted-response-headers</strong></p>
-
-<p>A response gets CORS-exposed-header-name list by extracting values from <code>Access-Control-Expose-Headers</code>. Given such a list this header name is byte-case-insensitive match for one of:</p>
-
-<pre><code>Cache-Control
-Content-Language
-Content-Length
-Content-Type
-Expires
-Last-Modified
-Pragma 
-</code></pre>
-
-<p>any value in list that is not  a forbidden-response-header-name.</p>
-
-<p><strong>5. Forbidden-response-header-name</strong></p>
-
-<p>Header name which is byte-case-insensitive match for:</p>
-
-<pre><code>Set-Cookie
-Set-Cookie2 
-</code></pre>
-
-<p><strong>6. Forbidden-header-name</strong></p>
-
-<p>Header name which matches one of:</p>
-
-<pre><code>Accept-Charset
-Accept-Encoding
-Access-Control-Request-Headers
-Access-Control-Request-Method
-Connection
-Content-Length
-Cookie
-Cookie2
-Date
-DNT
-Expect
-Host
-Keep-Alive
-Origin
-Referer
-TE
-Trailer
-Transfer-Encoding
-Upgrade
-Via 
-</code></pre>
-
-<p>or a header name that starts with byte-case-insensitive match for <code>Proxy-</code> or <code>Sec-</code></p>
-
-<p>More about CORS and credentials in the next post.</p>
-
-<h3 id="attribution">Attribution</h3>
-
-<p>You can read more about it here:</p>
-
-<ul>
-<li><a href="https://stackoverflow.com/questions/10636611/how-does-access-control-allow-origin-header-work">Stack OverFlow</a></li>
-<li><a href="https://stackoverflow.com/questions/13400594/understanding-xmlhttprequest-over-cors-responsetext/13400954#13400954">Stack OverFlow</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">MDN</a></li>
-<li><a href="https://fetch.spec.whatwg.org/">Fetch Spec</a></li>
-<li><a href="https://www.html5rocks.com/en/tutorials/cors/">HTML5Rocks</a></li>
-<li><a href="https://www.w3.org/TR/cors">W3 Documentations</a></li>
-</ul>
 
   </section>
   <footer>
@@ -484,12 +125,11 @@ Via
       <div class="c-pagination__ctrl">
         <div class="c-pagination__newer">
           
-          <a href="/posts/median-sorted-array/">Newer</a>
           
         </div>
         <div class="c-pagination__older">
           
-          <a href="/posts/php-webservice-with-jwt/">Older</a>
+          <a href="/posts/cors/">Older</a>
           
         </div>
       </div>
@@ -501,9 +141,9 @@ Via
   <ul id="slider" class="p-related__list">
     
     <li class="p-related__item js-related__item">
-      <a href="/posts/median-sorted-array/"
+      <a href="/posts/cors/"
         >
-        <span>JS Solutions- Median of two sorted arrays</span>
+        <span>Introduction To Cross Origin Resource Sharing</span>
       </a>
     </li>
     
