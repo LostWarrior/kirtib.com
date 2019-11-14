@@ -3,7 +3,7 @@ author: "Kirti Bhardwaj"
 date: 2019-05-11
 linktitle: median-sorted-array
 prev: /posts/cors
-title: JS Solutions- Median of two sorted arrays
+title: Arrays in JS- Median of two sorted arrays
 weight: 10
 draft: false
 ---
