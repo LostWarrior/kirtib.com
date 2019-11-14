@@ -1,6 +1,6 @@
 ---
 author: "Kirti Bhardwaj"
-date: 2019-05-11
+date: 2019-11-14
 linktitle: intersection-arrays
 prev: /posts/median-sorted-array
 title: Arrays in JS- Intersection Of Two Arrays
@@ -22,12 +22,18 @@ Runtime for this solution is 52 ms.
 
 Example 1:
 
-Input: nums1 = [1,2,2,1], nums2 = [2,2]
+Input: 
+    nums1 = [1,2,2,1], 
+    nums2 = [2,2]
+
 Output: [2]
 
 Example 2:
 
-Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+Input: 
+    nums1 = [4,9,5], 
+    nums2 = [9,4,9,8,4]
+
 Output: [9,4]
 
 ### Code
@@ -77,12 +83,18 @@ Let's look at some test cases for this:
 
 Example 1:
 
-Input: nums1 = [1,2,2,1], nums2 = [2,2]
+Input: 
+    nums1 = [1,2,2,1], 
+    nums2 = [2,2]
+
 Output: [2,2]
 
 Example 2:
 
-Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+Input: 
+    nums1 = [4,9,5], 
+    nums2 = [9,4,9,8,4]
+    
 Output: [4,9]
 
 

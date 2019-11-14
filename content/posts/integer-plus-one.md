@@ -1,6 +1,6 @@
 ---
 author: "Kirti Bhardwaj"
-date: 2019-05-11
+date: 2019-11-14
 linktitle: integer-plus-one
 prev: /posts/median-sorted-array
 title: Arrays in JS- Add plus one to the integer
@@ -18,8 +18,9 @@ Here is the LeetCode link to the problem: [LeetCode: Plus One](https://leetcode.
 
 
 ### Test Cases
+
 Input => Output
-[1,2,3] => [1,2,4]
+[1,2,3]   => [1,2,4]
 [4,3,2,1] => [4,3,2,2]
 [1,2,9] => [1,3,0]
 [9,9,9] => [1,0,0,0]
