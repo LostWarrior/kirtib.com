@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
   
-  <title>JS Solutions- Median of two sorted arrays</title>
-  <meta property="og:title" content="JS Solutions- Median of two sorted arrays" />
-  <meta name="twitter:title" content="JS Solutions- Median of two sorted arrays" />
+  <title>Arrays in JS- Median of two sorted arrays</title>
+  <meta property="og:title" content="Arrays in JS- Median of two sorted arrays" />
+  <meta name="twitter:title" content="Arrays in JS- Median of two sorted arrays" />
   
 
   
@@ -49,7 +49,7 @@
 
 <article class="p-article">
   <header>
-    <h1>JS Solutions- Median of two sorted arrays</h1>
+    <h1>Arrays in JS- Median of two sorted arrays</h1>
     <div>
       <div class="c-time">
         Posted on
@@ -69,13 +69,18 @@
 <p>There are two sorted arrays nums1 and nums2 of size m and n respectively.
 Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).</p>
 
-<p>Here is the leetcode link to the problem: {LeetCode: Median of Two Sorted Arrays](<a href="https://leetcode.com/problems/median-of-two-sorted-arrays/">https://leetcode.com/problems/median-of-two-sorted-arrays/</a>)</p>
+<p>Here is the leetcode link to the problem: <a href="https://leetcode.com/problems/median-of-two-sorted-arrays/">LeetCode: Median of Two Sorted Arrays</a></p>
 
-<p><strong><em>What is a median?</em></strong>
-    <a href="https://stattrek.com/statistics/dictionary.aspx?definition=median">StatTrek</a> defines median as a measure of central tendency. Simply explained In an array of odd values median will be middle value.
- <strong><em>Discussion</em></strong>
-    We are trying to find union of two arrays A and B here, left half will be smaller than right half. Finding median gives use left half which ends with median value.
-    Merging two arrays take O(m+n) time. We need to find a way where we can find the values in left half without merging both arrays so, as to keep complexity lower than O(m+n)</p>
+<p><strong><em>What is a median?</em></strong></p>
+
+<p><a href="https://stattrek.com/statistics/dictionary.aspx?definition=median">StatTrek</a> defines median as a measure of central tendency. Simply explained In an array of odd values median will be middle value.</p>
+
+<p><strong><em>Discussion</em></strong></p>
+
+<p>We are trying to find union of two arrays A and B here, left half will be smaller than right half. Finding median gives use left half which ends with median value.
+Merging two arrays take O(m+n) time. We need to find a way where we can find the values in left half without merging both arrays so, as to keep complexity lower than O(m+n)</p>
+
+<p>Read more on <a href="https://math.berkeley.edu/~gmelvin/polya.pdf">Polya&rsquo;s problem solving pdf</a></p>
 
 <h3 id="test-cases">Test Cases:</h3>
 
@@ -91,32 +96,199 @@ union = [1,2,3,4]</p>
 
 <p>The median is (2 + 3)/2 = 2.5</p>
 
-<h3 id="solution">Solution</h3>
+<h3 id="solution">Solution:</h3>
 
-<pre><code>We will use binary search to find the left half of the union such that, both halves are equal size and every element in left half is lesser than every element in right half. We know the size of this would be (m + n)/2, so we can safely say that we only want to know what values array1 will be contributing. Because, we know array2 would be contributing rest of the values.
+<p>We will use binary search to find the left half of the union such that, both halves are equal size and every element in left half is lesser than every element in right half. We know the size of this would be (m + n)/2, so we can safely say that we only want to know what values array1 will be contributing. Because, we know array2 would be contributing rest of the values.</p>
 
-Let's try to solve this:
+<p>Let&rsquo;s try to solve this:</p>
 
-    array x =&gt; [x1,x2,x3,x4,x5,x6];
-    array y =&gt; [y1, y2, y4, y4, y5, y6, y7, y8];
+<p>array x =&gt; [x1,x2,x3,x4,x5,x6]; <br>
+array y =&gt; [y1, y2, y4, y4, y5, y6, y7, y8];</p>
 
-    Let's say we find a partition x =&gt; (2, 4) and y =&gt; (5, 3) that is, on left side of union array we will have:
-    x1,x2,y1,y2,y3,y4,y5 and on right side we will have x3,x4,x5,x6,y6,y7,y8.
+<p>Let&rsquo;s say we find a partition x =&gt; (2, 4) and y =&gt; (5, 3) that is, on left side of union array we will have:
+x1,x2,y1,y2,y3,y4,y5 and on right side we will have x3,x4,x5,x6,y6,y7,y8.</p>
 
-    Now if, x2 &lt;= y6 (largest) &amp;&amp; y5 &lt;= x3 (smallest) then our median will be 
-    if numbers are even =&gt; median = avg(max(x2,y6), min(x3,y5))
-    if numbers are odd =&gt; median = max(x2,y5); (one extra element on left side)
+<p>Now if, x2 &lt;= y6 (largest) &amp;&amp; y5 &lt;= x3 (smallest) then our median will be <br>
+if numbers are <strong><em>even</em></strong> =&gt; median = avg(max(x2,y6), min(x3,y5)) <br>
+if numbers are <strong><em>odd</em></strong> =&gt; median = max(x2,y5); (one extra element on left side)</p>
 
-    To find this partition we do a binary search on smaller of two arrays.Time complexity of this operation would be O(log(min(x,y))) where x and y are lengths of two arrays.
+<p>To find this partition we do a binary search on smaller of two arrays.Time complexity of this operation would be O(log(min(x,y))) where x and y are lengths of two arrays.</p>
 
+<p>Example:
+<strong><em>Total Size Odd</em></strong></p>
 
-Example:
-    Everything becomes clearer once we look at examples. So, let's take two arrays A and B where total number is odd.
-    A= [1,3,8,9,15];
-    B= [7,11,18,19,21,25];
+<p>Everything becomes clearer once we look at examples. So, let&rsquo;s take two arrays A and B where total number is odd.</p>
 
-    U = 1,3,7,8,9, ***11***,15,18,19,21,25
+<p>A= [1,3,8,9,15]; <br>
+B= [7,11,18,19,21,25];</p>
+
+<p>U = [1,3,7,8,9, <strong>11</strong>,15,18,19,21,25] where, 11 is our median.</p>
+
+<p>Let&rsquo;s look at pseudocode:</p>
+
+<pre><code>1) partitionX + partitionY = (x+y+1)/2; // +1 to handle both odd and even cases
+2) Three cases:
+    a) Found: (maxLeftX &lt;= minRightY) &amp;&amp; (maxLeftY &lt;= minRightX);
+    b) else if (maxLeftX &gt; minRightY) =&gt; move towards left in X
+    c) else move towards right in X
 </code></pre>
+
+<p>Start = 0; end = 4 (A.length) therefore,
+partitionX = (start + end)/2 = (0+4)/2 = 2;
+partitionY = (x+y+1)/2  - partitionX= ((5+6+1)/2)-2 = 4;</p>
+
+<p>So, we partition X at 2 and Y at 4. This makes our two arrays look like this:
+leftX = [1,3] &amp; leftY = [7,11,18,19]
+rightX = [8,9,15] &amp; rightY = [21,25]
+Because, total size of array is odd we have one extra element on left.</p>
+
+<p>Now, maxLeftX[3] &lt;= minRightY[21] =&gt; true &amp;&amp; maxLeftY[19] &lt;= minRightX[8] =&gt; false;
+We move binary search towards right in X.</p>
+
+<p>So, new start = partitionX +1 = 2 + 1 = 3;
+new partitionX = (start + end)/2 = (3+4)/2 = 3;
+new partitionY = (x+y+1)/2 - partitionX = ((5+6+1)/2)-3 = 3;</p>
+
+<p>leftX = [1,3,8] &amp; leftY = [7,11,18]
+rightX = [9,15] &amp; rightY = [19,21,25]</p>
+
+<p>Now, maxLeftX[8] &lt;= minRightY[19] =&gt; true &amp;&amp; maxLeftY[18] &lt;= minRightX[9] =&gt; false;
+we move binary search towards right in X.</p>
+
+<p>Start = 4; partitionX = 4; partitionY = 2;</p>
+
+<p>leftX = [1,3,8,9] &amp; leftY = [7,11]
+rightX = [15] &amp; rightY=[18,19,21,25]</p>
+
+<p>Now, maxLeftX[9] &lt;= minRightY[18] =&gt; true &amp;&amp; maxLeftY[11]&lt;= minRightX[15] =&gt; true;</p>
+
+<p>So, our median = max(maxLeftX,maxLeftY) = max(9,11) = <strong>11</strong>;</p>
+
+<p><strong><em>Total Size Even</em></strong></p>
+
+<p>A= [23,26,31,35]; <br>
+B= [3,5,7,9,11,16];</p>
+
+<p>U = [3,5,7,9, <strong>11,16</strong>, 23,26,31,36] where median is (11+16)/2 = 13.5</p>
+
+<p>Start = 0; end = 4 (A.length) therefore,
+partitionX = (start + end)/2 = (0+4)/2 = 2;
+partitionY = (x+y+1)/2  - partitionX= ((4+6+1)/2)-2 = 3;</p>
+
+<p>So, we partition X at 2 and Y at 3. This makes our two arrays look like this:
+leftX = [23,26] &amp; leftY = [3,5,7]
+rightX = [31,35] &amp; rightY = [9,11,16]</p>
+
+<p>Now, maxLeftX[26] &lt;= minRightY[9] =&gt; false so, we move binary search towards left in X.</p>
+
+<p>Start = 0; end = partitionX -1 = 2-1;
+partitionX = (start + end)/2 = (0+1)/2 = 0;
+partitionY = (x+y+1)/2  - partitionX= ((4+6+1)/2)-0 = 5;</p>
+
+<p>So, we partition X at 1 and Y at 4. This makes our two arrays look like this:
+leftX = [] &amp; leftY = [3,5,7,9,11]
+rightX = [23,26,31,35] &amp; rightY = [16]</p>
+
+<p>Now, maxLeftX[-Infinity] &lt;= minRightY[16] =&gt; true &amp;&amp; maxLeftY[11] &lt;= minRightX[23] =&gt; true</p>
+
+<p><strong>median = avg(max(maxLeftX,maxLeftY), min(minRightY,minRightX))</strong>
+median = avg(max(-Infinity,11), min(16,23)) = avg(11,16) = 13.5</p>
+
+<h3 id="code">Code:</h3>
+
+<pre><code>/**
+* @param {number[]} nums1
+* @param {number[]} nums2
+* @return {number}
+*/
+var findMedianSortedArrays = function(nums1, nums2) {
+    const len = nums1.length + nums2.length;
+    let A = (nums1.length &gt; nums2.length) ? nums2 : nums1;
+    let B = (nums1.length &gt; nums2.length) ? nums1 : nums2;
+
+    const x = A.length; 
+    const y = B.length;
+    let start = 0, end = A.length, half = (x + y + 1)/2;
+
+    while (start &lt;= end){
+        let partitionX = (start+end)/2;
+        let partitionY = half - partitionX;
+
+        //Two partition of X
+        let maxLeftX = (partitionX === 0)? Number.MIN_SAFE_INTEGER : A[partitionX -1];
+        let minRightX = (partitionX === x) ? Number.MAX_SAFE_INTEGER : A[partitionX];
+
+        //Two partitions of Y
+        let maxLeftY = (partitionY === 0)? Number.MIN_SAFE_INTEGER : B[partitionY -1];
+        let minRightY = (partitionY === y) ? Number.MAX_SAFE_INTEGER : B[partitionY];
+
+        //If partitions are correct
+        if((maxLeftX &lt;= minRightY) &amp;&amp; (maxLeftY &lt;= minRightX)){
+            if(len%2 === 0){
+                //If final length is even
+                return (Math.max(maxLeftX,maxLeftY)+ Math.min(minLeftX,minLeftY))/2;
+            }else{
+                //If final length is odd
+                return Math.max(maxLeftX, maxLeftY);
+            }
+        }else if(maxLeftX &gt; minRightY){
+            //move towards left
+            end = partitionX - 1;
+        }else{
+            //move towards right
+            end = partitionX + 1;
+        }
+    }
+
+};
+</code></pre>
+
+<h3 id="another-approach">Another Approach</h3>
+
+<pre><code>var findMedianSortedArrays = function(A, B) {
+    const XLen = A.length;
+    const YLen = B.length;
+    const len = XLen + YLen;
+
+    let arr = [];
+    /** If single element in final array return that **/
+    if(len === 1){
+        return (XLen === 1) ? A[0]: B[0];
+    }
+
+    let pivot = (len % 2 === 0) ? (len/2) + 1 : Math.ceil(len/2);
+    let i = 0; let j = 0
+
+    while(arr.length &lt; pivot){
+        if(i&lt; XLen &amp;&amp; j &lt; YLen ){
+            if(A[i] &lt;= B[j]){
+                arr.push(A[i]);
+                i++;
+            }else{
+                arr.push(B[j]);
+                j++;
+            }
+
+        }else if(i &gt;= XLen){
+            arr.push(B[j]);
+            j++;
+        }else{
+            arr.push(A[i]);
+            i++;
+        }
+    }
+
+    return (len%2 === 0) ? (arr[arr.length-1] + arr[arr.length-2])/2 : arr[arr.length-1];
+};
+</code></pre>
+
+<h3 id="reference">Reference:</h3>
+
+<p><a href="https://www.youtube.com/watch?v=CMjAo8_8JYM">Youtube: Median of sorted arrays</a></p>
+
+<p><a href="https://medium.com/@hazemu/finding-the-median-of-2-sorted-arrays-in-logarithmic-time-1d3f2ecbeb46">Medium: Finding the Median of 2 Sorted Arrays in Logarithmic Time</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=LPFhl65R7ww">Youtube: Median of two sorted arrays of different sizes.</a></p>
 
   </section>
   <footer>
@@ -125,6 +297,7 @@ Example:
       <div class="c-pagination__ctrl">
         <div class="c-pagination__newer">
           
+          <a href="/posts/intersection-arrays/">Newer</a>
           
         </div>
         <div class="c-pagination__older">
@@ -148,6 +321,27 @@ Example:
     </li>
     
     <li class="p-related__item js-related__item">
+      <a href="/posts/array-diagonal/"
+        >
+        <span>Arrays in JS- Diagonal Difference</span>
+      </a>
+    </li>
+    
+    <li class="p-related__item js-related__item">
+      <a href="/posts/integer-plus-one/"
+        >
+        <span>Arrays in JS- Add plus one to the integer</span>
+      </a>
+    </li>
+    
+    <li class="p-related__item js-related__item">
+      <a href="/posts/intersection-arrays/"
+        >
+        <span>Arrays in JS- Intersection Of Two Arrays</span>
+      </a>
+    </li>
+    
+    <li class="p-related__item js-related__item">
       <a href="/posts/php-webservice-with-jwt/"
         >
         <span>Creating a php web service for authorization</span>
@@ -158,20 +352,6 @@ Example:
       <a href="/posts/javascript-event-overview/"
         >
         <span>JS Concepts -&gt; Events An Overview</span>
-      </a>
-    </li>
-    
-    <li class="p-related__item js-related__item">
-      <a href="/posts/installing-postgres-linux-mint/"
-        >
-        <span>Installing Postgres on Linux Mint</span>
-      </a>
-    </li>
-    
-    <li class="p-related__item js-related__item">
-      <a href="/posts/building-site-with-hugo/"
-        >
-        <span>Building Personal Website With Hugo And Netlify</span>
       </a>
     </li>
     
