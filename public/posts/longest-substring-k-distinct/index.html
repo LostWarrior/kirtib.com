@@ -4,16 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
   
-  <title>Creating a php web service for authorization</title>
-  <meta property="og:title" content="Creating a php web service for authorization" />
-  <meta name="twitter:title" content="Creating a php web service for authorization" />
+  <title>Longest Substring with At Most K Distinct Characters</title>
+  <meta property="og:title" content="Longest Substring with At Most K Distinct Characters" />
+  <meta name="twitter:title" content="Longest Substring with At Most K Distinct Characters" />
   
 
   
 
   <meta name="author" content=""/>
   <meta property="og:site_name" content="Kirti Bhardwaj" />
-  <meta property="og:url" content="/posts/php-webservice-with-jwt/" />
+  <meta property="og:url" content="/posts/longest-substring-k-distinct/" />
 
   
   <meta name="twitter:card" content="summary" />
@@ -49,12 +49,12 @@
 
 <article class="p-article">
   <header>
-    <h1>Creating a php web service for authorization</h1>
+    <h1>Longest Substring with At Most K Distinct Characters</h1>
     <div>
       <div class="c-time">
         Posted on
-        <time datetime="2018-03-06T00:00:00Z">
-          Mar 6, 2018
+        <time datetime="2019-11-26T00:00:00Z">
+          Nov 26, 2019
         </time>
       </div>
       
@@ -64,78 +64,85 @@
   <section id="js-article" class="p-article__body">
     
 
-<h2 id="introduction">Introduction</h2>
+<h3 id="problem-statement">Problem Statement</h3>
 
-<p>Recently, I needed to create a php webservice which any application could connect to and it would return a JWT auth token authorizing you.
-Here, I retrace my steps as well as share basic barebones code for such a webservice</p>
+<p>Given a string, find the length of the longest substring T that contains at most k distinct characters.Here is the leetcode link to the problem <a href="https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/">Longest Substring</a>
+Here is some discussion around it <a href="https://www.geeksforgeeks.org/find-the-longest-substring-with-k-unique-characters-in-a-given-string/">K unique characters</a></p>
 
-<h2 id="url">Url</h2>
+<h3 id="examples">Examples</h3>
 
-<p>First of all we needed a url we can hit so, I added a domain name to my /etc/hosts file</p>
+<p>Example 1:</p>
 
-<pre><code>sudo vim /etc/hosts
-
-Added below entry to the file
-
-127.0.0.1       localhost kirti.test.com
-
+<pre><code>Input: s = &quot;eceba&quot;, k = 2
+Output: 3
+Explanation: T is &quot;ece&quot; which its length is 3.
 </code></pre>
 
-<p>So, now when we type kirti.test.com it will hit localhost, easy peasy. Now on to next step:</p>
+<p>Example 2:</p>
 
-<h2 id="web-service">Web Service</h2>
-
-<p>Now we create a folder auth, where we will store all our webservice related code.</p>
-
-<p>This is how your folder structure will look like:</p>
-
-<p><img src="/images/folder.png" alt="Folder Structure" /></p>
-
-<p>Now, first point of entrance is going to be ws.php [short for web service] whereas, custom.php will have the helper code/custom functions that we will write. We will create a config folder which will store our configurations etc.</p>
-
-<p>Here is the code for web service.php</p>
-
-<p><img src="/images/wsphp.png" alt="Web service entry point" /></p>
-
-<p>Now, your .htaccess file should be able to serve all the requests that come to it so, we will add</p>
-
-<pre><code># Deny all the files
-&lt;Files ~ &quot;^.*&quot;&gt;
-  Deny from all
-&lt;/Files&gt;
-
-# Allow all from ws.php
-&lt;Files ws.php&gt;
-Allow from all
-Satisfy any
-&lt;/Files&gt;
-
+<pre><code>Input: s = &quot;aa&quot;, k = 1
+Output: 2
+Explanation: T is &quot;aa&quot; which its length is 2.
 </code></pre>
 
-<p>This to out .htaccess file. This essentially allows all requests for ws.php to be satisfied.</p>
+<h3 id="solution">Solution</h3>
 
-<p>Now on to the important part, custom code, this has three parts:</p>
+<p>This problem follows the <strong>Sliding Window pattern</strong>. We can use a HashMap to remember the frequency of each character we have processed. Here is one way to solve this problem:</p>
 
-<p><strong>1) Including all the config options:</strong></p>
+<p>1) Insert characters from the beginning of the string until we have ‘K’ distinct characters in the HashMap.
+These characters will constitute our sliding window. We are asked to find the longest such window having no more than ‘K’ distinct characters. We will remember the length of this window as the longest window so far.</p>
 
-<pre><code>require_once(config/constants.php);
+<p>2) Keep adding one character in the sliding window.</p>
+
+<p>3) In each step, try to shrink the window from the beginning if the count of distinct characters in the HashMap is larger than ‘K’. We will shrink the window until we have no more than ‘K’ distinct characters in the HashMap. This is needed as we intend to find the longest window.</p>
+
+<p>4) While shrinking, decrement the frequency of the character going out of the window and remove it from the HashMap if its frequency becomes zero.</p>
+
+<p>5) At the end of each step, we’ll check if the current window length is the longest so far, and if so, remember its length.</p>
+
+<h3 id="code">Code</h3>
+
+<pre><code>/**
+* @param {string} s
+* @param {number} k
+* @return {number}
+*/
+var lengthOfLongestSubstringKDistinct = function(s, k) {
+    const uniqueChar = k;
+    const len = s.length;
+
+    if(len &lt; uniqueChar+1) return len;
+
+    let hMap = {}; 
+    let max = 0;
+
+    for(let right = 0, left = 0; right &lt; len ; right++){
+        /** Add value to map or increment **/
+        hMap[s[right]] = (hMap[s[right]] || 0) + 1;
+
+        /** 
+            map size should be equal to k. 
+            If not keep removing keys and increment value of left pointer
+        **/
+        while(Object.keys(hMap).length &gt; uniqueChar){
+            if (--hMap[s[left]] === 0) {
+                delete hMap[s[left]];
+            }
+            left++;
+        }
+
+        max = Math.max(max, right - left + 1);
+    }
+
+    return max;
+};
 </code></pre>
 
-<p><strong>2) Authorizing the username and password:</strong></p>
+<h3 id="similar-problems">Similar Problems</h3>
 
-<p>Here we write a custom function to authorize if username and password salt stored for the user matches the one user has entered as well as return a key if it matches.</p>
+<p><a href="/posts/longest-substring-without-repeating-char/">Longest Substring Without Repeating Characters</a></p>
 
-<p><strong>3) Sending the JWT back to the querying code:</strong></p>
-
-<p><img src="/images/jwt.png" alt="Return JWT" /></p>
-
-<p>That&rsquo;s it. You can now hit the service with :</p>
-
-<pre><code>&quot;http://test.com/auth/ws.php?username=&quot;. $username . &quot;&amp;password=&quot; . $password; 
-
-</code></pre>
-
-<p>Now you need to handle it on client side too, which entails another post.</p>
+<p><a href="https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/">Longest Substring with At Most Two Distinct Characters</a></p>
 
   </section>
   <footer>
@@ -144,12 +151,12 @@ Satisfy any
       <div class="c-pagination__ctrl">
         <div class="c-pagination__newer">
           
-          <a href="/posts/cors/">Newer</a>
+          <a href="/posts/sliding-window/">Newer</a>
           
         </div>
         <div class="c-pagination__older">
           
-          <a href="/posts/javascript-event-overview/">Older</a>
+          <a href="/posts/longest-substring-without-repeating-char/">Older</a>
           
         </div>
       </div>
@@ -159,20 +166,6 @@ Satisfy any
 <section class="p-related">
   <h3>See Also</h3>
   <ul id="slider" class="p-related__list">
-    
-    <li class="p-related__item js-related__item">
-      <a href="/posts/arrays-binary-search/"
-        >
-        <span>Arrays in JS- Binary Search</span>
-      </a>
-    </li>
-    
-    <li class="p-related__item js-related__item">
-      <a href="/posts/sliding-window/"
-        >
-        <span>Coding Question Patterns =&gt; Sliding Window</span>
-      </a>
-    </li>
     
     <li class="p-related__item js-related__item">
       <a href="/posts/longest-substring-without-repeating-char/"
@@ -189,9 +182,16 @@ Satisfy any
     </li>
     
     <li class="p-related__item js-related__item">
-      <a href="/posts/longest-substring-k-distinct/"
+      <a href="/posts/sliding-window/"
         >
-        <span>Longest Substring with At Most K Distinct Characters</span>
+        <span>Coding Question Patterns =&gt; Sliding Window</span>
+      </a>
+    </li>
+    
+    <li class="p-related__item js-related__item">
+      <a href="/posts/arrays-binary-search/"
+        >
+        <span>Arrays in JS- Binary Search</span>
       </a>
     </li>
     
@@ -199,6 +199,13 @@ Satisfy any
       <a href="/posts/unique-emails/"
         >
         <span>Unique Email Addresses</span>
+      </a>
+    </li>
+    
+    <li class="p-related__item js-related__item">
+      <a href="/posts/array-diagonal/"
+        >
+        <span>Arrays in JS- Diagonal Difference</span>
       </a>
     </li>
     

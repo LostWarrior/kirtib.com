@@ -7,10 +7,79 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Belongs to Kirti Bhardwaj</copyright>
-    <lastBuildDate>Sun, 24 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Arrays in JS- Binary Search</title>
+      <link>/posts/arrays-binary-search/</link>
+      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/arrays-binary-search/</guid>
+      <description>Problem Statement Given a sorted (in ascending order) integer array nums of n elements and a target value, write a function to search target in nums. If target exists, then return its index, otherwise return -1. Here is the leetcode link to the problem Binary Search
+Examples Example 1:
+Input: nums = [-1,0,3,5,9,12], target = 9 Output: 4 Explanation: 9 exists in nums and its index is 4  Example 2:</description>
+    </item>
+    
+    <item>
+      <title>Coding Question Patterns =&gt; Sliding Window</title>
+      <link>/posts/sliding-window/</link>
+      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/sliding-window/</guid>
+      <description>Sliding Window Pattern In a lot of problems we are expected to find something among all the contiguous subarrays.A brute force way is to loop over the elements again and again till we find the result. This type of problem can be solved in a more optimized way by maintaining a window which satisfies problem constraints.This window can be increased or decreased based on the changing constraints and inputs.</description>
+    </item>
+    
+    <item>
+      <title>Longest Substring with At Most K Distinct Characters</title>
+      <link>/posts/longest-substring-k-distinct/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/longest-substring-k-distinct/</guid>
+      <description>Problem Statement Given a string, find the length of the longest substring T that contains at most k distinct characters.Here is the leetcode link to the problem Longest Substring Here is some discussion around it K unique characters
+Examples Example 1:
+Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 3 Explanation: T is &amp;quot;ece&amp;quot; which its length is 3.  Example 2:
+Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: T is &amp;quot;aa&amp;quot; which its length is 2.</description>
+    </item>
+    
+    <item>
+      <title>Longest Substring Without Repeating Characters</title>
+      <link>/posts/longest-substring-without-repeating-char/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/longest-substring-without-repeating-char/</guid>
+      <description>Problem Statement Given a string, find the length of the longest substring without repeating characters. Let&amp;rsquo;s take a look at some examples:
+Examples Example 1:
+Input: &amp;quot;abcabcbb&amp;quot; Output: 3 Explanation: The answer is &amp;quot;abc&amp;quot;, with the length of 3.  Example 2:
+Input: &amp;quot;bbbbb&amp;quot; Output: 1 Explanation: The answer is &amp;quot;b&amp;quot;, with the length of 1.  Example 3:
+Input: &amp;quot;pwwkew&amp;quot; Output: 3 Explanation: The answer is &amp;quot;wke&amp;quot;, with the length of 3.</description>
+    </item>
+    
+    <item>
+      <title>Three Sum</title>
+      <link>/posts/three-sum/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/three-sum/</guid>
+      <description>Problem Statement Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
+Note: The solution set must not contain duplicate triplets.
+Here it the leetcode link to the problem 3Sum
+Examples Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, -1, 2] ]  Solution /** * @param {number[]} nums * @return {number[][]} */ var sortFunc = (a,b) =&amp;gt; a-b; var threeSum = function(nums) { const sum = 0; const len = nums.</description>
+    </item>
+    
+    <item>
+      <title>Unique Email Addresses</title>
+      <link>/posts/unique-emails/</link>
+      <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/unique-emails/</guid>
+      <description>Problem Statement Every email consists of a local name and a domain name, separated by the @ sign.
+For example, in alice@leetcode.com, alice is the local name, and leetcode.com is the domain name.
+Besides lowercase letters, these emails may contain &amp;lsquo;.&amp;rsquo;s or &amp;lsquo;+&amp;rsquo;s.
+If you add periods (&amp;lsquo;.&amp;rsquo;) between some characters in the local name part of an email address, mail sent there will be forwarded to the same address without dots in the local name.</description>
+    </item>
     
     <item>
       <title>Arrays in JS- Diagonal Difference</title>
@@ -18,9 +87,34 @@
       <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/array-diagonal/</guid>
-      <description>Problem Statement Given a square matrix, calculate the absolute difference between the sums of its diagonals. Here is the link to problem HackerRank
-Example 1 2 3 4 5 6 9 8 9 The left-to-right diagonal = 1+5+9=15. The right to left diagonal = 3+5+9=17. Their absolute difference is |15-17| = 2.
-Solution Let&amp;rsquo;s take an example 11 2 4 4 5 6 10 8 -12 If we notice a pattern emerges.</description>
+      <description>Problem Statement Given a square matrix, calculate the absolute difference between the sums of its diagonals. Here is the link to problem HackerRank.
+Example
+1 2 3 4 5 6 9 8 9  The left-to-right diagonal = 1+5+9=15. The right to left diagonal = 3+5+9=17. Their absolute difference is |15-17| = 2.
+Solution Let&amp;rsquo;s take an example:
+11 2 4 4 5 6 10 8 -12  If we notice a pattern emerges.</description>
+    </item>
+    
+    <item>
+      <title>Fruit Into Baskets</title>
+      <link>/posts/fruits-in-baskets/</link>
+      <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/fruits-in-baskets/</guid>
+      <description>Problem Statement In a row of trees, the i-th tree produces fruit with type tree[i].
+You start at any tree of your choice, then repeatedly perform the following steps:
+Add one piece of fruit from this tree to your baskets. If you cannot, stop. Move to the next tree to the right of the current tree. If there is no tree to the right, stop. Note that you do not have any choice after the initial choice of starting tree: you must perform step 1, then step 2, then back to step 1, then step 2, and so on until you stop.</description>
+    </item>
+    
+    <item>
+      <title>Invert A Binary Tree</title>
+      <link>/posts/invert-binary-tree/</link>
+      <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/invert-binary-tree/</guid>
+      <description>Problem Statement Invert a binary tree. Here is the leetCode link Invert A Binary Tree
+Example:
+Input: 4 / \ 2 7 / \ / \ 1 3 6 9 Output: 4 / \ 7 2 / \ / \ 9 6 3 1  Solution This is not a difficult problem to solve. We write a recursive invertTree function, let&amp;rsquo;s look at the code.
+/** * Definition for a binary tree node.</description>
     </item>
     
     <item>

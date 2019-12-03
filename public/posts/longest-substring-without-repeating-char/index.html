@@ -4,16 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
   
-  <title>Creating a php web service for authorization</title>
-  <meta property="og:title" content="Creating a php web service for authorization" />
-  <meta name="twitter:title" content="Creating a php web service for authorization" />
+  <title>Longest Substring Without Repeating Characters</title>
+  <meta property="og:title" content="Longest Substring Without Repeating Characters" />
+  <meta name="twitter:title" content="Longest Substring Without Repeating Characters" />
   
 
   
 
   <meta name="author" content=""/>
   <meta property="og:site_name" content="Kirti Bhardwaj" />
-  <meta property="og:url" content="/posts/php-webservice-with-jwt/" />
+  <meta property="og:url" content="/posts/longest-substring-without-repeating-char/" />
 
   
   <meta name="twitter:card" content="summary" />
@@ -49,12 +49,12 @@
 
 <article class="p-article">
   <header>
-    <h1>Creating a php web service for authorization</h1>
+    <h1>Longest Substring Without Repeating Characters</h1>
     <div>
       <div class="c-time">
         Posted on
-        <time datetime="2018-03-06T00:00:00Z">
-          Mar 6, 2018
+        <time datetime="2019-11-26T00:00:00Z">
+          Nov 26, 2019
         </time>
       </div>
       
@@ -64,78 +64,95 @@
   <section id="js-article" class="p-article__body">
     
 
-<h2 id="introduction">Introduction</h2>
+<h3 id="problem-statement">Problem Statement</h3>
 
-<p>Recently, I needed to create a php webservice which any application could connect to and it would return a JWT auth token authorizing you.
-Here, I retrace my steps as well as share basic barebones code for such a webservice</p>
+<p>Given a string, find the length of the longest substring without repeating characters. Let&rsquo;s take a look at some examples:</p>
 
-<h2 id="url">Url</h2>
+<h3 id="examples">Examples</h3>
 
-<p>First of all we needed a url we can hit so, I added a domain name to my /etc/hosts file</p>
+<p><strong><em>Example 1:</em></strong></p>
 
-<pre><code>sudo vim /etc/hosts
-
-Added below entry to the file
-
-127.0.0.1       localhost kirti.test.com
-
+<pre><code>Input: &quot;abcabcbb&quot;
+Output: 3 
+Explanation: The answer is &quot;abc&quot;, with the length of 3. 
 </code></pre>
 
-<p>So, now when we type kirti.test.com it will hit localhost, easy peasy. Now on to next step:</p>
+<p><strong><em>Example 2:</em></strong></p>
 
-<h2 id="web-service">Web Service</h2>
-
-<p>Now we create a folder auth, where we will store all our webservice related code.</p>
-
-<p>This is how your folder structure will look like:</p>
-
-<p><img src="/images/folder.png" alt="Folder Structure" /></p>
-
-<p>Now, first point of entrance is going to be ws.php [short for web service] whereas, custom.php will have the helper code/custom functions that we will write. We will create a config folder which will store our configurations etc.</p>
-
-<p>Here is the code for web service.php</p>
-
-<p><img src="/images/wsphp.png" alt="Web service entry point" /></p>
-
-<p>Now, your .htaccess file should be able to serve all the requests that come to it so, we will add</p>
-
-<pre><code># Deny all the files
-&lt;Files ~ &quot;^.*&quot;&gt;
-  Deny from all
-&lt;/Files&gt;
-
-# Allow all from ws.php
-&lt;Files ws.php&gt;
-Allow from all
-Satisfy any
-&lt;/Files&gt;
-
+<pre><code>Input: &quot;bbbbb&quot;
+Output: 1
+Explanation: The answer is &quot;b&quot;, with the length of 1.
 </code></pre>
 
-<p>This to out .htaccess file. This essentially allows all requests for ws.php to be satisfied.</p>
+<p><strong><em>Example 3:</em></strong></p>
 
-<p>Now on to the important part, custom code, this has three parts:</p>
-
-<p><strong>1) Including all the config options:</strong></p>
-
-<pre><code>require_once(config/constants.php);
+<pre><code>Input: &quot;pwwkew&quot;
+Output: 3
+Explanation: The answer is &quot;wke&quot;, with the length of 3. 
+            Note that the answer must be a substring, &quot;pwke&quot; is a subsequence and not a substring.
 </code></pre>
 
-<p><strong>2) Authorizing the username and password:</strong></p>
+<p>Here is the leetcode link to the problem <a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/"> Longest Substring Without Repeating Characters</a></p>
 
-<p>Here we write a custom function to authorize if username and password salt stored for the user matches the one user has entered as well as return a key if it matches.</p>
+<h3 id="solution">Solution</h3>
 
-<p><strong>3) Sending the JWT back to the querying code:</strong></p>
+<p>Let&rsquo;s take a look at the brute force solution.
+    /**
+    * @param {string} s
+    * @return {number}
+    */
+    var lengthOfLongestSubstring = function(s) {
+        if(s.length &lt; 2) return s.length;</p>
 
-<p><img src="/images/jwt.png" alt="Return JWT" /></p>
+<pre><code>    let max = Number.NEGATIVE_INFINITY ;
 
-<p>That&rsquo;s it. You can now hit the service with :</p>
+    const arr = s.split(&quot;&quot;);
+    const len = arr.length;
 
-<pre><code>&quot;http://test.com/auth/ws.php?username=&quot;. $username . &quot;&amp;password=&quot; . $password; 
+    return arr.reduce((acc,item,index) =&gt; {
+        let substring = [];
 
+        for(let i = index; i&lt; len; i++){
+            let el = arr[i];
+            if(substring.indexOf(el) != -1){
+                /** break out of loop at first repeatition **/
+                break;
+            }
+            substring.push(el);
+
+            if(acc &lt;= substring.length){
+                acc = substring.length;
+            }
+        }
+
+        return acc;
+    }, max);
+};
 </code></pre>
 
-<p>Now you need to handle it on client side too, which entails another post.</p>
+<p><strong>Optimized Solution</strong>
+    /**
+    * @param {string} s
+    * @return {number}
+    */
+    var lengthOfLongestSubstring = function(s) {
+        if(s.length &lt; 2) return s.length;</p>
+
+<pre><code>    //Keep tracks of indexes of string characters
+    const map = {};
+    //left index of sliding window
+    let leftIndex = 0;
+
+    return s.split('').reduce((acc, el, index) =&gt; {
+        //If character already exists then shift sliding window to current +1
+        leftIndex = (map[el] &gt;= leftIndex) ? map[el] + 1 : leftIndex;
+        // Add current index value to map
+        map[el] = index;
+        // update the max value
+        return Math.max(acc, index - leftIndex + 1);
+    }, 0);
+};
+</code></pre>
 
   </section>
   <footer>
@@ -144,12 +161,12 @@ Satisfy any
       <div class="c-pagination__ctrl">
         <div class="c-pagination__newer">
           
-          <a href="/posts/cors/">Newer</a>
+          <a href="/posts/longest-substring-k-distinct/">Newer</a>
           
         </div>
         <div class="c-pagination__older">
           
-          <a href="/posts/javascript-event-overview/">Older</a>
+          <a href="/posts/three-sum/">Older</a>
           
         </div>
       </div>
@@ -159,6 +176,20 @@ Satisfy any
 <section class="p-related">
   <h3>See Also</h3>
   <ul id="slider" class="p-related__list">
+    
+    <li class="p-related__item js-related__item">
+      <a href="/posts/longest-substring-k-distinct/"
+        >
+        <span>Longest Substring with At Most K Distinct Characters</span>
+      </a>
+    </li>
+    
+    <li class="p-related__item js-related__item">
+      <a href="/posts/three-sum/"
+        >
+        <span>Three Sum</span>
+      </a>
+    </li>
     
     <li class="p-related__item js-related__item">
       <a href="/posts/arrays-binary-search/"
@@ -175,30 +206,16 @@ Satisfy any
     </li>
     
     <li class="p-related__item js-related__item">
-      <a href="/posts/longest-substring-without-repeating-char/"
-        >
-        <span>Longest Substring Without Repeating Characters</span>
-      </a>
-    </li>
-    
-    <li class="p-related__item js-related__item">
-      <a href="/posts/three-sum/"
-        >
-        <span>Three Sum</span>
-      </a>
-    </li>
-    
-    <li class="p-related__item js-related__item">
-      <a href="/posts/longest-substring-k-distinct/"
-        >
-        <span>Longest Substring with At Most K Distinct Characters</span>
-      </a>
-    </li>
-    
-    <li class="p-related__item js-related__item">
       <a href="/posts/unique-emails/"
         >
         <span>Unique Email Addresses</span>
+      </a>
+    </li>
+    
+    <li class="p-related__item js-related__item">
+      <a href="/posts/invert-binary-tree/"
+        >
+        <span>Invert A Binary Tree</span>
       </a>
     </li>
     

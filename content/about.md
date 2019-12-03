@@ -9,7 +9,7 @@ Somehow, accidentally stumbled upon the world of web and software again and it r
 
 I love talking to people and learning from their experiences and stories.The things I enjoy are as diverse as human beings, all coexisting and making each other better. Someday, I would love to write the book titled, “What Lord of The Rings can teach you about good Engineering”
 
-
+This blog is a collection of notes for my personal reference.
 
 <b>Want to know more?</b>
 
@@ -24,8 +24,6 @@ Here is my [resume, ](/resume).You can also find me here:
 * <svg viewBox="0 0 64 64" class="c-links__icon"><use xlink:href="#icon-linkedin"></use></svg>
 	<b>LinkedIn: </b>
 	[KirtiB](https://www.linkedin.com/in/kirtib/)
-
-You can find my <b>LeetCode </b> [here](https://leetcode.com/lostwarrior/)
 
 Feel free to drop by and say hello.	
 

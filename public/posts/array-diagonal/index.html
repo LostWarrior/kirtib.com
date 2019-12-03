@@ -67,48 +67,53 @@
 <h3 id="problem-statement">Problem Statement</h3>
 
 <p>Given a square matrix, calculate the absolute difference between the sums of its diagonals.
-Here is the link to problem <a href="https://www.hackerrank.com/challenges/diagonal-difference/problem">HackerRank</a></p>
+Here is the link to problem <a href="https://www.hackerrank.com/challenges/diagonal-difference/problem">HackerRank</a>.</p>
 
-<p><strong>Example</strong>
-    1 2 3
-    4 5 6
-    9 8 9
-The left-to-right diagonal = 1+5+9=15. The right to left diagonal = 3+5+9=17. Their absolute difference is |15-17| = 2.</p>
+<p><strong>Example</strong></p>
+
+<pre><code>1 2 3
+4 5 6
+9 8 9 
+</code></pre>
+
+<p>The left-to-right diagonal = 1+5+9=15. The right to left diagonal = 3+5+9=17. Their absolute difference is |15-17| = 2.</p>
 
 <h3 id="solution">Solution</h3>
 
-<p>Let&rsquo;s take an example
-    11 2 4
-    4 5 6
-    10 8 -12
-If we notice a pattern emerges. Our primary diagonal values are 11,5 and -12 that is if our input is a 2d integer array our primary diagonal values will be [[0,0],[1,1],[2,2]].
+<p>Let&rsquo;s take an example:</p>
+
+<pre><code>11 2 4
+4 5 6
+10 8 -12
+</code></pre>
+
+<p>If we notice a pattern emerges. Our primary diagonal values are 11,5 and -12 that is if our input is a 2d integer array our primary diagonal values will be [[0,0],[1,1],[2,2]].
 Similarly, for our secondary diagonal values are [[0,2],[1,1],[2,0]] that is 4,5 and 10.</p>
 
 <p>Now, if we loop through array our primary values are where i = j. And secondary values can be defined as i+j = len-1; where length is length of the array.Let&rsquo;s look at the code:</p>
 
 <h3 id="code">Code</h3>
 
-<p>function diagonalDifference(arr) {
+<pre><code>function diagonalDifference(arr) {
     let primarySum = 0;
     let secondarySum = 0;
-    const len = arr.length;</p>
+    const len = arr.length;
 
-<pre><code>for(let i = 0; i &lt; len; i++){
-    let dArr = arr[i];
-    for(let j = 0; j &lt; dArr.length; j++){
-        if(i === j){
-            primarySum += arr[i][j];
-        }
-        if(i+j === len-1){
-            secondarySum += arr[i][j];
+    for(let i = 0; i &lt; len; i++){
+        let dArr = arr[i];
+        for(let j = 0; j &lt; dArr.length; j++){
+            if(i === j){
+                primarySum += arr[i][j];
+            }
+            if(i+j === len-1){
+                secondarySum += arr[i][j];
+            }
         }
     }
+
+    return Math.abs((primarySum - secondarySum));
 }
-
-return Math.abs((primarySum - secondarySum));
 </code></pre>
-
-<p>}</p>
 
   </section>
   <footer>
@@ -117,11 +122,12 @@ return Math.abs((primarySum - secondarySum));
       <div class="c-pagination__ctrl">
         <div class="c-pagination__newer">
           
+          <a href="/posts/unique-emails/">Newer</a>
           
         </div>
         <div class="c-pagination__older">
           
-          <a href="/posts/integer-plus-one/">Older</a>
+          <a href="/posts/fruits-in-baskets/">Older</a>
           
         </div>
       </div>
@@ -133,44 +139,44 @@ return Math.abs((primarySum - secondarySum));
   <ul id="slider" class="p-related__list">
     
     <li class="p-related__item js-related__item">
-      <a href="/posts/integer-plus-one/"
+      <a href="/posts/fruits-in-baskets/"
         >
-        <span>Arrays in JS- Add plus one to the integer</span>
+        <span>Fruit Into Baskets</span>
       </a>
     </li>
     
     <li class="p-related__item js-related__item">
-      <a href="/posts/intersection-arrays/"
+      <a href="/posts/invert-binary-tree/"
         >
-        <span>Arrays in JS- Intersection Of Two Arrays</span>
+        <span>Invert A Binary Tree</span>
       </a>
     </li>
     
     <li class="p-related__item js-related__item">
-      <a href="/posts/median-sorted-array/"
+      <a href="/posts/sliding-window/"
         >
-        <span>Arrays in JS- Median of two sorted arrays</span>
+        <span>Coding Question Patterns =&gt; Sliding Window</span>
       </a>
     </li>
     
     <li class="p-related__item js-related__item">
-      <a href="/posts/cors/"
+      <a href="/posts/arrays-binary-search/"
         >
-        <span>Introduction To Cross Origin Resource Sharing</span>
+        <span>Arrays in JS- Binary Search</span>
       </a>
     </li>
     
     <li class="p-related__item js-related__item">
-      <a href="/posts/php-webservice-with-jwt/"
+      <a href="/posts/three-sum/"
         >
-        <span>Creating a php web service for authorization</span>
+        <span>Three Sum</span>
       </a>
     </li>
     
     <li class="p-related__item js-related__item">
-      <a href="/posts/javascript-event-overview/"
+      <a href="/posts/longest-substring-k-distinct/"
         >
-        <span>JS Concepts -&gt; Events An Overview</span>
+        <span>Longest Substring with At Most K Distinct Characters</span>
       </a>
     </li>
     
