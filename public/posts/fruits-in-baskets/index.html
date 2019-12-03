@@ -4,16 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
   
-  <title>Creating a php web service for authorization</title>
-  <meta property="og:title" content="Creating a php web service for authorization" />
-  <meta name="twitter:title" content="Creating a php web service for authorization" />
+  <title>Fruit Into Baskets</title>
+  <meta property="og:title" content="Fruit Into Baskets" />
+  <meta name="twitter:title" content="Fruit Into Baskets" />
   
 
   
 
   <meta name="author" content=""/>
   <meta property="og:site_name" content="Kirti Bhardwaj" />
-  <meta property="og:url" content="/posts/php-webservice-with-jwt/" />
+  <meta property="og:url" content="/posts/fruits-in-baskets/" />
 
   
   <meta name="twitter:card" content="summary" />
@@ -49,12 +49,12 @@
 
 <article class="p-article">
   <header>
-    <h1>Creating a php web service for authorization</h1>
+    <h1>Fruit Into Baskets</h1>
     <div>
       <div class="c-time">
         Posted on
-        <time datetime="2018-03-06T00:00:00Z">
-          Mar 6, 2018
+        <time datetime="2019-11-24T00:00:00Z">
+          Nov 24, 2019
         </time>
       </div>
       
@@ -64,78 +64,93 @@
   <section id="js-article" class="p-article__body">
     
 
-<h2 id="introduction">Introduction</h2>
+<h3 id="problem-statement">Problem Statement</h3>
 
-<p>Recently, I needed to create a php webservice which any application could connect to and it would return a JWT auth token authorizing you.
-Here, I retrace my steps as well as share basic barebones code for such a webservice</p>
+<p>In a row of trees, the i-th tree produces fruit with type tree[i].</p>
 
-<h2 id="url">Url</h2>
+<p>You start at any tree of your choice, then repeatedly perform the following steps:</p>
 
-<p>First of all we needed a url we can hit so, I added a domain name to my /etc/hosts file</p>
+<p>Add one piece of fruit from this tree to your baskets.  If you cannot, stop.
+Move to the next tree to the right of the current tree.  If there is no tree to the right, stop.
+Note that you do not have any choice after the initial choice of starting tree: you must perform step 1, then step 2, then back to step 1, then step 2, and so on until you stop.</p>
 
-<pre><code>sudo vim /etc/hosts
+<p>You have two baskets, and each basket can carry any quantity of fruit, but you want each basket to only carry one type of fruit each.</p>
 
-Added below entry to the file
+<p>What is the total amount of fruit you can collect with this procedure?</p>
 
-127.0.0.1       localhost kirti.test.com
+<p>Here is the link to the problem [Leetcode]()</p>
 
+<h3 id="examples">Examples</h3>
+
+<p>Example 1:</p>
+
+<pre><code>Input: [1,2,1]
+Output: 3
+Explanation: We can collect [1,2,1].
 </code></pre>
 
-<p>So, now when we type kirti.test.com it will hit localhost, easy peasy. Now on to next step:</p>
+<p>Example 2:</p>
 
-<h2 id="web-service">Web Service</h2>
-
-<p>Now we create a folder auth, where we will store all our webservice related code.</p>
-
-<p>This is how your folder structure will look like:</p>
-
-<p><img src="/images/folder.png" alt="Folder Structure" /></p>
-
-<p>Now, first point of entrance is going to be ws.php [short for web service] whereas, custom.php will have the helper code/custom functions that we will write. We will create a config folder which will store our configurations etc.</p>
-
-<p>Here is the code for web service.php</p>
-
-<p><img src="/images/wsphp.png" alt="Web service entry point" /></p>
-
-<p>Now, your .htaccess file should be able to serve all the requests that come to it so, we will add</p>
-
-<pre><code># Deny all the files
-&lt;Files ~ &quot;^.*&quot;&gt;
-  Deny from all
-&lt;/Files&gt;
-
-# Allow all from ws.php
-&lt;Files ws.php&gt;
-Allow from all
-Satisfy any
-&lt;/Files&gt;
-
+<pre><code>Input: [0,1,2,2]
+Output: 3
+Explanation: We can collect [1,2,2].
+If we started at the first tree, we would only collect [0, 1].
 </code></pre>
 
-<p>This to out .htaccess file. This essentially allows all requests for ws.php to be satisfied.</p>
+<p>Example 3:</p>
 
-<p>Now on to the important part, custom code, this has three parts:</p>
-
-<p><strong>1) Including all the config options:</strong></p>
-
-<pre><code>require_once(config/constants.php);
+<pre><code>Input: [1,2,3,2,2]
+Output: 4
+Explanation: We can collect [2,3,2,2].
+If we started at the first tree, we would only collect [1, 2].
 </code></pre>
 
-<p><strong>2) Authorizing the username and password:</strong></p>
+<p>Example 4:</p>
 
-<p>Here we write a custom function to authorize if username and password salt stored for the user matches the one user has entered as well as return a key if it matches.</p>
-
-<p><strong>3) Sending the JWT back to the querying code:</strong></p>
-
-<p><img src="/images/jwt.png" alt="Return JWT" /></p>
-
-<p>That&rsquo;s it. You can now hit the service with :</p>
-
-<pre><code>&quot;http://test.com/auth/ws.php?username=&quot;. $username . &quot;&amp;password=&quot; . $password; 
-
+<pre><code>Input: [3,3,3,1,2,1,1,2,3,3,4]
+Output: 5
+Explanation: We can collect [1,2,1,1,2].
+If we started at the first tree or the eighth tree, we would only collect 4 fruits.
 </code></pre>
 
-<p>Now you need to handle it on client side too, which entails another post.</p>
+<h3 id="solution">Solution</h3>
+
+<p>This is quite an easy solution. For each index we keep count of total number of fruits we can collect as well as two types of fruits we can collect in each basket and return the maximum number of fruits. Let&rsquo;s take a look at the code</p>
+
+<h3 id="code">Code</h3>
+
+<pre><code>/**
+* @param {number[]} tree
+* @return {number}
+*/
+var totalFruit = function(tree) {
+    let max = Number.NEGATIVE_INFINITY;
+    const len = tree.length;
+
+    return tree.reduce((acc,el,index) =&gt; {
+        let total = 0;
+        let basket1 = el;
+        let basket2 = tree[index+1];
+        for(let i = index; i &lt; len; i++){
+            /** Set basket2 type to next available type **/
+            if(basket1 === basket2){
+                basket2 = tree[i];
+            }
+
+            if(tree[i] === basket1 || tree[i] === basket2){
+                total += 1;
+            }else{
+                break;
+            }
+        }
+
+        max = (total &gt; max) ? total : max;
+
+        return max;
+    }, max);
+
+};
+</code></pre>
 
   </section>
   <footer>
@@ -144,12 +159,12 @@ Satisfy any
       <div class="c-pagination__ctrl">
         <div class="c-pagination__newer">
           
-          <a href="/posts/cors/">Newer</a>
+          <a href="/posts/array-diagonal/">Newer</a>
           
         </div>
         <div class="c-pagination__older">
           
-          <a href="/posts/javascript-event-overview/">Older</a>
+          <a href="/posts/invert-binary-tree/">Older</a>
           
         </div>
       </div>
@@ -161,9 +176,16 @@ Satisfy any
   <ul id="slider" class="p-related__list">
     
     <li class="p-related__item js-related__item">
-      <a href="/posts/arrays-binary-search/"
+      <a href="/posts/array-diagonal/"
         >
-        <span>Arrays in JS- Binary Search</span>
+        <span>Arrays in JS- Diagonal Difference</span>
+      </a>
+    </li>
+    
+    <li class="p-related__item js-related__item">
+      <a href="/posts/invert-binary-tree/"
+        >
+        <span>Invert A Binary Tree</span>
       </a>
     </li>
     
@@ -175,9 +197,9 @@ Satisfy any
     </li>
     
     <li class="p-related__item js-related__item">
-      <a href="/posts/longest-substring-without-repeating-char/"
+      <a href="/posts/arrays-binary-search/"
         >
-        <span>Longest Substring Without Repeating Characters</span>
+        <span>Arrays in JS- Binary Search</span>
       </a>
     </li>
     
@@ -192,13 +214,6 @@ Satisfy any
       <a href="/posts/longest-substring-k-distinct/"
         >
         <span>Longest Substring with At Most K Distinct Characters</span>
-      </a>
-    </li>
-    
-    <li class="p-related__item js-related__item">
-      <a href="/posts/unique-emails/"
-        >
-        <span>Unique Email Addresses</span>
       </a>
     </li>
     

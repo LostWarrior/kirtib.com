@@ -4,16 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
   
-  <title>Creating a php web service for authorization</title>
-  <meta property="og:title" content="Creating a php web service for authorization" />
-  <meta name="twitter:title" content="Creating a php web service for authorization" />
+  <title>Invert A Binary Tree</title>
+  <meta property="og:title" content="Invert A Binary Tree" />
+  <meta name="twitter:title" content="Invert A Binary Tree" />
   
 
   
 
   <meta name="author" content=""/>
   <meta property="og:site_name" content="Kirti Bhardwaj" />
-  <meta property="og:url" content="/posts/php-webservice-with-jwt/" />
+  <meta property="og:url" content="/posts/invert-binary-tree/" />
 
   
   <meta name="twitter:card" content="summary" />
@@ -49,12 +49,12 @@
 
 <article class="p-article">
   <header>
-    <h1>Creating a php web service for authorization</h1>
+    <h1>Invert A Binary Tree</h1>
     <div>
       <div class="c-time">
         Posted on
-        <time datetime="2018-03-06T00:00:00Z">
-          Mar 6, 2018
+        <time datetime="2019-11-24T00:00:00Z">
+          Nov 24, 2019
         </time>
       </div>
       
@@ -64,78 +64,55 @@
   <section id="js-article" class="p-article__body">
     
 
-<h2 id="introduction">Introduction</h2>
+<h3 id="problem-statement">Problem Statement</h3>
 
-<p>Recently, I needed to create a php webservice which any application could connect to and it would return a JWT auth token authorizing you.
-Here, I retrace my steps as well as share basic barebones code for such a webservice</p>
+<p>Invert a binary tree. Here is the leetCode link <a href="https://leetcode.com/problems/invert-binary-tree/">Invert A Binary Tree</a></p>
 
-<h2 id="url">Url</h2>
+<p><strong>Example:</strong></p>
 
-<p>First of all we needed a url we can hit so, I added a domain name to my /etc/hosts file</p>
+<pre><code>Input:
 
-<pre><code>sudo vim /etc/hosts
+     4
+   /   \
+  2     7
+ / \   / \
+1   3 6   9
 
-Added below entry to the file
+Output:
 
-127.0.0.1       localhost kirti.test.com
-
+     4
+   /   \
+  7     2
+ / \   / \
+9   6 3   1
 </code></pre>
 
-<p>So, now when we type kirti.test.com it will hit localhost, easy peasy. Now on to next step:</p>
+<h3 id="solution">Solution</h3>
 
-<h2 id="web-service">Web Service</h2>
+<p>This is not a difficult problem to solve. We write a recursive invertTree function, let&rsquo;s look at the code.</p>
 
-<p>Now we create a folder auth, where we will store all our webservice related code.</p>
+<pre><code>/**
+* Definition for a binary tree node.
+* function TreeNode(val) {
+*     this.val = val;
+*     this.left = this.right = null;
+* }
+*/
+/**
+* @param {TreeNode} root
+* @return {TreeNode}
+*/
+var invertTree = function(root) {
+    if(!root) return root;
+    let right = invertTree(root.right);
+    let left = invertTree(root.left);
 
-<p>This is how your folder structure will look like:</p>
+    root.left = right || null;
+    root.right = left || null;
 
-<p><img src="/images/folder.png" alt="Folder Structure" /></p>
-
-<p>Now, first point of entrance is going to be ws.php [short for web service] whereas, custom.php will have the helper code/custom functions that we will write. We will create a config folder which will store our configurations etc.</p>
-
-<p>Here is the code for web service.php</p>
-
-<p><img src="/images/wsphp.png" alt="Web service entry point" /></p>
-
-<p>Now, your .htaccess file should be able to serve all the requests that come to it so, we will add</p>
-
-<pre><code># Deny all the files
-&lt;Files ~ &quot;^.*&quot;&gt;
-  Deny from all
-&lt;/Files&gt;
-
-# Allow all from ws.php
-&lt;Files ws.php&gt;
-Allow from all
-Satisfy any
-&lt;/Files&gt;
-
+    return root;
+};
 </code></pre>
-
-<p>This to out .htaccess file. This essentially allows all requests for ws.php to be satisfied.</p>
-
-<p>Now on to the important part, custom code, this has three parts:</p>
-
-<p><strong>1) Including all the config options:</strong></p>
-
-<pre><code>require_once(config/constants.php);
-</code></pre>
-
-<p><strong>2) Authorizing the username and password:</strong></p>
-
-<p>Here we write a custom function to authorize if username and password salt stored for the user matches the one user has entered as well as return a key if it matches.</p>
-
-<p><strong>3) Sending the JWT back to the querying code:</strong></p>
-
-<p><img src="/images/jwt.png" alt="Return JWT" /></p>
-
-<p>That&rsquo;s it. You can now hit the service with :</p>
-
-<pre><code>&quot;http://test.com/auth/ws.php?username=&quot;. $username . &quot;&amp;password=&quot; . $password; 
-
-</code></pre>
-
-<p>Now you need to handle it on client side too, which entails another post.</p>
 
   </section>
   <footer>
@@ -144,12 +121,12 @@ Satisfy any
       <div class="c-pagination__ctrl">
         <div class="c-pagination__newer">
           
-          <a href="/posts/cors/">Newer</a>
+          <a href="/posts/fruits-in-baskets/">Newer</a>
           
         </div>
         <div class="c-pagination__older">
           
-          <a href="/posts/javascript-event-overview/">Older</a>
+          <a href="/posts/integer-plus-one/">Older</a>
           
         </div>
       </div>
@@ -159,6 +136,20 @@ Satisfy any
 <section class="p-related">
   <h3>See Also</h3>
   <ul id="slider" class="p-related__list">
+    
+    <li class="p-related__item js-related__item">
+      <a href="/posts/fruits-in-baskets/"
+        >
+        <span>Fruit Into Baskets</span>
+      </a>
+    </li>
+    
+    <li class="p-related__item js-related__item">
+      <a href="/posts/array-diagonal/"
+        >
+        <span>Arrays in JS- Diagonal Difference</span>
+      </a>
+    </li>
     
     <li class="p-related__item js-related__item">
       <a href="/posts/arrays-binary-search/"
@@ -182,23 +173,9 @@ Satisfy any
     </li>
     
     <li class="p-related__item js-related__item">
-      <a href="/posts/three-sum/"
-        >
-        <span>Three Sum</span>
-      </a>
-    </li>
-    
-    <li class="p-related__item js-related__item">
       <a href="/posts/longest-substring-k-distinct/"
         >
         <span>Longest Substring with At Most K Distinct Characters</span>
-      </a>
-    </li>
-    
-    <li class="p-related__item js-related__item">
-      <a href="/posts/unique-emails/"
-        >
-        <span>Unique Email Addresses</span>
       </a>
     </li>
     

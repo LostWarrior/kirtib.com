@@ -25,7 +25,10 @@ Javascript, d3.js, php, html5, css, webpack, svg, react.js, git, parcel.js, jenk
 
 ###### <b><span class="pink-color" style="color:#ff4088;">Walmart Labs​</span> — Software Engineer III</b> *<small>(Jan 2019 - SEPTEMBER 2019)</small>*
 Used react, redux, electrode and hapi.js to build the fitment widget for Walmart.com raising the ​ ATC​ for auto parts by a significant number.
-Played an integral role in getting the widget to work on product pages and helped other developers to be an effective part of the team.
+Played an integral role in getting the widget to work on product pages and helped other developers to be an effective part of the team. 
+
+An introduction about the widget <b> [Micro front-end architecture: case study of the Fitment Widget on Walmart.com](https://www.youtube.com/watch?v=BcpDr0CcIxA) </b>
+
 Helped automate the baby Registry backend for the Walmart.com including cache implementation and integrating with cloud configuration management. 
 
 <a href="/files/fitment.png" target="_blank">

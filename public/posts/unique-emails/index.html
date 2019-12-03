@@ -4,16 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
   
-  <title>Creating a php web service for authorization</title>
-  <meta property="og:title" content="Creating a php web service for authorization" />
-  <meta name="twitter:title" content="Creating a php web service for authorization" />
+  <title>Unique Email Addresses</title>
+  <meta property="og:title" content="Unique Email Addresses" />
+  <meta name="twitter:title" content="Unique Email Addresses" />
   
 
   
 
   <meta name="author" content=""/>
   <meta property="og:site_name" content="Kirti Bhardwaj" />
-  <meta property="og:url" content="/posts/php-webservice-with-jwt/" />
+  <meta property="og:url" content="/posts/unique-emails/" />
 
   
   <meta name="twitter:card" content="summary" />
@@ -49,12 +49,12 @@
 
 <article class="p-article">
   <header>
-    <h1>Creating a php web service for authorization</h1>
+    <h1>Unique Email Addresses</h1>
     <div>
       <div class="c-time">
         Posted on
-        <time datetime="2018-03-06T00:00:00Z">
-          Mar 6, 2018
+        <time datetime="2019-11-25T00:00:00Z">
+          Nov 25, 2019
         </time>
       </div>
       
@@ -64,78 +64,58 @@
   <section id="js-article" class="p-article__body">
     
 
-<h2 id="introduction">Introduction</h2>
+<h3 id="problem-statement">Problem Statement</h3>
 
-<p>Recently, I needed to create a php webservice which any application could connect to and it would return a JWT auth token authorizing you.
-Here, I retrace my steps as well as share basic barebones code for such a webservice</p>
+<p>Every email consists of a local name and a domain name, separated by the @ sign.</p>
 
-<h2 id="url">Url</h2>
+<p>For example, in alice@leetcode.com, alice is the local name, and leetcode.com is the domain name.</p>
 
-<p>First of all we needed a url we can hit so, I added a domain name to my /etc/hosts file</p>
+<p>Besides lowercase letters, these emails may contain &lsquo;.&rsquo;s or &lsquo;+&rsquo;s.</p>
 
-<pre><code>sudo vim /etc/hosts
+<p>If you add periods (&lsquo;.&rsquo;) between some characters in the local name part of an email address, mail sent there will be forwarded to the same address without dots in the local name.  For example, &ldquo;alice.z@leetcode.com&rdquo; and &ldquo;alicez@leetcode.com&rdquo; forward to the same email address.  (Note that this rule does not apply for domain names.)</p>
 
-Added below entry to the file
+<p>If you add a plus (&lsquo;+&rsquo;) in the local name, everything after the first plus sign will be ignored. This allows certain emails to be filtered, for example m.y+name@email.com will be forwarded to my@email.com.  (Again, this rule does not apply for domain names.)</p>
 
-127.0.0.1       localhost kirti.test.com
+<p>It is possible to use both of these rules at the same time.</p>
 
+<p>Given a list of emails, we send one email to each address in the list.  How many different addresses actually receive mails?</p>
+
+<p>Here is the link to the problem <a href="https://leetcode.com/problems/unique-email-addresses/">leetcode</a></p>
+
+<h3 id="example">Example</h3>
+
+<pre><code>Input: [&quot;test.email+alex@leetcode.com&quot;,&quot;test.e.mail+bob.cathy@leetcode.com&quot;,&quot;testemail+david@lee.tcode.com&quot;]
+Output: 2
+Explanation: &quot;testemail@leetcode.com&quot; and &quot;testemail@lee.tcode.com&quot; actually receive mails
 </code></pre>
 
-<p>So, now when we type kirti.test.com it will hit localhost, easy peasy. Now on to next step:</p>
+<h3 id="discussion">Discussion</h3>
 
-<h2 id="web-service">Web Service</h2>
+<p>This is an easy problem to solve. First we divide the address into local and domain parts by splitting it on &ldquo;@&rdquo;. Now, for local part we split it on &ldquo;.&rdquo; and join all the parts back together thus, converting abc.def =&gt; abcdef and thanks to chaining in js we split the result again on &ldquo;+&rdquo; and assign everything before the &ldquo;+&rdquo; character to local variable.</p>
 
-<p>Now we create a folder auth, where we will store all our webservice related code.</p>
+<p>From here on it is a simple task of creating the final string and adding it to the accumulator provided.</p>
 
-<p>This is how your folder structure will look like:</p>
+<h3 id="solution">Solution</h3>
 
-<p><img src="/images/folder.png" alt="Folder Structure" /></p>
+<pre><code>/**
+* @param {string[]} emails
+* @return {number}
+*/
+var numUniqueEmails = function(emails) {
+    let finalEmails = emails.reduce((acc,email) =&gt; {
+        let arr = email.split(&quot;@&quot;);
+        let local = arr[0].split(&quot;.&quot;).join(&quot;&quot;).split(&quot;+&quot;)[0];
+        let domain = arr[1];
 
-<p>Now, first point of entrance is going to be ws.php [short for web service] whereas, custom.php will have the helper code/custom functions that we will write. We will create a config folder which will store our configurations etc.</p>
+        let addr = `${local}@${domain}`;
 
-<p>Here is the code for web service.php</p>
+        acc.add(addr);
+        return acc;
+    },new Set());
 
-<p><img src="/images/wsphp.png" alt="Web service entry point" /></p>
-
-<p>Now, your .htaccess file should be able to serve all the requests that come to it so, we will add</p>
-
-<pre><code># Deny all the files
-&lt;Files ~ &quot;^.*&quot;&gt;
-  Deny from all
-&lt;/Files&gt;
-
-# Allow all from ws.php
-&lt;Files ws.php&gt;
-Allow from all
-Satisfy any
-&lt;/Files&gt;
-
+    return finalEmails.size;
+};
 </code></pre>
-
-<p>This to out .htaccess file. This essentially allows all requests for ws.php to be satisfied.</p>
-
-<p>Now on to the important part, custom code, this has three parts:</p>
-
-<p><strong>1) Including all the config options:</strong></p>
-
-<pre><code>require_once(config/constants.php);
-</code></pre>
-
-<p><strong>2) Authorizing the username and password:</strong></p>
-
-<p>Here we write a custom function to authorize if username and password salt stored for the user matches the one user has entered as well as return a key if it matches.</p>
-
-<p><strong>3) Sending the JWT back to the querying code:</strong></p>
-
-<p><img src="/images/jwt.png" alt="Return JWT" /></p>
-
-<p>That&rsquo;s it. You can now hit the service with :</p>
-
-<pre><code>&quot;http://test.com/auth/ws.php?username=&quot;. $username . &quot;&amp;password=&quot; . $password; 
-
-</code></pre>
-
-<p>Now you need to handle it on client side too, which entails another post.</p>
 
   </section>
   <footer>
@@ -144,12 +124,12 @@ Satisfy any
       <div class="c-pagination__ctrl">
         <div class="c-pagination__newer">
           
-          <a href="/posts/cors/">Newer</a>
+          <a href="/posts/three-sum/">Newer</a>
           
         </div>
         <div class="c-pagination__older">
           
-          <a href="/posts/javascript-event-overview/">Older</a>
+          <a href="/posts/array-diagonal/">Older</a>
           
         </div>
       </div>
@@ -175,6 +155,13 @@ Satisfy any
     </li>
     
     <li class="p-related__item js-related__item">
+      <a href="/posts/longest-substring-k-distinct/"
+        >
+        <span>Longest Substring with At Most K Distinct Characters</span>
+      </a>
+    </li>
+    
+    <li class="p-related__item js-related__item">
       <a href="/posts/longest-substring-without-repeating-char/"
         >
         <span>Longest Substring Without Repeating Characters</span>
@@ -189,16 +176,9 @@ Satisfy any
     </li>
     
     <li class="p-related__item js-related__item">
-      <a href="/posts/longest-substring-k-distinct/"
+      <a href="/posts/array-diagonal/"
         >
-        <span>Longest Substring with At Most K Distinct Characters</span>
-      </a>
-    </li>
-    
-    <li class="p-related__item js-related__item">
-      <a href="/posts/unique-emails/"
-        >
-        <span>Unique Email Addresses</span>
+        <span>Arrays in JS- Diagonal Difference</span>
       </a>
     </li>
     
