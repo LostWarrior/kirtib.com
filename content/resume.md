@@ -5,8 +5,8 @@ showthedate: false
 ---
 
 Download <i class="fa fa-download"></i> [pdf](/files/resume.pdf) here
-
-<!-- > 
+<!-- 
+> 
 * London, United Kingdom
 * (+44)- 7826808638
 * [Email](mailto:kirti.sbhardwaj@gmail.com) -->
@@ -23,11 +23,12 @@ Javascript, d3.js, php, html5, css, webpack, svg, react.js, git, parcel.js, jenk
 
 #### <b> EXPERIENCE </b>
 
-###### <b><span class="pink-color" style="color:#ff4088;">Walmart Labs​</span> — Software Engineer III</b> *<small>(Jan 2019 - SEPTEMBER 2019)</small>*
+###### <b><span class="pink-color" style="color:#ff4088;">Walmart Labs​</span> — Software Engineer III</b> *<small>(Jan 2019 - Sept 2019)</small>*
 Used react, redux, electrode and hapi.js to build the fitment widget for Walmart.com raising the ​ ATC​ for auto parts by a significant number.
 Played an integral role in getting the widget to work on product pages and helped other developers to be an effective part of the team. 
+More about Fitment:
 
-An introduction about the widget <b> [Micro front-end architecture: case study of the Fitment Widget on Walmart.com](https://www.youtube.com/watch?v=BcpDr0CcIxA) </b>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BcpDr0CcIxA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Helped automate the baby Registry backend for the Walmart.com including cache implementation and integrating with cloud configuration management. 
 
@@ -41,7 +42,7 @@ Helped automate the baby Registry backend for the Walmart.com including cache im
 	<img src="/files/fitment-more-info.png" width="200" height="200" alt="fitment widget on product page"/>
 </a>
 
-###### <b><span class="pink-color" style="color:#ff4088;">Radiolocus, Mumbai and Bangalore​</span> — Frontend Developer</b> *<small>(MAY 2015 - SEPTEMBER 2018)</small>*
+###### <b><span class="pink-color" style="color:#ff4088;">Radiolocus, Mumbai and Bangalore​</span> — Frontend Developer</b> *<small>(May 2015 - Sept 2018)</small>*
 <b>Lead frontend team</b> while playing a role at intersection of engineering and
 product. Gained experience in customer centric approach to solving issues
 related to ​ <b>navigation​, user path​, data analytics</b> and telling a story through
@@ -57,7 +58,7 @@ Built multiple dashboards and utilities with features such as:
 * Logging functionality etc.
 
 
-###### <b> <span class="pink-color" style="color:#ff4088;">EatAds, New Delhi​ </span>— Web Engineer </b> *<small>(NOVEMBER 2014 - APRIL 2015)</small>*
+###### <b> <span class="pink-color" style="color:#ff4088;">EatAds, New Delhi​ </span>— Web Engineer </b> *<small>(Nov 2014 - Apr 2015)</small>*
 Worked with a small team of six engineers to build a web and mobile app for
 outdoor media:
 
@@ -69,7 +70,7 @@ outdoor media:
 <!-- *<small>Build Stack: php, JavaScript, HTML, CSS</small>* -->
 
 
-###### <b><span class="pink-color" style="color:#ff4088;"> Twyst, Gurgaon​ </span>— Developer </b> *<small>(JULY 2014 - NOVEMBER 2014)</small>*
+###### <b><span class="pink-color" style="color:#ff4088;"> Twyst, Gurgaon​ </span>— Developer </b> *<small>(Jul 2014 - Nov 2014)</small>*
 
 Worked with a small team of four developers to build the web platform of the hyperlocal startup Twyst:
 
@@ -80,7 +81,7 @@ Worked with a small team of four developers to build the web platform of the hyp
 <!-- *<small>Build Stack: Angular.js, d3.js, JavaScript, CSS, node.js, mongodb</small>* -->
 
 
-###### <b> <span class="pink-color" style="color:#ff4088;">GetFitGo, Mumbai​</span> — Senior Web Developer </b> *<small>(APRIL 2014 - JUNE 2014)</small>*
+###### <b> <span class="pink-color" style="color:#ff4088;">GetFitGo, Mumbai​</span> — Senior Web Developer </b> *<small>(Apr 2014 - Jun 2014)</small>*
 Worked with a team of three engineers to develop a social network for fitness enthusiasts with features such as
 
 >* Suggested Friends
@@ -92,7 +93,7 @@ Worked with a team of three engineers to develop a social network for fitness en
 <!-- *<small>Build Stack: Ruby on rails, JavaScript, HTML, CSS, C++</small>* -->
 
 
-###### <b> <span class="pink-color" style="color:#ff4088;">SocialProma, Bangalore​</span> — Tech Consultant, Developer and Writer </b> *<small>(September 2013 - APRIL 2014)</small>*
+###### <b> <span class="pink-color" style="color:#ff4088;">SocialProma, Bangalore​</span> — Tech Consultant, Developer and Writer </b> *<small>(Sep 2013 - Apr 2014)</small>*
 Joined as an intern and later came on board as developer and tech consultant.Major responsibilities included:
 
 >* Writing Tech Blogs and News
@@ -129,7 +130,7 @@ As a part of team at RadioLocus worked on dashboard for smartcity project by Gov
 
 #### <b> EDUCATION </b>
 
-###### <b> <span class="pink-color" style="color:#ff4088;">TAKSHASHILA INSTITUTION​</span> — GCPP </b> *<small>(SEPT 18 - Jan 19)</small>*
-###### <b> <span class="pink-color" style="color:#ff4088;">University Of London​</span> — (ECONOMICS) </b> *<small>(AUG 11 - 13)</small>*
-###### <b> <span class="pink-color" style="color:#ff4088;">NALSAR​</span> — P.G.Diploma (IHL) </b> *<small>(10 - 11) </small>*
-###### <b> <span class="pink-color" style="color:#ff4088;">BRCM</span> — B.E. (Computer Science And Engineering) </b> *<small>(AUG 05 - SEPT 09)</small>*
+###### <b> <span class="pink-color" style="color:#ff4088;">TAKSHASHILA INSTITUTION​</span> — GCPP </b> *<small>Graduated</small>*
+###### <b> <span class="pink-color" style="color:#ff4088;">University Of London​</span> — (ECONOMICS) </b> *<small>Incomplete</small>*
+###### <b> <span class="pink-color" style="color:#ff4088;">NALSAR​</span> — P.G.Diploma (IHL) </b> *<small>First Class</small>*
+###### <b> <span class="pink-color" style="color:#ff4088;">BRCM</span> — B.E. (Computer Science And Engineering) </b> *<small>Honors</small>*
