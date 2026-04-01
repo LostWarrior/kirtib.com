@@ -27,14 +27,15 @@ Payments infrastructure company processing $35B+ annually. Progressed from front
 
 **Database Migration & Infrastructure (2025 - Present)**
 
-Part of the team migrating GoCardless's core payments database from PostgreSQL to YugabyteDB (distributed SQL) with zero downtime. Phase 1 (~500GB, complete). Phase 2 (~15TB, ongoing).
+Part of the Payments Runway team focused on scalability - actively migrating GoCardless's core payments database from PostgreSQL to YugabyteDB (distributed SQL) with zero downtime. Phase 1 (~500GB) complete. Currently working on Phase 2 (~15TB).
 
->* Migrated 50+ ActiveRecord models to a dual-write pattern (CutoverRecord), removed blocking foreign key dependencies, and built connection validation scripts for each phase
-* Built a load testing platform from scratch (Ruby + Playwright + Node.js) with Prometheus metrics, Web Vitals collection, and Kibana logging - deployed as Kubernetes cron jobs
-* Authored a custom database function (query_advisory_locks) to optimise advisory lock queries, built latency probes with Prometheus histograms, and rolled out observability across staging and production
-* Fixed 100+ test compatibility issues between PostgreSQL and YugabyteDB - non-deterministic ordering, DDL transaction differences, serialization errors, cross-database connections, and partition lifecycle handling
-* Extended YugabyteDB Voyager migration tooling - schema import commands, table exclusion logic, ownership safeguards, and connection validation for phased rollout
-* Managed infrastructure (Terraform/GCP) for cutover environments - database configs, consoles, replica scaling, and disk provisioning
+>* Led the cutover of sandbox-staging to YugabyteDB across three attempts - debugging replication failures, stop-writes coordination, permission models, and partition handling. Wrote the definitive cutover runbook documenting lessons, fallback procedures, and pre-cutover checklists used by the wider team
+* Contributed to the team's custom migration tooling around YugabyteDB Voyager - added methods for schema transformation, table exclusion, ownership safeguards, and an alternative schema import path to work around Voyager's silent failure modes
+* Investigated and documented a critical ~1000x slowdown in Voyager's data import when restarting with `--on-primary-key-conflict IGNORE` - traced through three code paths to identify that recovery mode falls back to per-row COPY operations, and defined recovery procedures for the team
+* Supported the team in Phase 1 migration of 50+ ActiveRecord models to a dual-write pattern (CutoverRecord), removing blocking foreign key dependencies and building connection validation scripts
+* Authored a custom database function (query_advisory_locks) to optimise advisory lock queries in the job processing system, built latency probes with Prometheus histograms, and rolled out observability across staging and production
+* Built a load testing platform from scratch (Ruby + Playwright + Node.js) with Prometheus metrics, Web Vitals collection, and Kibana logging - deployed as Kubernetes cron jobs to validate dashboard performance during migration
+* Part of the team effort to fix 100+ test compatibility issues between PostgreSQL and YugabyteDB - non-deterministic ordering, DDL transaction differences, serialization errors, and partition lifecycle handling
 
 **Product Growth / Spark Team (2023 - 2024)**
 
