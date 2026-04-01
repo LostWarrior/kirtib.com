@@ -27,12 +27,14 @@ Payments infrastructure company processing $35B+ annually. Progressed from front
 
 **Database Migration & Infrastructure (2025 - Present)**
 
->* Leading migration of core payments database from PostgreSQL to YugabyteDB (distributed SQL) - migrating 50+ ActiveRecord models with dual-write patterns for zero-downtime cutover
-* Built a load testing platform from scratch (Ruby + Playwright + Node.js) with Prometheus metrics, Web Vitals collection, and Kibana logging - deployed via Kubernetes cron jobs
-* Authored database functions to optimise advisory lock queries, built latency probes with Prometheus histograms, and rolled out observability across staging and production
-* Developed migration tooling around YugabyteDB Voyager - schema import, table exclusion logic, ownership safeguards, and connection validation for phased migration
-* Fixed 100+ distributed database compatibility issues in the test suite - non-deterministic ordering, DDL transaction differences, serialization errors, and cross-database connections
-* Managed infrastructure (Terraform/GCP) for cutover environments - database configs, connection pools, consoles, replica scaling, and disk provisioning
+Part of the team migrating GoCardless's core payments database from PostgreSQL to YugabyteDB (distributed SQL) with zero downtime. Phase 1 (~500GB, complete). Phase 2 (~15TB, ongoing).
+
+>* Migrated 50+ ActiveRecord models to a dual-write pattern (CutoverRecord), removed blocking foreign key dependencies, and built connection validation scripts for each phase
+* Built a load testing platform from scratch (Ruby + Playwright + Node.js) with Prometheus metrics, Web Vitals collection, and Kibana logging - deployed as Kubernetes cron jobs
+* Authored a custom database function (query_advisory_locks) to optimise advisory lock queries, built latency probes with Prometheus histograms, and rolled out observability across staging and production
+* Fixed 100+ test compatibility issues between PostgreSQL and YugabyteDB - non-deterministic ordering, DDL transaction differences, serialization errors, cross-database connections, and partition lifecycle handling
+* Extended YugabyteDB Voyager migration tooling - schema import commands, table exclusion logic, ownership safeguards, and connection validation for phased rollout
+* Managed infrastructure (Terraform/GCP) for cutover environments - database configs, consoles, replica scaling, and disk provisioning
 
 **Product Growth / Spark Team (2023 - 2024)**
 
@@ -48,9 +50,11 @@ Payments infrastructure company processing $35B+ annually. Progressed from front
 
 Tech lead for the digital experience team, sitting at the cusp of product, management and tech.
 
->* Core contributor (#6) to the content platform powering GoCardless's public website - React with Prismic/Contentful CMS, multi-region support (EN/FR/ES/DE), and Terraform-managed routing
-* Set up Google Analytics BigQuery infrastructure from scratch - GCP projects, IAM roles, service accounts, Firebase linking, and dataset configuration
-* Built UI components in the shared React component library and established testing infrastructure in the frontend monorepo
+>* **S:** GoCardless's public website needed to support marketing content across multiple regions and languages, managed by non-technical teams. **T:** Build and maintain the content platform serving all public-facing pages. **A:** Became a core contributor (#6 overall) to the React application backed by Prismic and later Contentful CMS, with Terraform-managed routing for legal, pricing, partner, and FAQ pages across EN/FR/ES/DE regions. **R:** Marketing teams could independently publish and localise content across four regions without engineering involvement.
+>
+>* **S:** The marketing team had no analytics pipeline connecting Google Analytics data to BigQuery for cross-channel analysis. **T:** Set up the infrastructure to stream GA data into BigQuery. **A:** Built the entire pipeline from scratch - GCP projects, IAM roles, service accounts, Firebase linking, datasets, and staging/production environments integrated with the Utopia infrastructure platform. **R:** Marketing analytics team gained self-serve access to GA data in BigQuery, enabling cross-channel reporting.
+>
+>* **S:** Frontend teams lacked shared UI components and consistent testing across projects. **T:** Establish reusable component and testing infrastructure. **A:** Built UI components in the shared React library (flux) and set up jest-config and testing infrastructure in the frontend monorepo (ui-hub). **R:** Consistent UI patterns and test setup across frontend projects, reducing duplication and onboarding time.
 
 ###### <b><span class="pink-color" style="color:#ff4088;">Walmart Labs</span> — Software Engineer III</b> *<small>(Jan 2019 - Sept 2019)</small>*
 Used react, redux, electrode and hapi.js to build the fitment widget for Walmart.com raising the ATC for auto parts by a significant number.
