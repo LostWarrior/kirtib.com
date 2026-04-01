@@ -1,6 +1,8 @@
 ---
 date: 2026-04-01
+title: Resume
 linktitle: resume
+url: /resume/
 showthedate: false
 ---
 

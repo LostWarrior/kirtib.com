@@ -1,5 +1,7 @@
 ---
 date: 2026-04-01
+draft: true
+title: Old Resume
 linktitle: resume
 showthedate: false
 ---
