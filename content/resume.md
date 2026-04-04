@@ -8,61 +8,51 @@ showthedate: false
 
 ### <b> <span class="dark-highlight" style="color:#555;">Kirti Bhardwaj</span> </b>
 
-*Software engineer with experience across ecommerce, analytics, growth, and payments infrastructure. Currently focused on database scalability - migrating a 15TB payments database from PostgreSQL to YugabyteDB. Previously led frontend platform and growth engineering teams.*
+*Software Engineer specializing in distributed systems and high-scale infrastructure migrations. With over six years at GoCardless, I have transitioned from leading frontend platform initiatives to executing zero-downtime migrations for 15TB+ data environments. I am motivated by solving scalability bottlenecks where product growth intersects with database constraints.*
 
 ***
+
+#### <b> TECHNICAL SKILLS </b>
+
+*   **Systems & Scalability:** Distributed SQL (YugabyteDB), PostgreSQL Internals, SQL Optimization, Redis, Ruby on Rails.
+*   **Infrastructure & Operations:** GCP, Kubernetes, Terraform, Prometheus/Grafana, CI/CD, Load Testing (Playwright/Hesiod).
+*   **Product Engineering:** TypeScript, React, Next.js, Gatsby, D3.js, A/B Testing (Optimizely), Experimentation Frameworks.
 
 #### <b> EXPERIENCE </b>
 
 ###### <b><span class="pink-color" style="color:#ff4088;">GoCardless, London</span> — Software Engineer</b> *<small>(Mar 2020 - Present)</small>*
 
-**Database Migration & Infrastructure (2025 - Present)**
+**Distributed Systems & Database Migrations (2025 - Present)**
+Executing the zero-downtime migration of a core 15TB PostgreSQL database to YugabyteDB (Distributed SQL).
+*   **Performance Engineering:** Resolved a critical scaling bottleneck in the job processing system by designing a high-performance distributed locking utility. This addressed a ~100ms latency bottleneck in database lock discovery, reducing execution time to ~3ms across 21 high-volume job classes and eliminating P99 tail-latency spikes.
+*   **High-Scale Operations:** Managed three production-parallel cutover attempts in sandbox-staging environments. Authored technical debriefs and operational playbooks adopted by the wider engineering org to manage partition handling and replication lag at scale.
+*   **Systems Debugging:** Investigated and resolved upstream scalability limitations in **YugabyteDB Voyager**, specifically regarding partition filtering and CDC replication. Built custom load-testing probes (Hesiod) to validate system throughput during migration phases.
 
-Part of the Payments Runway team focused on scalability - actively migrating GoCardless's core payments database from PostgreSQL to YugabyteDB (distributed SQL) with zero downtime. Phase 1 (~500GB) complete. Currently working on Phase 2 (~15TB).
+**Product Growth & Platform Engineering (2023 - 2024)**
+*   **Strategic Optimization:** Led the technical redesign of the merchant registration funnel to scale with global growth. Defined the product experiment roadmap, implemented multi-variant A/B testing, and architected automated email/bot verification systems that improved lead quality and conversion efficiency.
+*   **Systems Integration:** Architected a high-concurrency rewards API for international growth campaigns, managing the technical trade-offs between idempotent distribution and high-volume lifecycle messaging via Braze.
 
->* Led the cutover of sandbox-staging to YugabyteDB across three attempts - debugging replication failures, stop-writes coordination, permission models, and partition handling. Wrote the cutover runbook used by the wider team
-* Investigated a critical ~1000x slowdown in Voyager's data import - traced through three code paths to find recovery mode falling back to per-row COPY operations. Defined recovery procedures for the team
-* Authored a database function (query_advisory_locks) to optimise advisory lock queries in the job processing system. Built latency probes with Prometheus histograms and rolled out observability across staging and production
-* Built a load testing platform from scratch (Ruby + Playwright + Node.js) with Prometheus metrics, Web Vitals, and Kibana logging - deployed as Kubernetes cron jobs
-* Supported Phase 1 migration of 50+ ActiveRecord models to a dual-write pattern (CutoverRecord), removing foreign key dependencies and building connection validation scripts
-* Contributed to custom Voyager tooling - schema transformation, table exclusion, ownership safeguards, and an alternative schema import path
-* Part of the team effort to fix 100+ test compatibility issues between PostgreSQL and YugabyteDB
-
-**Product Growth / Spark Team (2023 - 2024)**
-
->* Built the email verification system end-to-end (frontend + backend) - database schema, API routes, i18n email templates, SendGrid quality scoring, pwned password checks, and rate limiting. Reduced fraudulent signups across the funnel
-* Owned the signup frontend in the Next.js monorepo - optimised forms, reCAPTCHA, conversion tracking, and payer growth loop experiments
-* Integrated SendGrid's email validation API for spam labeling at signup - email verdict scoring, background worker for quality checks on updates
-* Contributed to the referral rewards system - Optimizely experiments, Braze email triggers, and audience segmentation
-
-**Frontend Platform / DX Team (2020 - 2022)** - Tech Lead, Digital Experience
-
-Tech lead for the digital experience team, sitting at the cusp of product, management and tech. Managed stakeholder relationships, set technical direction for the team, and created the conditions for engineers to do their best work.
-
->* Owned the content platform powering GoCardless's public website - React with Prismic/Contentful CMS, multi-region support (EN/FR/ES/DE), and Terraform-managed routing
-* Built the GA BigQuery analytics pipeline from scratch - GCP projects, IAM, service accounts, Firebase linking, and staging/production environments
-* Built UI components in the shared React library (flux) and set up testing infrastructure in the frontend monorepo (ui-hub)
+**Digital Experience (DX) — Tech Lead (2020 - 2022)**
+*   **Multidimensional Leadership:** Served as the technical lead for a cross-functional team at the intersection of product, engineering, and marketing. Managed stakeholder roadmaps, mentored junior engineers, and set the technical direction for the 3M+ monthly marketing platform.
+*   **Platform Modernization:** Led the architectural transition from Prismic to Contentful and optimized build performance for a global rebrand. Built the GCP/BigQuery data infrastructure to enable cross-channel attribution modeling, bridging the gap between engineering output and marketing ROI.
 
 ###### <b><span class="pink-color" style="color:#ff4088;">Walmart Labs</span> — Software Engineer III</b> *<small>(Jan 2019 - Sept 2019)</small>*
+*   Developed the Fitment Widget for Walmart.com (React/Redux), a micro-frontend designed to handle high-concurrency traffic on product pages while verifying auto-part compatibility.
+*   Automated registry backend services, implementing caching strategies to ensure consistency across distributed nodes.
 
->* Built the fitment verification widget for Walmart.com auto parts using React, Redux, Electrode and Hapi.js - increased Add-to-Cart metrics for the category
-* Automated baby Registry backend with cache implementation and cloud configuration management
-
-###### <b><span class="pink-color" style="color:#ff4088;">Radiolocus, Mumbai and Bangalore</span> — Frontend Developer</b> *<small>(May 2015 - Sept 2018)</small>*
-
-Led the frontend team at the intersection of engineering and product. Built D3-based analytics dashboards for clients including VirginMedia and the Government of India's SmartCity project. Handled data visualizations, code splitting, custom utilities, PHP authentication layer, and client-based customizations.
+###### <b><span class="pink-color" style="color:#ff4088;">Radiolocus, Mumbai & Bangalore</span> — Frontend Developer</b> *<small>(May 2015 - Sept 2018)</small>*
+*   Built D3.js analytics dashboards for high-density urban datasets (VirginMedia, SmartCity India), focusing on rendering performance for datasets with millions of data points.
 
 #### <b> PROJECTS </b>
 
-###### <b> <span class="pink-color" style="color:#ff4088;">Get Jugaad</span> — Co-founder</b> *<small>(during university)</small>*
-
-Ridesharing platform for India, built through Steve Blank's Lean Startup Initiative. Selected as the official Indian startup to pitch to investors in Silicon Valley.
+*   **knowledge-base:** A zero-dependency CLI for organizing project context in markdown. Designed for both human readability and efficient AI agent navigation, featuring automated indexing and lifecycle management.
+*   **KobiTab:** A macOS "second brain" utility for information organization and knowledge management.
+*   **Calliope Canvas:** A TypeScript/React framework for building code-driven, interactive technical presentations.
+*   **Get Jugaad:** A co-founded ridesharing experiment (Lean Startup Initiative) focused on logistics scaling in high-density urban environments.
 
 #### <b> EDUCATION </b>
 
-*Took the scenic route through engineering, international law, and economics. The common thread? I like understanding how complex systems work - then building them.*
-
+###### <b> <span class="pink-color" style="color:#ff4088;">BRCM</span> — B.E. (Computer Science & Engineering) </b> *<small>Honors</small>*
 ###### <b> <span class="pink-color" style="color:#ff4088;">TAKSHASHILA INSTITUTION</span> — GCPP </b> *<small>Graduated</small>*
-###### <b> <span class="pink-color" style="color:#ff4088;">University Of London</span> — (ECONOMICS) </b> *<small>Incomplete</small>*
-###### <b> <span class="pink-color" style="color:#ff4088;">NALSAR</span> — P.G.Diploma (IHL) </b> *<small>First Class</small>*
-###### <b> <span class="pink-color" style="color:#ff4088;">BRCM</span> — B.E. (Computer Science And Engineering) </b> *<small>Honors</small>*
+###### <b> <span class="pink-color" style="color:#ff4088;">NALSAR</span> — P.G. Diploma (International Humanitarian Law) </b> *<small>First Class</small>*
+###### <b> <span class="pink-color" style="color:#ff4088;">University of London</span> — Economics </b> *<small>Incomplete</small>*
