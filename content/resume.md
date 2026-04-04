@@ -41,9 +41,7 @@ Focused on improving the scalability and reliability of GoCardless's core system
 *   Developed the Fitment Widget for Walmart.com (React/Redux), a micro-frontend designed to handle high-concurrency traffic on product pages while verifying auto-part compatibility.
 *   Spent brief time working on automating backend services for the registry, implementing caching strategies to ensure consistency across distributed nodes.
 
-<details>
-
-<summary><b>See more</b></summary>
+{{< details "See more" >}}
 
 Built the fitment verification widget for Walmart.com auto parts using React, Redux, Electrode and Hapi.js - showing a 9% increase in Add-to-Cart metrics for the category.
 
@@ -54,29 +52,24 @@ Built the fitment verification widget for Walmart.com auto parts using React, Re
   <a href="/files/fitment-full.png" target="_blank"><img src="/files/fitment-full.png" width="200" alt="Full View"/></a>
   <a href="/files/fitment-more-info.png" target="_blank"><img src="/files/fitment-more-info.png" width="200" alt="More Info"/></a>
 </div>
-</details>
+{{< /details >}}
 
 ###### <b><span class="pink-color" style="color:#ff4088;">Radiolocus, Mumbai & Bangalore</span> — Software Engineer</b> *<small>(May 2015 - Sept 2018)</small>*
 *   Led the frontend team at the intersection of engineering and product. This role came with a lot of autonomy and responsibility and included mentoring and leading the team. 
 
-<details>
-<summary><b>See more</b></summary>
+{{< details "See more" >}}
 Some examples of work my team and I did using high-density urban datasets (e.g. VirginMedia, SmartCity India, European Airports) our focus was on rendering performance for datasets with millions of data points and high frequency updates. Helping our customers to make sense of the data and make informed decisions.
 
 **VirginMedia Dashboard:**
-<video width="100%" height="350" controls style="margin-top: 10px; background: #000;">
-  <source src="/files/virginmedia.webm?rel=0" type="video/webm">
-</video>
+{{< video src="/files/virginmedia.webm?rel=0" >}}
 
 **SmartCity Dashboard:**
-<video width="100%" height="350" controls style="margin-top: 10px; background: #000;">
-  <source src="/files/smartcity.webm?rel=0" type="video/webm">
-</video>
-</details>
+{{< video src="/files/smartcity.webm?rel=0" >}}
+{{< /details >}}
 
 #### <b> PROJECTS </b>
 
-*   **KB:** A zero-dependency CLI for organizing project context in markdown. Designed for both human readability and efficient AI agent navigation, featuring automated indexing and lifecycle management.
+*   **knowledge-base:** A zero-dependency CLI for organizing project context in markdown. Designed for both human readability and efficient AI agent navigation, featuring automated indexing and lifecycle management.
 *   **KobiTab:** A macOS "second brain" utility for information organization and knowledge management.
 *   **Calliope Canvas:** A TypeScript/React framework for building code-driven, interactive technical presentations.
 *   **Get Jugaad:** As a part of Lean Startup Initiative by Steve Blank co-founded a ridesharing app and platform targeting customers in India focused on logistics scaling in high-density urban environments. Team was selected as official startup from India giving us an opportunity to pitch to investors in Silicon Valley. My focus was on customer discovery, product design, community building and new market entry strategies.
