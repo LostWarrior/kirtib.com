@@ -1,0 +1,3 @@
+<video width="{{ .Get "width" | default "100%" }}" height="{{ .Get "height" | default "350" }}" controls style="margin-top: 10px; background: #000;">
+  <source src="{{ .Get "src" | absURL }}" type="video/webm">
+</video>

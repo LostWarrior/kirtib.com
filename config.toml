@@ -4,8 +4,14 @@ Title = "Kirti Bhardwaj"
 # Copyright notice. This is displayer in the footer.
 copyright = "&copy; Belongs to Kirti Bhardwaj"
 theme = "hugo_theme_pickles"
+summaryLength = 30
 pygmentsStyle = "monokai"
 pygmentsUseClasses= true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [params]
   ShowDatesOnPosts= false
@@ -15,9 +21,8 @@ pygmentsUseClasses= true
   paginate = 5
   # Social accounts. Link to these accounts are displayed in the header and
   # footer
-  twitter = "kirtib"
   github = "LostWarrior"
-  linkedin = "kirtib/"
+  linkedin = "kirtib"
   # Google Analytics API key.
   ga_api_key = "Your Google Analytics tracking id"
   #author = "Kirti Bhardwaj"

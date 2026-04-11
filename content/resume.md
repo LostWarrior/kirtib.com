@@ -6,9 +6,7 @@ url: /resume/
 showthedate: false
 ---
 
-### <b> <span class="dark-highlight" style="color:#555;">Kirti Bhardwaj</span> </b>
-
-*Software Engineer with wide variety of domain experience, from frontend to distributed systems and high-scale infrastructure migrations. With over six years at GoCardless, I have transitioned from leading frontend platform initiatives to executing zero-downtime migrations for high availability data environments. I enjoy solving problems across the stack from scalability bottlenecks to product growth to enhancing user experience.*
+Software Engineer with wide variety of domain experience, from frontend to distributed systems and high-scale infrastructure migrations. With over six years at GoCardless, I have transitioned from leading frontend platform initiatives to executing zero-downtime migrations for high availability data environments. I enjoy solving problems across the stack from scalability bottlenecks to product growth to enhancing user experience.
 
 ***
 
@@ -24,14 +22,15 @@ showthedate: false
 
 **Distributed Systems & Database Migrations (2025 - Present)**
 Focused on improving the scalability and reliability of GoCardless's core systems to ensure it can handle the company's growth and evolving business needs.
-*   **Performance Engineering:** Resolved a critical scaling bottleneck in the job processing system by designing a high-performance distributed locking utility. This addressed a ~100ms latency bottleneck in database lock discovery, reducing execution time to ~3ms across 21 high-volume job classes and eliminating P99 tail-latency spikes.
-*   **High-Scale Operations:** Managed three production-parallel cutover attempts in sandbox-staging environments. Authored technical debriefs and operational playbooks adopted by the wider engineering team to manage partition handling and replication lag at scale.
-*   **Systems Debugging:** Investigated and resolved scalability limitations in **YugabyteDB Voyager**, specifically regarding partition filtering and CDC replication. Built custom tools to validate system throughput during migration phases.
-*   **Large Scale Data Migration:** Currently working on strategies for migrating 15TB of data from PostgreSQL to YugabyteDB with zero downtime. This involves working with the YugabyteDB team to understand the limitations of their tools and come up with a strategy that works for our use case. Ensuring minimal downtime and data loss during the migration while maintaining data integrity.
+
+*  **Performance Engineering:** Resolved a critical scaling bottleneck in the job processing system by designing a high-performance distributed locking utility. This addressed a ~100ms latency bottleneck in database lock discovery, reducing execution time to ~3ms across 21 high-volume job classes and eliminating P99 tail-latency spikes.
+*  **High-Scale Operations:** Managed three production-parallel cutover attempts in sandbox-staging environments. Authored technical debriefs and operational playbooks adopted by the wider engineering team to manage partition handling and replication lag at scale.
+*  **Systems Debugging:** Investigated and resolved scalability limitations in **YugabyteDB Voyager**, specifically regarding partition filtering and CDC replication. Built custom tools to validate system throughput during migration phases.
+*  **Large Scale Data Migration:** Currently working on strategies for migrating 15TB of data from PostgreSQL to YugabyteDB with zero downtime. This involves working with the YugabyteDB team to understand the limitations of their tools and come up with a strategy that works for our use case. Ensuring minimal downtime and data loss during the migration while maintaining data integrity.
 
 **Product Growth & Platform Engineering (2023 - 2024)**
-*   **Strategic Optimization:** Led the technical redesign of the merchant registration funnel to scale with global growth. Defined the product experiment roadmap, implemented multi-variant A/B testing, and architected automated email/bot verification systems that improved lead quality and conversion efficiency.
-*   **Systems Integration:** Architected a high-concurrency rewards API for international growth campaigns, managing the technical trade-offs between idempotent distribution and high-volume lifecycle messaging via Braze.
+*  **Strategic Optimization:** Led the technical redesign of the merchant registration funnel to scale with global growth. Defined the product experiment roadmap, implemented multi-variant A/B testing, and architected automated email/bot verification systems that improved lead quality and conversion efficiency.
+*  **Systems Integration:** Architected a high-concurrency rewards API for international growth campaigns, managing the technical trade-offs between idempotent distribution and high-volume lifecycle messaging via Braze.
 
 **Digital Experience (DX) — Tech Lead (2020 - 2022)**
 *   **Multidimensional Leadership:** Served as the technical lead for a cross-functional team at the intersection of product, engineering, and marketing. Managed stakeholder roadmaps, mentored junior engineers, and set the technical direction for the 3M+ monthly marketing platform.
@@ -69,9 +68,9 @@ Some examples of work my team and I did using high-density urban datasets (e.g. 
 
 #### <b> PROJECTS </b>
 
-*   **knowledge-base:** A zero-dependency CLI for organizing project context in markdown. Designed for both human readability and efficient AI agent navigation, featuring automated indexing and lifecycle management.
-*   **KobiTab:** A macOS "second brain" utility for information organization and knowledge management.
-*   **Calliope Canvas:** A TypeScript/React framework for building code-driven, interactive technical presentations.
+*   **[knowledge-base](https://github.com/LostWarrior/knowledge-base):** A zero-dependency CLI for organizing project context in markdown. Designed for both human readability and efficient AI agent navigation, featuring automated indexing and lifecycle management.
+*   **[KobiTab](https://kobitab.com):** A macOS "second brain" utility for information organization and knowledge management.
+*   **[Calliope Canvas](https://github.com/LostWarrior/Calliope-Canvas):** A TypeScript/React framework for building code-driven, interactive technical presentations.
 *   **Get Jugaad:** As a part of Lean Startup Initiative by Steve Blank co-founded a ridesharing app and platform targeting customers in India focused on logistics scaling in high-density urban environments. Team was selected as official startup from India giving us an opportunity to pitch to investors in Silicon Valley. My focus was on customer discovery, product design, community building and new market entry strategies.
 
 #### <b> EDUCATION </b>

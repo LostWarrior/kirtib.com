@@ -13,18 +13,11 @@ This blog is a collection of notes for my personal reference.
 
 <b>Want to know more?</b>
 
-Here is my [resume, ](/resume).You can also find me here:
+Here is my [resume](/resume). You can also find me here:
 
-> * <svg viewBox="0 0 64 64" class="c-links__icon"><use xlink:href="#icon-github"></use></svg>
-	<b> Github  :  </b>
-    [LostWarrior](https://github.com/LostWarrior), 
-* <svg viewBox="0 0 64 64" class="c-links__icon"><use xlink:href="#icon-twitter"></use></svg>
-	<b> Twitter :  </b>
-	[KirtiB](https://twitter.com/KirtiB)
-* <svg viewBox="0 0 64 64" class="c-links__icon"><use xlink:href="#icon-linkedin"></use></svg>
-	<b>LinkedIn: </b>
-	[KirtiB](https://www.linkedin.com/in/kirtib/)
+* <svg viewBox="0 0 48 48" class="c-links__icon" style="width:16px; height:16px; vertical-align:middle; fill:currentColor; margin-right: 8px;margin-bottom: 4px;"><use xlink:href="#icon-github"></use></svg>**Github** - [LostWarrior](https://github.com/LostWarrior)
+* <svg viewBox="0 0 48 48" class="c-links__icon" style="width:16px; height:16px; vertical-align:middle; fill:currentColor; margin-right: 8px;margin-bottom: 4px;"><use xlink:href="#icon-linkedin"></use></svg>**LinkedIn** - [KirtiB](https://www.linkedin.com/in/kirtib/)
 
 Feel free to drop by and say hello.	
 
-***
+**

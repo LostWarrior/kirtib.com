@@ -1,9 +1,225 @@
-.pink-color{
-	color:#ff4088 !important;
+:root {
+  --primary-font: 'Inter', -apple-system, system-ui, sans-serif;
+  --heading-font: 'Newsreader', 'Lora', serif;
 }
-.dark-highlight{
-	color: #555 !important;
+
+/* Base Sizing */
+html {
+  font-size: 62.5%; /* 10px base */
 }
-.normal-text{
-	color:#888 !important;
+
+body {
+  font-family: var(--primary-font) !important;
+  font-size: 1.8rem !important; /* ~18px for that spacious Claude look */
+  line-height: 1.6 !important;
+  color: #1a1a1a !important; /* Slightly softer than pure black */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+h1, h2, h3, .p-title, .c-article__title, .c-title {
+  font-family: var(--heading-font) !important;
+  font-weight: 700 !important;
+  margin-top: 3.5rem;
+  margin-bottom: 1.8rem;
+  letter-spacing: -0.02em; /* Slightly tighter for that high-end look */
+}
+
+h4, h5, h6 {
+  font-family: var(--primary-font) !important;
+  font-weight: 600 !important;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.c-article__header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 3.5rem;
+    margin-bottom: 1.8rem;
+}
+
+.c-article__header-wrap h1 {
+    margin: 0 !important;
+    line-height: 1 !important;
+}
+
+.c-article__download-icon {
+    color: #ff4088;
+    transition: transform 0.2s ease;
+    display: flex;
+    align-self: center;
+    position: relative;
+    top: 4px; /* Optical adjustment */
+}
+
+.c-article__download-icon:hover {
+    transform: translateY(2px);
+    color: #e03578;
+}
+
+h1, .p-title { font-size: 3.4rem !important; }
+h2 { font-size: 2.8rem !important; }
+h3 { font-size: 2.4rem !important; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
+h4 { font-size: 2.1rem !important; margin-top: 3rem; }
+h5 { font-size: 1.9rem !important; }
+h6 { 
+    font-size: 1.6rem !important; 
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+h6 b {
+    font-weight: 700;
+}
+
+h6 .pink-color {
+    letter-spacing: 0.02em;
+}
+
+/* Article Titles on Index */
+.c-article__title {
+  font-family: var(--primary-font) !important;
+  font-size: 2.2rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.c-meta {
+  font-family: var(--primary-font) !important;
+  font-size: 1.4rem !important;
+  color: #777 !important;
+  margin-bottom: 1.5rem;
+}
+
+.c-article__summary {
+    font-size: 1.5rem !important;
+    line-height: 1.5 !important;
+    color: #666 !important;
+    margin-bottom: 1rem;
+}
+
+.p-article__link {
+    font-family: var(--heading-font) !important;
+    font-style: italic;
+    font-size: 1.6rem;
+    color: #ff4088 !important;
+}
+
+/* Resume Specific Tweaks */
+.dark-highlight {
+  color: #222 !important;
+  font-family: var(--heading-font) !important;
+  font-size: 1.1em;
+}
+
+.pink-color {
+  color: #ff4088 !important;
+  font-weight: 700;
+}
+
+.normal-text {
+  color: #555 !important;
+}
+
+/* Lists and Bullets */
+ul, ol {
+  margin-bottom: 2rem;
+}
+
+li {
+  font-size: 1.6rem !important;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+/* Job Specifics */
+h6 b {
+    display: inline-block;
+    margin-bottom: 0.2rem;
+}
+
+h6 small, h6 em {
+    font-size: 0.8em;
+    font-weight: 400;
+    color: #777;
+    font-family: var(--primary-font);
+    font-style: normal;
+}
+
+/* Details/Summary styling */
+details {
+    margin: 1.5rem 0;
+    padding: 1.2rem 1.6rem;
+    border-radius: 8px;
+    background: #fcfcfc;
+    border: 1px solid #efefef;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #ff4088;
+    font-family: var(--primary-font);
+    font-size: 1.5rem;
+}
+
+.details-content {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    color: #444;
+}
+
+/* Related Posts Carousel */
+.p-related__item a {
+    background-color: transparent !important;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    color: #1a1a1a !important;
+    font-family: var(--primary-font) !important;
+    font-weight: 500 !important;
+    text-align: center;
+    transition: all 0.3s ease !important;
+}
+
+.p-related__item a::before {
+    display: none !important; /* Remove the dark overlay */
+}
+
+.p-related__item a:hover {
+    border-color: #ff4088;
+    color: #ff4088 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Projects & Education */
+.p-article__body p {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Video/Iframe radius */
+iframe, video {
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 4rem 0;
+}
+
+/* Spacing cleanup */
+strong, b {
+    font-weight: 700;
 }

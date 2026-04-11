@@ -32,9 +32,7 @@ jobs:
 
       - name: Install Hugo
         env:
-          # Keep the deploy build aligned with the historical site/theme output
-          # until the site is upgraded from the legacy Pickles theme.
-          HUGO_VERSION: 0.40.1
+          HUGO_VERSION: 0.159.2
         run: |
           curl -fsSL -o "${RUNNER_TEMP}/hugo.tar.gz" "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz"
           mkdir -p "${RUNNER_TEMP}/hugo-bin"
