@@ -71,7 +71,7 @@ Some examples of work my team and I did using high-density urban datasets (e.g. 
 *   **[knowledge-base](https://github.com/LostWarrior/knowledge-base):** A zero-dependency CLI for organizing project context in markdown. Designed for both human readability and efficient AI agent navigation, featuring automated indexing and lifecycle management.
 *   **[KobiTab](https://kobitab.com):** A macOS "second brain" utility for information organization and knowledge management.
 *   **[Calliope Canvas](https://github.com/LostWarrior/Calliope-Canvas):** A TypeScript/React framework for building code-driven, interactive technical presentations.
-*   **Get Jugaad:** As a part of Lean Startup Initiative by Steve Blank co-founded a ridesharing app and platform targeting customers in India focused on logistics scaling in high-density urban environments. Team was selected as official startup from India giving us an opportunity to pitch to investors in Silicon Valley. My focus was on customer discovery, product design, community building and new market entry strategies.
+*   **[Get Jugaad](https://web.archive.org/web/20130215083405/http://getjugaad.com:80/faq.php):** As a part of Lean Startup Initiative by Steve Blank co-founded a ridesharing app and platform targeting customers in India focused on logistics scaling in high-density urban environments. Team was selected as official startup from India giving us an opportunity to pitch to investors in Silicon Valley. My focus was on customer discovery, product design, community building and new market entry strategies.
 
 #### <b> EDUCATION </b>
 *Took the scenic route through engineering, international law, and economics. The common thread? I like understanding how complex systems work - then building them.*
