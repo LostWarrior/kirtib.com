@@ -6,11 +6,11 @@ url: /resume/
 showthedate: false
 ---
 
-Software Engineer with wide variety of domain experience, from frontend to distributed systems and high-scale infrastructure migrations. With over six years at GoCardless, I have transitioned from leading frontend platform initiatives to executing zero-downtime migrations for high availability data environments. I enjoy solving problems across the stack from scalability bottlenecks to product growth to enhancing user experience.
+Software Engineer with wide variety of domain experience, from frontend to distributed systems and high-scale infrastructure migrations. With over six years at GoCardless, I have transitioned from leading frontend platform initiatives to executing migrations for high availability data environments. I enjoy solving problems across the stack from scalability issues to product growth to enhancing user experience.
 
 ***
 
-#### <b> TECHNICAL SKILLS </b>
+0x17#### <b> TECHNICAL SKILLS </b>
 
 *   **Systems & Scalability:** Distributed SQL (YugabyteDB), PostgreSQL Internals, SQL Optimization, Redis, Ruby on Rails.
 *   **Infrastructure & Operations:** GCP, Kubernetes, Terraform, Prometheus/Grafana, CI/CD, Load Testing (Playwright/Hesiod).
