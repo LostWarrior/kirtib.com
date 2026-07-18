@@ -1,6 +1,6 @@
 ---
 author: "Kirti Bhardwaj"
-date: 2019-11-26
+date: 2023-11-26
 linktitle: longest-substring-k-distinct
 prev: /posts/median-sorted-array
 title: Longest Substring with At Most K Distinct Characters

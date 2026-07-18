@@ -1,6 +1,6 @@
 ---
 author: "Kirti Bhardwaj"
-date: 2019-11-26
+date: 2023-11-26
 linktitle: three-sum
 prev: /posts/median-sorted-array
 title: Three Sum

@@ -1,6 +1,6 @@
 ---
 author: "Kirti Bhardwaj"
-date: 2019-11-14
+date: 2023-11-14
 linktitle: intersection-arrays
 prev: /posts/median-sorted-array
 title: Arrays in JS- Intersection Of Two Arrays

@@ -1,6 +1,6 @@
 ---
 author: "Kirti Bhardwaj"
-date: 2018-05-11
+date: 2023-05-11
 linktitle: cors
 prev: /posts/building-site-with-hugo
 title: Introduction To Cross Origin Resource Sharing

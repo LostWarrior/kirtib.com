@@ -1,6 +1,6 @@
 ---
 author: "Kirti Bhardwaj"
-date: 2018-02-17
+date: 2023-02-17
 linktitle: Install Postgres On Mint
 prev: /posts/building-site-with-hugo
 title: Installing Postgres on Linux Mint

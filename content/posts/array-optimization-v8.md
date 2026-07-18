@@ -1,6 +1,6 @@
 ---
 author: "Kirti Bhardwaj"
-date: 2018-05-11
+date: 2023-05-11
 linktitle: Intro-cors
 prev: /posts/cors
 title: About Array Optimizations in V8

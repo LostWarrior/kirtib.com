@@ -1,7 +1,7 @@
 ---
 
 author: "Kirti Bhardwaj"
-date: "2018-02-22"
+date: "2023-02-22"
 linktitle: javascript-event-delegation
 title: JS Concepts -> Event Delegation
 weight: 10

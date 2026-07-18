@@ -1,6 +1,6 @@
 ---
 author: "Kirti Bhardwaj"
-date: 2018-08-31
+date: 2023-08-31
 linktitle: Experiments With Dual Boot
 prev: /posts/cors
 title: About Array Optimizations in V8

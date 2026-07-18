@@ -1,9 +1,10 @@
 {{ partial "header.html" . }}
+{{ $isResume := or (eq .Section "resume") (eq .Type "resume") (eq .RelPermalink "/resume/") }}
 <article class="p-article">
   <header>
     <div class="c-article__header-wrap">
       <h1>{{ .Title }}</h1>
-      {{ if or (eq .Section "resume") (eq .Type "resume") (eq .RelPermalink "/resume/") }}
+      {{ if $isResume }}
       <a href="/files/resume.pdf" class="c-article__download-icon" target="_blank" title="Download PDF">
         <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
       </a>
@@ -88,6 +89,18 @@
           post_title: {{ .Title }},
           post_date: {{ .Date.Format "2006-01-02" }},
           reading_time: {{ .ReadingTime }}
+        });
+      }
+    });
+  </script>
+  {{ end }}
+  {{ if $isResume }}
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof zaraz !== 'undefined') {
+        zaraz.track("resume_page_viewed", {
+          page_title: {{ .Title | jsonify }},
+          page_path: window.location.pathname
         });
       }
     });

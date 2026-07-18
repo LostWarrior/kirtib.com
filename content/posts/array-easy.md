@@ -1,7 +1,7 @@
 
 ---
 author: "Kirti Bhardwaj"
-date: 2019-11-24
+date: 2023-11-24
 linktitle: array-easy
 prev: /posts/median-sorted-array
 title: Arrays in JS- Some Easy Problems

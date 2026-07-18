@@ -1,6 +1,6 @@
 ---
 author: "Kirti Bhardwaj"
-date: 2019-11-24
+date: 2023-11-24
 linktitle: invert-binary-tree
 prev: /posts/median-sorted-array
 title: Invert A Binary Tree

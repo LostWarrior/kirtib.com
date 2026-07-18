@@ -1,6 +1,6 @@
 ---
 author: "Kirti Bhardwaj"
-date: 2019-11-14
+date: 2023-11-14
 linktitle: integer-plus-one
 prev: /posts/median-sorted-array
 title: Arrays in JS- Add plus one to the integer

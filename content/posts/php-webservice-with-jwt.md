@@ -1,6 +1,6 @@
 ---
 author: "Kirti Bhardwaj"
-date: 2018-03-06
+date: 2023-03-06
 linktitle: Webservice-with-jwt-auth
 prev: /posts/building-site-with-hugo
 title: Creating a php web service for authorization

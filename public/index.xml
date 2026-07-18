@@ -2,151 +2,151 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kirti Bhardwaj</title>
-    <link>//localhost:1313/</link>
+    <link>/</link>
     <description>Recent content on Kirti Bhardwaj</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Belongs to Kirti Bhardwaj</copyright>
     <lastBuildDate>Wed, 01 Apr 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>It&#39;s a Dangerous Business, Frodo: What LOTR Teaches Us About CI/CD</title>
-      <link>//localhost:1313/archives/lotr-engineering-intro/</link>
+      <link>/archives/lotr-engineering-intro/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/archives/lotr-engineering-intro/</guid>
+      <guid>/archives/lotr-engineering-intro/</guid>
       <description>&lt;h3 id=&#34;its-a-dangerous-business-frodo-going-out-your-door&#34;&gt;&amp;ldquo;It’s a dangerous business, Frodo, going out your door&amp;hellip;&amp;rdquo;&lt;/h3&gt;&#xA;&lt;p&gt;In the world of Middle-earth, stepping onto the road without a plan is a recipe for disaster. In the world of software engineering, &amp;ldquo;going out your door&amp;rdquo; is the moment you push your code to the main branch.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problem Solving Patterns =&gt; Sliding Window</title>
-      <link>//localhost:1313/posts/sliding-window/</link>
-      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/sliding-window/</guid>
+      <link>/posts/sliding-window/</link>
+      <pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>/posts/sliding-window/</guid>
       <description>&lt;h3 id=&#34;sliding-window-pattern&#34;&gt;Sliding Window Pattern&lt;/h3&gt;&#xA;&lt;p&gt;In a lot of problems we are expected to find something among all the contiguous subarrays.A brute force way is to loop over the elements again and again till we find the result. This type of problem can be solved in a more optimized way by maintaining a window which satisfies problem constraints.This window can be increased or decreased based on the changing constraints and inputs.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Arrays in JS- Binary Search</title>
-      <link>//localhost:1313/posts/arrays-binary-search/</link>
-      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/arrays-binary-search/</guid>
+      <link>/posts/arrays-binary-search/</link>
+      <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>/posts/arrays-binary-search/</guid>
       <description>&lt;h3 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h3&gt;&#xA;&lt;p&gt;Given a sorted (in ascending order) integer array nums of n elements and a target value, write a function to search target in nums. If target exists, then return its index, otherwise return -1.&#xA;Here is the leetcode link to the problem &lt;a href=&#34;https://leetcode.com/problems/binary-search/&#34;&gt;Binary Search&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Longest Substring with At Most K Distinct Characters</title>
-      <link>//localhost:1313/posts/longest-substring-k-distinct/</link>
-      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/longest-substring-k-distinct/</guid>
+      <link>/posts/longest-substring-k-distinct/</link>
+      <pubDate>Sun, 26 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>/posts/longest-substring-k-distinct/</guid>
       <description>&lt;h3 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h3&gt;&#xA;&lt;p&gt;Given a string, find the length of the longest substring T that contains at most k distinct characters.Here is the leetcode link to the problem &lt;a href=&#34;https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/&#34;&gt;Longest Substring&lt;/a&gt;&#xA;Here is some discussion around it &lt;a href=&#34;https://www.geeksforgeeks.org/find-the-longest-substring-with-k-unique-characters-in-a-given-string/&#34;&gt;K unique characters&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Longest Substring Without Repeating Characters</title>
-      <link>//localhost:1313/posts/longest-substring-without-repeating-char/</link>
-      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/longest-substring-without-repeating-char/</guid>
+      <link>/posts/longest-substring-without-repeating-char/</link>
+      <pubDate>Sun, 26 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>/posts/longest-substring-without-repeating-char/</guid>
       <description>&lt;h3 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h3&gt;&#xA;&lt;p&gt;Given a string, find the length of the longest substring without repeating characters. Let&amp;rsquo;s take a look at some examples:&lt;/p&gt;&#xA;&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;Input: &amp;quot;abcabcbb&amp;quot;&#xA;Output: 3 &#xA;Explanation: The answer is &amp;quot;abc&amp;quot;, with the length of 3. &#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Three Sum</title>
-      <link>//localhost:1313/posts/three-sum/</link>
-      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/three-sum/</guid>
+      <link>/posts/three-sum/</link>
+      <pubDate>Sun, 26 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>/posts/three-sum/</guid>
       <description>&lt;h3 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h3&gt;&#xA;&lt;p&gt;Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Unique Email Addresses</title>
-      <link>//localhost:1313/posts/unique-emails/</link>
-      <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/unique-emails/</guid>
+      <link>/posts/unique-emails/</link>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>/posts/unique-emails/</guid>
       <description>&lt;h3 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h3&gt;&#xA;&lt;p&gt;Every email consists of a local name and a domain name, separated by the @ sign.&lt;/p&gt;&#xA;&lt;p&gt;For example, in &lt;a href=&#34;mailto:alice@leetcode.com&#34;&gt;alice@leetcode.com&lt;/a&gt;, alice is the local name, and leetcode.com is the domain name.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Arrays in JS- Diagonal Difference</title>
-      <link>//localhost:1313/posts/array-diagonal/</link>
-      <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/array-diagonal/</guid>
+      <link>/posts/array-diagonal/</link>
+      <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>/posts/array-diagonal/</guid>
       <description>&lt;h3 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h3&gt;&#xA;&lt;p&gt;Given a square matrix, calculate the absolute difference between the sums of its diagonals.&#xA;Here is the link to problem &lt;a href=&#34;https://www.hackerrank.com/challenges/diagonal-difference/problem&#34;&gt;HackerRank&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;1 2 3&#xA;4 5 6&#xA;9 8 9 &#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;The left-to-right diagonal = 1+5+9=15. The right to left diagonal = 3+5+9=17. Their absolute difference is |15-17| = 2.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fruit Into Baskets</title>
-      <link>//localhost:1313/posts/fruits-in-baskets/</link>
-      <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/fruits-in-baskets/</guid>
+      <link>/posts/fruits-in-baskets/</link>
+      <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>/posts/fruits-in-baskets/</guid>
       <description>&lt;h3 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h3&gt;&#xA;&lt;p&gt;In a row of trees, the i-th tree produces fruit with type tree[i].&lt;/p&gt;&#xA;&lt;p&gt;You start at any tree of your choice, then repeatedly perform the following steps:&lt;/p&gt;&#xA;&lt;p&gt;Add one piece of fruit from this tree to your baskets.  If you cannot, stop.&#xA;Move to the next tree to the right of the current tree.  If there is no tree to the right, stop.&#xA;Note that you do not have any choice after the initial choice of starting tree: you must perform step 1, then step 2, then back to step 1, then step 2, and so on until you stop.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Invert A Binary Tree</title>
-      <link>//localhost:1313/posts/invert-binary-tree/</link>
-      <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/invert-binary-tree/</guid>
+      <link>/posts/invert-binary-tree/</link>
+      <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>/posts/invert-binary-tree/</guid>
       <description>&lt;h3 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h3&gt;&#xA;&lt;p&gt;Invert a binary tree. Here is the leetCode link &lt;a href=&#34;https://leetcode.com/problems/invert-binary-tree/&#34;&gt;Invert A Binary Tree&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;Input:&#xA;&#xA;     4&#xA;   /   \&#xA;  2     7&#xA; / \   / \&#xA;1   3 6   9&#xA;&#xA;Output:&#xA;&#xA;     4&#xA;   /   \&#xA;  7     2&#xA; / \   / \&#xA;9   6 3   1&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h3 id=&#34;solution&#34;&gt;Solution&lt;/h3&gt;&#xA;&lt;p&gt;This is not a difficult problem to solve. We write a recursive invertTree function, let&amp;rsquo;s look at the code.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Arrays in JS- Add plus one to the integer</title>
-      <link>//localhost:1313/posts/integer-plus-one/</link>
-      <pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/integer-plus-one/</guid>
+      <link>/posts/integer-plus-one/</link>
+      <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>/posts/integer-plus-one/</guid>
       <description>&lt;h3 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h3&gt;&#xA;&lt;p&gt;Given a non-empty array of digits representing a non-negative integer, plus one to the integer.&lt;/p&gt;&#xA;&lt;p&gt;The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Arrays in JS- Intersection Of Two Arrays</title>
-      <link>//localhost:1313/posts/intersection-arrays/</link>
-      <pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/intersection-arrays/</guid>
+      <link>/posts/intersection-arrays/</link>
+      <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>/posts/intersection-arrays/</guid>
       <description>&lt;h3 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h3&gt;&#xA;&lt;p&gt;Given two arrays, write a function to compute their intersection.The result can be in any order.&#xA;&lt;strong&gt;Each element in the result should be unique&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Here is the LeetCode link to the problem: &lt;a href=&#34;https://leetcode.com/problems/intersection-of-two-arrays/&#34;&gt;349. Intersection of Two Arrays&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Arrays in JS- Median of two sorted arrays</title>
-      <link>//localhost:1313/posts/median-sorted-array/</link>
-      <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/median-sorted-array/</guid>
-      <description>&lt;h3 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h3&gt;&#xA;&lt;p&gt;There are two sorted arrays nums1 and nums2 of size m and n respectively.&#xA;Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Introduction To Cross Origin Resource Sharing</title>
-      <link>//localhost:1313/posts/cors/</link>
-      <pubDate>Fri, 11 May 2018 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/cors/</guid>
+      <link>/posts/cors/</link>
+      <pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate>
+      <guid>/posts/cors/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;A user agent makes a CORS request when it requests resource from a different domain, protocol or port. It is restricted on most browsers for security reasons, XMLHttpRequest and the Fetch API both follow &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy&#34;&gt;same origin policy&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Arrays in JS- Median of two sorted arrays</title>
+      <link>/posts/median-sorted-array/</link>
+      <pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate>
+      <guid>/posts/median-sorted-array/</guid>
+      <description>&lt;h3 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h3&gt;&#xA;&lt;p&gt;There are two sorted arrays nums1 and nums2 of size m and n respectively.&#xA;Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Creating a php web service for authorization</title>
-      <link>//localhost:1313/posts/php-webservice-with-jwt/</link>
-      <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/php-webservice-with-jwt/</guid>
+      <link>/posts/php-webservice-with-jwt/</link>
+      <pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>/posts/php-webservice-with-jwt/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Recently, I needed to create a php webservice which any application could connect to and it would return a JWT auth token authorizing you.&#xA;Here, I retrace my steps as well as share basic barebones code for such a webservice&lt;/p&gt;</description>
     </item>
     <item>
       <title>JS Concepts -&gt; Events An Overview</title>
-      <link>//localhost:1313/posts/javascript-event-overview/</link>
-      <pubDate>Thu, 22 Feb 2018 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/javascript-event-overview/</guid>
+      <link>/posts/javascript-event-overview/</link>
+      <pubDate>Wed, 22 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>/posts/javascript-event-overview/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Best way to define something is to look at examples, so here are a few examples of events [Context is limited to web]:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;User presses a key on keyboard&#xA;Error Occured&#xA;Api returned data&#xA;Web page finished loading&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Event interface represents any event which happens in DOM, there are many types of events and they use different interfaces. Some of these interfaces are based on main Event interface, which contains common properties and methods for all events.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Installing Postgres on Linux Mint</title>
-      <link>//localhost:1313/posts/installing-postgres-linux-mint/</link>
-      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/installing-postgres-linux-mint/</guid>
-      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;Recently I needed to install and setup Postgres on my system for a side project. Here are the steps I followed to get it working on my machine.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Check For Version Installed:&#xA;lsb_release -a&#xA;It will give you output like this.&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;//localhost:1313/images/release.png&#34; alt=&#34;OS Release&#34;&gt;&lt;/p&gt;</description>
+      <link>/posts/installing-postgres-linux-mint/</link>
+      <pubDate>Fri, 17 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>/posts/installing-postgres-linux-mint/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;Recently I needed to install and setup Postgres on my system for a side project. Here are the steps I followed to get it working on my machine.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Check For Version Installed:&#xA;lsb_release -a&#xA;It will give you output like this.&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/images/release.png&#34; alt=&#34;OS Release&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building Personal Website With Hugo And Netlify</title>
-      <link>//localhost:1313/posts/building-site-with-hugo/</link>
-      <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/building-site-with-hugo/</guid>
+      <link>/posts/building-site-with-hugo/</link>
+      <pubDate>Mon, 06 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>/posts/building-site-with-hugo/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;When I decided to build my personal website, there were options abound on how to build, how to deploy etc. I came across hugo and netlify on twitter and everyone raved about how easy it was.&#xA;So, I decided to get a basic website up and running first and then go about tweaking and moving it. Found the process to be really smooth, documenting it here for future reference as well as for someone else who might want to use it.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Resume</title>
-      <link>//localhost:1313/resume/</link>
+      <link>/resume/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/resume/</guid>
-      <description>&lt;p&gt;Software Engineer with wide variety of domain experience, from frontend to distributed systems and high-scale infrastructure migrations. With over six years at GoCardless, I have transitioned from leading frontend platform initiatives to executing zero-downtime migrations for high availability data environments. I enjoy solving problems across the stack from scalability bottlenecks to product growth to enhancing user experience.&lt;/p&gt;</description>
+      <guid>/resume/</guid>
+      <description>&lt;p&gt;Software Engineer with wide variety of domain experience, from frontend to distributed systems and high-scale infrastructure migrations. With over six years at GoCardless, I have transitioned from leading frontend platform initiatives to executing migrations for high availability data environments. I enjoy solving problems across the stack from scalability issues to product growth to enhancing user experience.&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>//localhost:1313/about/</link>
-      <pubDate>Thu, 11 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/about/</guid>
+      <link>/about/</link>
+      <pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>/about/</guid>
       <description>&lt;p&gt;Hi! I am Kirti, a web engineer and developer based out of London, United Kingdom.&lt;/p&gt;&#xA;&lt;p&gt;Started out as an engineering grad trying to co-found a ridesharing startup “Get Jugaad”. Have studied a range of subjects from Computer Science, Economics, Public Policy to International Humanitarian Law.&lt;/p&gt;</description>
     </item>
   </channel>

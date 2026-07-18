@@ -2,126 +2,126 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/archives/lotr-engineering-intro/</loc>
+    <loc>/archives/lotr-engineering-intro/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/posts/sliding-window/</loc>
-    <lastmod>2019-11-28T00:00:00+00:00</lastmod>
+    <loc>/posts/sliding-window/</loc>
+    <lastmod>2023-11-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/posts/arrays-binary-search/</loc>
-    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+    <loc>/posts/arrays-binary-search/</loc>
+    <lastmod>2023-11-27T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/posts/longest-substring-k-distinct/</loc>
-    <lastmod>2019-11-26T00:00:00+00:00</lastmod>
+    <loc>/posts/longest-substring-k-distinct/</loc>
+    <lastmod>2023-11-26T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/posts/longest-substring-without-repeating-char/</loc>
-    <lastmod>2019-11-26T00:00:00+00:00</lastmod>
+    <loc>/posts/longest-substring-without-repeating-char/</loc>
+    <lastmod>2023-11-26T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/posts/three-sum/</loc>
-    <lastmod>2019-11-26T00:00:00+00:00</lastmod>
+    <loc>/posts/three-sum/</loc>
+    <lastmod>2023-11-26T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/posts/unique-emails/</loc>
-    <lastmod>2019-11-25T00:00:00+00:00</lastmod>
+    <loc>/posts/unique-emails/</loc>
+    <lastmod>2023-11-25T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/posts/array-diagonal/</loc>
-    <lastmod>2019-11-24T00:00:00+00:00</lastmod>
+    <loc>/posts/array-diagonal/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/posts/fruits-in-baskets/</loc>
-    <lastmod>2019-11-24T00:00:00+00:00</lastmod>
+    <loc>/posts/fruits-in-baskets/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/posts/invert-binary-tree/</loc>
-    <lastmod>2019-11-24T00:00:00+00:00</lastmod>
+    <loc>/posts/invert-binary-tree/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/posts/integer-plus-one/</loc>
-    <lastmod>2019-11-14T00:00:00+00:00</lastmod>
+    <loc>/posts/integer-plus-one/</loc>
+    <lastmod>2023-11-14T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/posts/intersection-arrays/</loc>
-    <lastmod>2019-11-14T00:00:00+00:00</lastmod>
+    <loc>/posts/intersection-arrays/</loc>
+    <lastmod>2023-11-14T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/posts/median-sorted-array/</loc>
-    <lastmod>2019-05-11T00:00:00+00:00</lastmod>
+    <loc>/posts/cors/</loc>
+    <lastmod>2023-05-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/posts/cors/</loc>
-    <lastmod>2018-05-11T00:00:00+00:00</lastmod>
+    <loc>/posts/median-sorted-array/</loc>
+    <lastmod>2023-05-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/posts/php-webservice-with-jwt/</loc>
-    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+    <loc>/posts/php-webservice-with-jwt/</loc>
+    <lastmod>2023-03-06T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/posts/javascript-event-overview/</loc>
-    <lastmod>2018-02-22T00:00:00+00:00</lastmod>
+    <loc>/posts/javascript-event-overview/</loc>
+    <lastmod>2023-02-22T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/posts/installing-postgres-linux-mint/</loc>
-    <lastmod>2018-02-17T00:00:00+00:00</lastmod>
+    <loc>/posts/installing-postgres-linux-mint/</loc>
+    <lastmod>2023-02-17T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/posts/building-site-with-hugo/</loc>
-    <lastmod>2018-02-06T00:00:00+00:00</lastmod>
+    <loc>/posts/building-site-with-hugo/</loc>
+    <lastmod>2023-02-06T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/archives/</loc>
+    <loc>/archives/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/</loc>
+    <loc>/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/resume/</loc>
+    <loc>/resume/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/posts/</loc>
-    <lastmod>2019-11-28T00:00:00+00:00</lastmod>
+    <loc>/posts/</loc>
+    <lastmod>2023-11-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/about/</loc>
-    <lastmod>2018-01-11T00:00:00+00:00</lastmod>
+    <loc>/about/</loc>
+    <lastmod>2023-01-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>/categories/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>/tags/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

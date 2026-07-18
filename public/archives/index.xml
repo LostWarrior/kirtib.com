@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Archives on Kirti Bhardwaj</title>
-    <link>//localhost:1313/archives/</link>
+    <link>/archives/</link>
     <description>Recent content in Archives on Kirti Bhardwaj</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Belongs to Kirti Bhardwaj</copyright>
     <lastBuildDate>Wed, 01 Apr 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/archives/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/archives/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>It&#39;s a Dangerous Business, Frodo: What LOTR Teaches Us About CI/CD</title>
-      <link>//localhost:1313/archives/lotr-engineering-intro/</link>
+      <link>/archives/lotr-engineering-intro/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/archives/lotr-engineering-intro/</guid>
+      <guid>/archives/lotr-engineering-intro/</guid>
       <description>&lt;h3 id=&#34;its-a-dangerous-business-frodo-going-out-your-door&#34;&gt;&amp;ldquo;It’s a dangerous business, Frodo, going out your door&amp;hellip;&amp;rdquo;&lt;/h3&gt;&#xA;&lt;p&gt;In the world of Middle-earth, stepping onto the road without a plan is a recipe for disaster. In the world of software engineering, &amp;ldquo;going out your door&amp;rdquo; is the moment you push your code to the main branch.&lt;/p&gt;</description>
     </item>
   </channel>

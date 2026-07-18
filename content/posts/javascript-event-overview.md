@@ -1,7 +1,7 @@
 ---
 
 author: "Kirti Bhardwaj"
-date: "2018-02-22"
+date: "2023-02-22"
 linktitle: javascript-event-overview
 title: JS Concepts -> Events An Overview
 weight: 10

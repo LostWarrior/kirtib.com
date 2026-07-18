@@ -1,6 +1,6 @@
 ---
 author: "Kirti Bhardwaj"
-date: 2019-11-28
+date: 2023-11-28
 linktitle: sliding-window-pattern
 prev: /posts/median-sorted-array
 title: Problem Solving Patterns => Sliding Window

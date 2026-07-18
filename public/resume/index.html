@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us" prefix="og: http://ogp.me/ns#">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
   
@@ -13,7 +13,7 @@
 
   <meta name="author" content=""/>
   <meta property="og:site_name" content="Kirti Bhardwaj" />
-  <meta property="og:url" content="//localhost:1313/resume/" />
+  <meta property="og:url" content="/resume/" />
 
   
   <meta name="twitter:card" content="summary" />
@@ -26,12 +26,14 @@
   
   
   <meta name="generator" content="Hugo 0.160.1">
+    
+  
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css" />
   <script type="text/javascript" src="/js/bundle.js"></script>
   
-  <link rel="stylesheet" href="//localhost:1313/css/custom.css">
+  <link rel="stylesheet" href="/css/custom.css">
   
   
   <script src="/cdn-cgi/zaraz/i.js" referrerpolicy="origin"></script>
@@ -51,6 +53,7 @@
 
   <main id="main" class="l-main">
 
+
 <article class="p-article">
   <header>
     <div class="c-article__header-wrap">
@@ -65,21 +68,15 @@
   </header>
   
   <section id="js-article" class="p-article__body">
-    <p>Software Engineer with wide variety of domain experience, from frontend to distributed systems and high-scale infrastructure migrations. With over six years at GoCardless, I have transitioned from leading frontend platform initiatives to executing zero-downtime migrations for high availability data environments. I enjoy solving problems across the stack from scalability bottlenecks to product growth to enhancing user experience.</p>
+    <p>Software Engineer with wide variety of domain experience, from frontend to distributed systems and high-scale infrastructure migrations. With over six years at GoCardless, I have transitioned from leading frontend platform initiatives to executing migrations for high availability data environments. I enjoy solving problems across the stack from scalability issues to product growth to enhancing user experience.</p>
 <hr>
-<h4 id="technical-skills"><b> TECHNICAL SKILLS </b></h4>
-<ul>
-<li><strong>Systems &amp; Scalability:</strong> Distributed SQL (YugabyteDB), PostgreSQL Internals, SQL Optimization, Redis, Ruby on Rails.</li>
-<li><strong>Infrastructure &amp; Operations:</strong> GCP, Kubernetes, Terraform, Prometheus/Grafana, CI/CD, Load Testing (Playwright/Hesiod).</li>
-<li><strong>Product Engineering:</strong> TypeScript, React, Next.js, Gatsby, D3.js, A/B Testing (Optimizely), Experimentation Frameworks.</li>
-</ul>
 <h4 id="experience"><b> EXPERIENCE </b></h4>
-<h6 id="gocardless-london--software-engineer"><b><span class="pink-color" style="color:#ff4088;">GoCardless, London</span> — Software Engineer</b> <em><small>(Mar 2020 - Present)</small></em></h6>
+<h6 id="gocardless-london--software-engineer"><b><span class="pink-color" style="color:#ff4088;">GoCardless, London</span> — Software Engineer</b> <em><small>(Mar 2023 - Present)</small></em></h6>
 <p><strong>Distributed Systems &amp; Database Migrations (2025 - Present)</strong>
 Focused on improving the scalability and reliability of GoCardless&rsquo;s core systems to ensure it can handle the company&rsquo;s growth and evolving business needs.</p>
 <ul>
 <li><strong>Performance Engineering:</strong> Resolved a critical scaling bottleneck in the job processing system by designing a high-performance distributed locking utility. This addressed a ~100ms latency bottleneck in database lock discovery, reducing execution time to ~3ms across 21 high-volume job classes and eliminating P99 tail-latency spikes.</li>
-<li><strong>High-Scale Operations:</strong> Managed three production-parallel cutover attempts in sandbox-staging environments. Authored technical debriefs and operational playbooks adopted by the wider engineering team to manage partition handling and replication lag at scale.</li>
+<li><strong>High-Scale Operations:</strong> Tested and successfully cut over multiple times in production-parallel environments while onboarding team members on the nitty-gritty of the process in order to improve our final migration goal. Authored technical debriefs and operational playbooks adopted by the wider engineering team to manage partition handling and replication lag at scale.</li>
 <li><strong>Systems Debugging:</strong> Investigated and resolved scalability limitations in <strong>YugabyteDB Voyager</strong>, specifically regarding partition filtering and CDC replication. Built custom tools to validate system throughput during migration phases.</li>
 <li><strong>Large Scale Data Migration:</strong> Currently working on strategies for migrating 15TB of data from PostgreSQL to YugabyteDB with zero downtime. This involves working with the YugabyteDB team to understand the limitations of their tools and come up with a strategy that works for our use case. Ensuring minimal downtime and data loss during the migration while maintaining data integrity.</li>
 </ul>
@@ -88,12 +85,12 @@ Focused on improving the scalability and reliability of GoCardless&rsquo;s core 
 <li><strong>Strategic Optimization:</strong> Led the technical redesign of the merchant registration funnel to scale with global growth. Defined the product experiment roadmap, implemented multi-variant A/B testing, and architected automated email/bot verification systems that improved lead quality and conversion efficiency.</li>
 <li><strong>Systems Integration:</strong> Architected a high-concurrency rewards API for international growth campaigns, managing the technical trade-offs between idempotent distribution and high-volume lifecycle messaging via Braze.</li>
 </ul>
-<p><strong>Digital Experience (DX) — Tech Lead (2020 - 2022)</strong></p>
+<p><strong>Digital Experience (DX) — Tech Lead (2023 - 2023)</strong></p>
 <ul>
 <li><strong>Multidimensional Leadership:</strong> Served as the technical lead for a cross-functional team at the intersection of product, engineering, and marketing. Managed stakeholder roadmaps, mentored junior engineers, and set the technical direction for the 3M+ monthly marketing platform.</li>
 <li><strong>Platform Modernization:</strong> Led the architectural transition from Prismic to Contentful and optimized build performance for a global rebrand. Built the GCP/BigQuery data infrastructure to enable cross-channel attribution modeling, bridging the gap between engineering output and marketing ROI.</li>
 </ul>
-<h6 id="walmart-labs--software-engineer-iii"><b><span class="pink-color" style="color:#ff4088;">Walmart Labs</span> — Software Engineer III</b> <em><small>(Jan 2019 - Sept 2019)</small></em></h6>
+<h6 id="walmart-labs--software-engineer-iii"><b><span class="pink-color" style="color:#ff4088;">Walmart Labs</span> — Software Engineer III</b></h6>
 <ul>
 <li>Developed the Fitment Widget for Walmart.com (React/Redux), a micro-frontend designed to handle high-concurrency traffic on product pages while verifying auto-part compatibility.</li>
 <li>Spent brief time working on automating backend services for the registry, implementing caching strategies to ensure consistency across distributed nodes.</li>
@@ -115,7 +112,7 @@ Built the fitment verification widget for Walmart.com auto parts using React, Re
 
   </div>
 </details>
-<h6 id="radiolocus-mumbai--bangalore--software-engineer"><b><span class="pink-color" style="color:#ff4088;">Radiolocus, Mumbai &amp; Bangalore</span> — Software Engineer</b> <em><small>(May 2015 - Sept 2018)</small></em></h6>
+<h6 id="radiolocus-mumbai--bangalore--software-engineer"><b><span class="pink-color" style="color:#ff4088;">Radiolocus, Mumbai &amp; Bangalore</span> — Software Engineer</b></h6>
 <ul>
 <li>Led the frontend team at the intersection of engineering and product. This role came with a lot of autonomy and responsibility and included mentoring and leading the team.</li>
 </ul>
@@ -127,12 +124,12 @@ Some examples of work my team and I did using high-density urban datasets (e.g. 
 
 **VirginMedia Dashboard:**
 <video width="100%" height="350" controls style="margin-top: 10px; background: #000;">
-  <source src="//localhost:1313/files/virginmedia.webm?rel=0" type="video/webm">
+  <source src="/files/virginmedia.webm?rel=0" type="video/webm">
 </video>
 
 **SmartCity Dashboard:**
 <video width="100%" height="350" controls style="margin-top: 10px; background: #000;">
-  <source src="//localhost:1313/files/smartcity.webm?rel=0" type="video/webm">
+  <source src="/files/smartcity.webm?rel=0" type="video/webm">
 </video>
 
   </div>
@@ -140,12 +137,12 @@ Some examples of work my team and I did using high-density urban datasets (e.g. 
 <h4 id="projects"><b> PROJECTS </b></h4>
 <ul>
 <li><strong><a href="https://github.com/LostWarrior/knowledge-base">knowledge-base</a>:</strong> A zero-dependency CLI for organizing project context in markdown. Designed for both human readability and efficient AI agent navigation, featuring automated indexing and lifecycle management.</li>
-<li><strong><a href="https://kobitab.com">KobiTab</a>:</strong> A macOS &ldquo;second brain&rdquo; utility for information organization and knowledge management.</li>
+<li><strong><a href="https://kobitab.com">KobiTab</a>:</strong> A private-by-default macOS second brain that makes links, notes, and files searchable, lets you ask questions of saved content, and keeps indexing and LLM processing on-device.</li>
+<li><strong><a href="https://github.com/LostWarrior/wodehouse-gpt">wodehouse-gpt</a>:</strong> A raw PyTorch, character-level GPT-style transformer built without pre-trained models or Hugging Face, trained on P.G. Wodehouse novels.</li>
 <li><strong><a href="https://github.com/LostWarrior/Calliope-Canvas">Calliope Canvas</a>:</strong> A TypeScript/React framework for building code-driven, interactive technical presentations.</li>
-<li><strong>Get Jugaad:</strong> As a part of Lean Startup Initiative by Steve Blank co-founded a ridesharing app and platform targeting customers in India focused on logistics scaling in high-density urban environments. Team was selected as official startup from India giving us an opportunity to pitch to investors in Silicon Valley. My focus was on customer discovery, product design, community building and new market entry strategies.</li>
+<li><strong><a href="https://web.archive.org/web/20130215083405/http://getjugaad.com:80/faq.php">Get Jugaad</a>:</strong> As a part of Lean Startup Initiative by Steve Blank co-founded a ridesharing app and platform targeting customers in India focused on logistics scaling in high-density urban environments. Team was selected as official startup from India giving us an opportunity to pitch to investors in Silicon Valley. My focus was on customer discovery, product design, community building and new market entry strategies.</li>
 </ul>
 <h4 id="education"><b> EDUCATION </b></h4>
-<p><em>Took the scenic route through engineering, international law, and economics. The common thread? I like understanding how complex systems work - then building them.</em></p>
 <h6 id="brcm--be-computer-science--engineering"><b> <span class="pink-color" style="color:#ff4088;">BRCM</span> — B.E. (Computer Science &amp; Engineering) </b> <em><small>Honors</small></em></h6>
 <h6 id="takshashila-institution--gcpp"><b> <span class="pink-color" style="color:#ff4088;">TAKSHASHILA INSTITUTION</span> — GCPP </b> <em><small>Graduated</small></em></h6>
 <h6 id="nalsar--pg-diploma-international-humanitarian-law"><b> <span class="pink-color" style="color:#ff4088;">NALSAR</span> — P.G. Diploma (International Humanitarian Law) </b> <em><small>First Class</small></em></h6>
@@ -169,6 +166,18 @@ Some examples of work my team and I did using high-density urban datasets (e.g. 
     
 
   </footer>
+  
+  
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof zaraz !== 'undefined') {
+        zaraz.track("resume_page_viewed", {
+          page_title: "\"Resume\"",
+          page_path: window.location.pathname
+        });
+      }
+    });
+  </script>
   
 </article>
   </main>

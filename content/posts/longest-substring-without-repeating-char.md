@@ -1,6 +1,6 @@
 ---
 author: "Kirti Bhardwaj"
-date: 2019-11-26
+date: 2023-11-26
 linktitle: longest-substring-without-repeating
 prev: /posts/median-sorted-array
 title: Longest Substring Without Repeating Characters

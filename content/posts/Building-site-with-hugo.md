@@ -1,6 +1,6 @@
 ---
 author: "Kirti Bhardwaj"
-date: 2018-02-06
+date: 2023-02-06
 linktitle: Building Personal Website With Hugo And Netlify
 <!-- next: /tutorials/github-pages-blog
 prev: /tutorials/automated-deployments -->

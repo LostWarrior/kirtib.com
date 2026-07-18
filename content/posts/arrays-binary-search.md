@@ -1,7 +1,7 @@
 
 ---
 author: "Kirti Bhardwaj"
-date: 2019-11-27
+date: 2023-11-27
 linktitle: array-binary-search
 prev: /posts/median-sorted-array
 title: Arrays in JS- Binary Search

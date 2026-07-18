@@ -1,6 +1,6 @@
 ---
 author: "Kirti Bhardwaj"
-date: 2019-05-11
+date: 2023-05-11
 linktitle: median-sorted-array
 prev: /posts/cors
 title: Arrays in JS- Median of two sorted arrays
