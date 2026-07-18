@@ -1,9 +1,9 @@
 ---
 date: 2023-01-11
 ---
-Hi! I am Kirti, a web engineer and developer based out of London, United Kingdom.
+Hi! I am Kirti, I work as an engineer and live in London currently
 
-Started out as an engineering grad trying to co-found a ridesharing startup “Get Jugaad”. Have studied a range of subjects from Computer Science, Economics, Public Policy to International Humanitarian Law.
+Started out as an engineering grad trying to co-found a ridesharing startup “Get Jugaad”. Went on to study a range of subjects from Computer Science, Economics, Public Policy to International Humanitarian Law.
 
 Somehow, accidentally stumbled upon the world of web and software again and it reeled me in. Haven’t stopped since then, I believe people are multidimensional and our experiences and adventures shape us. My diverse education has made me more empathetic and has given me the ability to see the bigger picture.
 
