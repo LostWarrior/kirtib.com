@@ -1,15 +1,19 @@
 ---
 date: 2023-01-11
 ---
-Hi! I am Kirti, I work as an engineer and live in London currently
+Hi, I am Kirti. I live in London and build software, products and systems to solve problems that are complex, messy and human.
 
-Started out as an engineering grad trying to co-found a ridesharing startup “Get Jugaad”. Went on to study a range of subjects from Computer Science, Economics, Public Policy to International Humanitarian Law.
+I started out hoping to study medicine but stumbled into engineering instead. While studying, I co-founded Get Jugaad, a ridesharing startup. Since then, I have worked across data-rich products, growth systems, payments, infrastructure, and distributed systems.
 
-Somehow, accidentally stumbled upon the world of web and software again and it reeled me in. Haven’t stopped since then, I believe people are multidimensional and our experiences and adventures shape us. My diverse education has made me more empathetic and has given me the ability to see the bigger picture.
+Technology has never interested me in isolation. My curiosity has also led me into economics, public policy, international humanitarian law, and literature. These interests shape my worldview and how I approach systems and problems. I like to start with why, questions like why does a system exist, who does it serve and what happens if it fails are at the core of my worldview.
 
-I love talking to people and learning from their experiences and stories.The things I enjoy are as diverse as human beings, all coexisting and making each other better. Someday, I would love to write the book titled, “What Lord of The Rings can teach you about good Engineering”
+I believe people are more than any one role, discipline, or chapter of their lives. We are shaped by the experiences, stories, and adventures we gather along the way. Moving between fields has taught me to look for context, question easy answers, and approach problems from more than one perspective.
 
-This blog is a collection of notes for my personal reference.
+I love talking with people and learning how they came to see the world as they do. My own interests often meet in unexpected places. Someday, I hope to write a book called What The Lord of the Rings Can Teach Us About Good Engineering.
+
+This blog is where I collect notes, explanations, and unfinished crumbs from the things I am learning or building.
+
+These days, when I’m not debugging database internals at my day job, I try to answer questions by turning them into projects. That is how [KobiTab](https://kobitab.com/), [Calliope Canvas](https://github.com/LostWarrior/Calliope-Canvas), [kb](https://github.com/LostWarrior/kb), [Symposium](https://github.com/LostWarrior/Symposium) and [Wodehouse GPT](https://github.com/LostWarrior/wodehouse-gpt) came about. Some solve problems and some are excuses to learn, but really, they are all just me having fun.
 
 <b>Want to know more?</b>
 
