@@ -92,12 +92,17 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>/archives/</loc>
-    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+    <loc>/about/</loc>
+    <lastmod>2026-07-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>/</loc>
+    <lastmod>2026-07-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>/archives/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -109,11 +114,6 @@
   </url><url>
     <loc>/posts/</loc>
     <lastmod>2023-11-28T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>/about/</loc>
-    <lastmod>2023-01-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>

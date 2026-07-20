@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Belongs to Kirti Bhardwaj</copyright>
-    <lastBuildDate>Wed, 01 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>It&#39;s a Dangerous Business, Frodo: What LOTR Teaches Us About CI/CD</title>
@@ -136,18 +136,18 @@
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;When I decided to build my personal website, there were options abound on how to build, how to deploy etc. I came across hugo and netlify on twitter and everyone raved about how easy it was.&#xA;So, I decided to get a basic website up and running first and then go about tweaking and moving it. Found the process to be really smooth, documenting it here for future reference as well as for someone else who might want to use it.&lt;/p&gt;</description>
     </item>
     <item>
+      <title></title>
+      <link>/about/</link>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>/about/</guid>
+      <description>&lt;p&gt;Hi, I am Kirti. I live in London and build software, products and systems to solve problems that are complex, messy and human.&lt;/p&gt;&#xA;&lt;p&gt;I started out hoping to study medicine but stumbled into engineering instead. While studying, I co-founded Get Jugaad, a ridesharing startup. Since then, I have worked across data-rich products, growth systems, payments, infrastructure, and distributed systems.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Resume</title>
       <link>/resume/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
       <guid>/resume/</guid>
       <description>&lt;p&gt;Software Engineer with wide variety of domain experience, from frontend to distributed systems and high-scale infrastructure migrations. With over six years at GoCardless, I have transitioned from leading frontend platform initiatives to executing migrations for high availability data environments. I enjoy solving problems across the stack from scalability issues to product growth to enhancing user experience.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>/about/</link>
-      <pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>/about/</guid>
-      <description>&lt;p&gt;Hi, I am Kirti. I live in London and build software, products and systems to solve problems that are complex, messy and human.&lt;/p&gt;&#xA;&lt;p&gt;I started out hoping to study medicine but stumbled into engineering instead. While studying, I co-founded Get Jugaad, a ridesharing startup. Since then, I have worked across data-rich products, growth systems, payments, infrastructure, and distributed systems.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

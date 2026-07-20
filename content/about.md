@@ -1,5 +1,5 @@
 ---
-date: 2023-01-11
+date: 2026-07-13
 ---
 Hi, I am Kirti. I live in London and build software, products and systems to solve problems that are complex, messy and human.
 
