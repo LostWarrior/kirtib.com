@@ -21,6 +21,7 @@ Here is my [resume](/resume). You can also find me here:
 
 * <svg viewBox="0 0 48 48" class="c-links__icon" style="width:16px; height:16px; vertical-align:middle; fill:currentColor; margin-right: 8px;margin-bottom: 4px;"><use xlink:href="#icon-github"></use></svg>**Github** - [LostWarrior](https://github.com/LostWarrior)
 * <svg viewBox="0 0 48 48" class="c-links__icon" style="width:16px; height:16px; vertical-align:middle; fill:currentColor; margin-right: 8px;margin-bottom: 4px;"><use xlink:href="#icon-linkedin"></use></svg>**LinkedIn** - [KirtiB](https://www.linkedin.com/in/kirtib/)
+* <svg viewBox="0 0 24 24" class="c-links__icon" style="width:16px; height:16px; vertical-align:middle; fill:currentColor; margin-right: 8px;margin-bottom: 4px;"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"></path></svg>**Substack** - [Kirti B](https://kirtib.substack.com)
 
 Feel free to drop by and say hello.	
 
