@@ -6,31 +6,38 @@ url: /resume/
 showthedate: false
 ---
 
-Software Engineer with wide variety of domain experience, from frontend to distributed systems and high-scale infrastructure migrations. With over six years at GoCardless, I have transitioned from leading frontend platform initiatives to executing migrations for high availability data environments. I enjoy solving problems across the stack from scalability issues to product growth to enhancing user experience.
+Product engineer and former startup co-founder who owns problems end to end, from customer discovery and experiment design to distributed systems and high-scale database migrations. Over six years at GoCardless I have led growth products, run a cross-functional team, and now work on the reliability of core payment infrastructure. I care about why a system exists, who it serves, and whether it actually moved the needle.
 
 ***
 
 #### <b> EXPERIENCE </b>
 
-###### <b><span class="pink-color" style="color:#ff4088;">GoCardless, London</span> — Software Engineer</b> *<small>(Mar 2023 - Present)</small>*
+###### <b><span class="pink-color" style="color:#ff4088;">GoCardless, London</span> — Software Engineer</b> *<small>(Mar 2020 - Present)</small>*
 
-**Distributed Systems & Database Migrations (2025 - Present)**
-Focused on improving the scalability and reliability of GoCardless's core systems to ensure it can handle the company's growth and evolving business needs.
+**Distributed Systems, Scalability and Performance**
+*   Co-designed the migration of GoCardless's core payments monolith (10M payments on peak days) from Postgres to YugabyteDB, so it can scale horizontally.
+*   Made the migration pipeline for our 14 TB dataset 25x faster (600 hours down to 24) by reworking the schema, tuning the database, and digging into YugabyteDB Voyager's partition filtering and CDC replication issues.
+*   Designed and shipped a Postgres function to replace direct `pg_locks` queries in our job system, unblocking 21 high-volume job classes for the YugabyteDB migration. Validated it against both databases, then rolled it out behind a feature flag (5% to 100%) with a latency probe watching production. Lock lookup went from ~100ms to ~3ms and P99 latency halved.
+*   Led a cross-team E2E testing effort to catch edge cases in legacy services, built dry-run tooling with automated fallbacks, rehearsed the cutover repeatedly in production-parallel environments, and agreed readiness criteria with stakeholders for a zero-downtime switch.
+*   Run Game Days to find gaps in our systems, write the runbooks the wider team uses, and onboard engineers inside and outside the team so no one person is a single point of failure.
 
-*  **Performance Engineering:** Resolved a critical scaling bottleneck in the job processing system by designing a high-performance distributed locking utility. This addressed a ~100ms latency bottleneck in database lock discovery, reducing execution time to ~3ms across 21 high-volume job classes and eliminating P99 tail-latency spikes.
-*  **High-Scale Operations:** Tested and successfully cut over multiple times in production-parallel environments while onboarding team members on the nitty-gritty of the process in order to improve our final migration goal. Authored technical debriefs and operational playbooks adopted by the wider engineering team to manage partition handling and replication lag at scale.
-*  **Systems Debugging:** Investigated and resolved scalability limitations in **YugabyteDB Voyager**, specifically regarding partition filtering and CDC replication. Built custom tools to validate system throughput during migration phases.
-*  **Large Scale Data Migration:** Currently working on strategies for migrating 15TB of data from PostgreSQL to YugabyteDB with zero downtime. This involves working with the YugabyteDB team to understand the limitations of their tools and come up with a strategy that works for our use case. Ensuring minimal downtime and data loss during the migration while maintaining data integrity.
+**Product Engineering (Tech Lead)**
+*   As tech lead for Digital Experience, led a team across product, engineering and marketing, acting as product owner, engineering lead and main point of contact for stakeholders. Set the technical direction for a marketing platform with 3M+ monthly visitors and mentored engineers.
+*   Owned the merchant sign-up redesign end to end, across frontend and backend. More than half of merchants dropped out at the top of the funnel because we asked for too much upfront, so I cut the first step down to the essentials and A/B tested each change in Optimizely. Activation went up 22%.
+*   Asking for less upfront meant catching spam another way, so I built email verification (schema, API, localised templates, SendGrid quality checks), pwned-password checks, rate limiting, reCAPTCHA and device-ID tracking, updated our spam-detection ML model, and passed spam signals downstream so fake accounts were blocked automatically. This removed a recurring source of incidents.
+*   Scoped and planned the referral rewards system for international growth campaigns, including the technical approach, Optimizely experiments and lifecycle messaging through Braze, then handed it to the team to build with ongoing tech guidance.
+*   Planned and led frontend delivery of the company-wide website rebrand, including scoping, prioritisation and stakeholder updates, and moved our content platform from Prismic to Contentful.
+*   Built the monorepo template (TypeScript, Next.js, React, Lerna) that every new UI project starts from, shrank bundle sizes, raised test coverage to 95%, and contributed to Flux, our component library.
+*   Cut build times from 60 to 15 minutes and infrastructure costs by 87%, and moved services from CircleCI to GitHub Actions, AWS to GCS, and Helm to our internal deploy tooling.
+*   Connected GA, BigQuery and Looker so marketing could attribute results across channels.
 
-**Product Growth & Platform Engineering (2023 - 2024)**
-*  **Strategic Optimization:** Led the technical redesign of the merchant registration funnel to scale with global growth. Defined the product experiment roadmap, implemented multi-variant A/B testing, and architected automated email/bot verification systems that improved lead quality and conversion efficiency.
-*  **Systems Integration:** Architected a high-concurrency rewards API for international growth campaigns, managing the technical trade-offs between idempotent distribution and high-volume lifecycle messaging via Braze.
+###### <b><a href="https://kobitab.com" class="pink-color" style="color:#ff4088;">KobiTab</a> — Founder</b> *<small>(Feb 2026 - Present)</small>*
+*   Built and launched a household brain for macOS that pulls a family's scattered files, calendars, emails and notes into one place and turns them into actionable tasks.
+*   Designed it local-first: indexing and search run on-device with no account needed, and AI is optional, so users can bring their own provider or keep inference fully local.
+*   Built review-before-run agents for everyday family admin like calendar drafting, nanny coordination and chores, plus plain-language answers with cited sources (e.g. shoe sizes, vaccine records).
+*   Grown to 2,000 users organically through word of mouth, with no paid marketing.
 
-**Digital Experience (DX) — Tech Lead (2023 - 2023)**
-*   **Multidimensional Leadership:** Served as the technical lead for a cross-functional team at the intersection of product, engineering, and marketing. Managed stakeholder roadmaps, mentored junior engineers, and set the technical direction for the 3M+ monthly marketing platform.
-*   **Platform Modernization:** Led the architectural transition from Prismic to Contentful and optimized build performance for a global rebrand. Built the GCP/BigQuery data infrastructure to enable cross-channel attribution modeling, bridging the gap between engineering output and marketing ROI.
-
-###### <b><span class="pink-color" style="color:#ff4088;">Walmart Labs</span> — Software Engineer III</b>
+###### <b><span class="pink-color" style="color:#ff4088;">Walmart Labs</span> — Software Engineer</b>
 *   Developed the Fitment Widget for Walmart.com (React/Redux), a micro-frontend designed to handle high-concurrency traffic on product pages while verifying auto-part compatibility.
 *   Spent brief time working on automating backend services for the registry, implementing caching strategies to ensure consistency across distributed nodes.
 
@@ -60,14 +67,18 @@ Some examples of work my team and I did using high-density urban datasets (e.g. 
 {{< video src="/files/smartcity.webm?rel=0" >}}
 {{< /details >}}
 
+###### <b><span class="pink-color" style="color:#ff4088;">Get Jugaad, India</span> — Co-founder</b>
+*   Co-founded a ridesharing app and platform for high-density Indian cities while at university.
+*   Owned customer discovery, product design, community building and go-to-market for new cities — talking to riders and drivers, turning interviews into product decisions, and iterating on what we learned.
+*   Selected as India's official startup in Steve Blank's Lean Startup Initiative, earning the chance to pitch to investors in Silicon Valley.
+*   We wound it down after hitting a regulatory wall: at the time, Indian law didn't allow charging for rides in privately registered vehicles.
+*   [Archived site](https://web.archive.org/web/20130215083405/http://getjugaad.com:80/faq.php)
+
 #### <b> PROJECTS </b>
 
 *   **[knowledge-base](https://github.com/LostWarrior/knowledge-base):** A zero-dependency CLI for organizing project context in markdown. Designed for both human readability and efficient AI agent navigation, featuring automated indexing and lifecycle management.
-*   **[KobiTab](https://kobitab.com):** A private-by-default macOS second brain that makes links, notes, and files searchable, lets you ask questions of saved content, and keeps indexing and LLM processing on-device.
 *   **[wodehouse-gpt](https://github.com/LostWarrior/wodehouse-gpt):** A raw PyTorch, character-level GPT-style transformer built without pre-trained models or Hugging Face, trained on P.G. Wodehouse novels.
 *   **[Calliope Canvas](https://github.com/LostWarrior/Calliope-Canvas):** A TypeScript/React framework for building code-driven, interactive technical presentations.
-*   **[Get Jugaad](https://web.archive.org/web/20130215083405/http://getjugaad.com:80/faq.php):** As a part of Lean Startup Initiative by Steve Blank co-founded a ridesharing app and platform targeting customers in India focused on logistics scaling in high-density urban environments. Team was selected as official startup from India giving us an opportunity to pitch to investors in Silicon Valley. My focus was on customer discovery, product design, community building and new market entry strategies.
-
 #### <b> EDUCATION </b>
 
 ###### <b> <span class="pink-color" style="color:#ff4088;">BRCM</span> — B.E. (Computer Science & Engineering) </b> *<small>Honors</small>*
